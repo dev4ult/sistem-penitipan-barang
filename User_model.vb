@@ -13,4 +13,14 @@
 
         Return list_user
     End Function
+
+    Public Sub InsertNewUser(username As String, email As String, password As String)
+        db.Query("INSERT INTO users(username, email, password) VALUES (@username, @email, @password)")
+
+        db.Bind("username", "text", username)
+        db.Bind("email", "text", email)
+        db.Bind("password", "text", password)
+
+        db.Execute()
+    End Sub
 End Class

@@ -20,7 +20,7 @@ Public Class Database
         End If
     End Sub
 
-    Public Sub Bind(name As String, type As String, value As string)
+    Public Sub Bind(name As String, type As String, value As String)
         If type = "number" Then
             value = Integer.Parse(value)
         End If
