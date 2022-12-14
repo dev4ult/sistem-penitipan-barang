@@ -10,8 +10,6 @@ Public Class Login
 
         ' Add any initialization after the InitializeComponent() call.
         user_model = New User_model
-
-
         DataGridView1.DataSource = user_model.GetAllUserAsDataTable
 
     End Sub
