@@ -1,5 +1,5 @@
 ﻿Public Class User_model
-    Private db As Database
+    Public Shared db As Database
 
     Public Sub New()
         db = New Database()

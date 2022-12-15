@@ -16,6 +16,7 @@ Public Class Database
     Public Sub Query(query As String)
         cmd.CommandText = query
         If query.Contains("@") Then
+            conn.Open()
             cmd.Prepare()
         End If
     End Sub
@@ -32,6 +33,7 @@ Public Class Database
     End Sub
 
     Public Function Fetch() As MySqlDataReader
+        'cmd = New MySqlCommand(cmd.CommandText, conn)
         Return cmd.ExecuteReader
     End Function
 
