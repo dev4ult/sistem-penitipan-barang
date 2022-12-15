@@ -111,13 +111,21 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="JenisLocker.vb">
+    <Compile Include="Database.vb" />
+    <Compile Include="HapusJenisLocker.Designer.vb">
+      <DependentUpon>HapusJenisLocker.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HapusJenisLocker.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="JenisLocker.Designer.vb">
-      <DependentUpon>JenisLocker.vb</DependentUpon>
+    <Compile Include="FormJenisLocker.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormJenisLocker.Designer.vb">
+      <DependentUpon>FormJenisLocker.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Jenis_Locker.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -133,17 +141,38 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="TambahJenisLocker.Designer.vb">
+      <DependentUpon>TambahJenisLocker.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TambahJenisLocker.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateJenisLocker.Designer.vb">
+      <DependentUpon>UpdateJenisLocker.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateJenisLocker.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="User_model.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="JenisLocker.resx">
-      <DependentUpon>JenisLocker.vb</DependentUpon>
+    <EmbeddedResource Include="FormJenisLocker.resx">
+      <DependentUpon>FormJenisLocker.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HapusJenisLocker.resx">
+      <DependentUpon>HapusJenisLocker.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TambahJenisLocker.resx">
+      <DependentUpon>TambahJenisLocker.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateJenisLocker.resx">
+      <DependentUpon>UpdateJenisLocker.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
