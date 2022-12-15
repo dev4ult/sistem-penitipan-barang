@@ -22,7 +22,7 @@ Partial Class MonitorLocker
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.DataGridLocker = New System.Windows.Forms.DataGridView()
         Me.IdLocker = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NamaLocker = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Ukuran = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -32,17 +32,18 @@ Partial Class MonitorLocker
         Me.btntambahlocker = New System.Windows.Forms.Button()
         Me.btnupdatestatus = New System.Windows.Forms.Button()
         Me.btnhapuslocker = New System.Windows.Forms.Button()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Label1 = New System.Windows.Forms.Label()
+        CType(Me.DataGridLocker, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'DataGridView1
+        'DataGridLocker
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdLocker, Me.NamaLocker, Me.Ukuran, Me.Biaya, Me.Lokasi, Me.Status})
-        Me.DataGridView1.Location = New System.Drawing.Point(17, 74)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(811, 280)
-        Me.DataGridView1.TabIndex = 0
+        Me.DataGridLocker.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridLocker.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdLocker, Me.NamaLocker, Me.Ukuran, Me.Biaya, Me.Lokasi, Me.Status})
+        Me.DataGridLocker.Location = New System.Drawing.Point(17, 74)
+        Me.DataGridLocker.Name = "DataGridLocker"
+        Me.DataGridLocker.Size = New System.Drawing.Size(811, 280)
+        Me.DataGridLocker.TabIndex = 0
         '
         'IdLocker
         '
@@ -106,23 +107,35 @@ Partial Class MonitorLocker
         Me.btnhapuslocker.Text = "Hapus Locker"
         Me.btnhapuslocker.UseVisualStyleBackColor = True
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(20, 39)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(161, 31)
+        Me.Label1.TabIndex = 4
+        Me.Label1.Text = "Data Locker"
+        '
         'MonitorLocker
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(845, 537)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnhapuslocker)
         Me.Controls.Add(Me.btnupdatestatus)
         Me.Controls.Add(Me.btntambahlocker)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.DataGridLocker)
         Me.Name = "MonitorLocker"
         Me.Text = "MonitorLocker"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridLocker, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents DataGridLocker As DataGridView
     Friend WithEvents IdLocker As DataGridViewTextBoxColumn
     Friend WithEvents NamaLocker As DataGridViewTextBoxColumn
     Friend WithEvents Ukuran As DataGridViewTextBoxColumn
@@ -132,4 +145,5 @@ Partial Class MonitorLocker
     Friend WithEvents btntambahlocker As Button
     Friend WithEvents btnupdatestatus As Button
     Friend WithEvents btnhapuslocker As Button
+    Friend WithEvents Label1 As Label
 End Class

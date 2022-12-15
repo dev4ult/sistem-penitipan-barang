@@ -1,4 +1,6 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports System.Data.SqlClient
+Imports MySql.Data.MySqlClient
+Imports Mysqlx.XDevAPI.Common
 
 Public Class Database
     Private conn As New MySqlConnection
@@ -62,6 +64,47 @@ Public Class Database
         conn.Close()
 
         Return dataTable
+    End Function
+
+    Public Function GetDataBaseLocker() As DataTable
+        Dim result As New DataTable
+
+        conn.ConnectionString = "server=localhost; 
+                                 user id=root;
+                                 password=;
+                                 database=vb_sistem_penitipan"
+        conn.Open()
+        cmd.Connection = conn
+        cmd.CommandText = "SELECT
+                                      id As 'ID Locker',
+                                      id_ukuran AS 'Ukuran',
+                                      lokasi as 'Lokasi',
+                                       status as 'Status'
+                                       FROM locker
+                              "
+        dataReader = cmd.ExecuteReader
+
+        result.Load(dataReader)
+        dataReader.Close()
+        conn.Close()
+        Return result
+
+    End Function
+
+
+    Public Function AddDataLockerDatabase(id_ukuran As Integer, nama As String, lokasi As String)
+
+        conn.ConnectionString = "server=localhost; 
+                                 user id=root;
+                                 password=;
+                                 database=vb_sistem_penitipan"
+        conn.Open()
+        cmd.Connection = conn
+        cmd.CommandText = "INSERT INTO locker (id_ukuran, nama, lokasi, status) VALUES (" &
+                                     id_ukuran & ", '" & nama & "', '" & lokasi & "', 'Kosong' )"
+
+
+
     End Function
 
 End Class

@@ -23,18 +23,19 @@ Partial Class TambahLocker
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.CBukuran = New System.Windows.Forms.ComboBox()
+        Me.TBnama = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TBlokasi = New System.Windows.Forms.TextBox()
         Me.btntambah = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.lblharga = New System.Windows.Forms.Label()
+        Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -51,24 +52,25 @@ Partial Class TambahLocker
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Tambah Locker"
         '
-        'ComboBox1
+        'CBukuran
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(11, 12)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(204, 21)
-        Me.ComboBox1.TabIndex = 1
+        Me.CBukuran.FormattingEnabled = True
+        Me.CBukuran.Items.AddRange(New Object() {"Kecil", "Sedang ", "Besar"})
+        Me.CBukuran.Location = New System.Drawing.Point(11, 12)
+        Me.CBukuran.Name = "CBukuran"
+        Me.CBukuran.Size = New System.Drawing.Size(204, 21)
+        Me.CBukuran.TabIndex = 1
         '
-        'TextBox1
+        'TBnama
         '
-        Me.TextBox1.Location = New System.Drawing.Point(11, 12)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(204, 20)
-        Me.TextBox1.TabIndex = 2
+        Me.TBnama.Location = New System.Drawing.Point(11, 12)
+        Me.TBnama.Name = "TBnama"
+        Me.TBnama.Size = New System.Drawing.Size(204, 20)
+        Me.TBnama.TabIndex = 2
         '
         'Panel1
         '
-        Me.Panel1.Controls.Add(Me.TextBox1)
+        Me.Panel1.Controls.Add(Me.TBnama)
         Me.Panel1.Location = New System.Drawing.Point(46, 190)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(234, 47)
@@ -76,7 +78,7 @@ Partial Class TambahLocker
         '
         'Panel2
         '
-        Me.Panel2.Controls.Add(Me.ComboBox1)
+        Me.Panel2.Controls.Add(Me.CBukuran)
         Me.Panel2.Location = New System.Drawing.Point(46, 106)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(234, 48)
@@ -84,18 +86,18 @@ Partial Class TambahLocker
         '
         'Panel3
         '
-        Me.Panel3.Controls.Add(Me.TextBox2)
+        Me.Panel3.Controls.Add(Me.TBlokasi)
         Me.Panel3.Location = New System.Drawing.Point(46, 286)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(234, 47)
         Me.Panel3.TabIndex = 4
         '
-        'TextBox2
+        'TBlokasi
         '
-        Me.TextBox2.Location = New System.Drawing.Point(11, 13)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(204, 20)
-        Me.TextBox2.TabIndex = 2
+        Me.TBlokasi.Location = New System.Drawing.Point(11, 13)
+        Me.TBlokasi.Name = "TBlokasi"
+        Me.TBlokasi.Size = New System.Drawing.Size(204, 20)
+        Me.TBlokasi.TabIndex = 2
         '
         'btntambah
         '
@@ -179,16 +181,17 @@ Partial Class TambahLocker
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents CBukuran As ComboBox
+    Friend WithEvents TBnama As TextBox
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel3 As Panel
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TBlokasi As TextBox
     Friend WithEvents btntambah As Button
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents lblharga As Label
+    Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
 End Class
