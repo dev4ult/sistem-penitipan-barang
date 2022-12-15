@@ -2,8 +2,9 @@
     Private stmt As String
     Private result As New List(Of String)
     Dim sqlRead
+    Private db As Database
     Public Sub New()
-        User_model.db = New Database()
+        db = New Database()
     End Sub
 
     Public Function getDataJenisTempat() As List(Of String)
@@ -11,17 +12,15 @@
                     JOIN jenis_tempat jt
                     ON l.id_tempat = jt.id
                     GROUP BY l.id_tempat"
-        User_model.db.Query(stmt)
+        db.Query(stmt)
 
-        sqlRead = User_model.db.Fetch()
+        sqlRead = db.Fetch()
         While sqlRead.Read
             result.Add(sqlRead.GetString(0).ToString())
         End While
 
         'MsgBox(namaTempat.Count())
         sqlRead.Close()
-
-        User_model.db.closeConn()
         Return result
     End Function
 
@@ -30,15 +29,15 @@
         stmt = "SELECT DISTINCT l.lokasi FROM locker l
                 JOIN jenis_tempat jt ON l.id_tempat = jt.id
                 WHERE jt.namaTempat =@namaTempat"
-        User_model.db.Query(stmt)
-        User_model.db.Bind("namaTempat", "text", jenisTempat)
-        sqlRead = User_model.db.Fetch()
+        db.Query(stmt)
+        db.Bind("namaTempat", "text", jenisTempat)
+        sqlRead = db.Fetch()
         While sqlRead.Read
             result.Add(sqlRead.GetString(0).ToString())
         End While
         sqlRead.Close()
 
-        User_model.db.closeConn()
+        db.closeConn()
         Return result
     End Function
 End Class
