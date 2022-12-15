@@ -3,20 +3,22 @@
 Public Class Database
     Private conn As New MySqlConnection
     Private cmd As New MySqlCommand
+    Private queryString As String
+    Private dataReader As MySqlDataReader
 
     Public Sub New()
         conn.ConnectionString = "server=localhost; 
                                  user id=root;
                                  password=;
                                  database=vb_sistem_penitipan"
+    End Sub
+    Public Sub Open()
         cmd.Connection = conn
         conn.Open()
     End Sub
-
     Public Sub Query(query As String)
         cmd.CommandText = query
         If query.Contains("@") Then
-            conn.Open()
             cmd.Prepare()
         End If
     End Sub
@@ -28,16 +30,14 @@ Public Class Database
         cmd.Parameters.AddWithValue("@" & name, value)
     End Sub
 
-    Public Sub Execute()
-        cmd.ExecuteNonQuery()
+    Public Sub PrepareStmt()
+        If queryString.Contains("@") Then
+            cmd.Prepare()
+        End If
     End Sub
 
     Public Function Fetch() As MySqlDataReader
-        'cmd = New MySqlCommand(cmd.CommandText, conn)
-        Return cmd.ExecuteReader
+        Return cmd.ExecuteReader()
     End Function
 
-    Public Sub closeConn()
-        conn.Close()
-    End Sub
 End Class
