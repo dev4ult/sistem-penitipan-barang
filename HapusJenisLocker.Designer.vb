@@ -28,6 +28,7 @@ Partial Class HapusJenisLocker
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.BtnDelete = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'LblHapusJenisLocker
@@ -42,7 +43,8 @@ Partial Class HapusJenisLocker
         '
         'BtnClose
         '
-        Me.BtnClose.Location = New System.Drawing.Point(109, 225)
+        Me.BtnClose.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnClose.Location = New System.Drawing.Point(109, 249)
         Me.BtnClose.Name = "BtnClose"
         Me.BtnClose.Size = New System.Drawing.Size(138, 35)
         Me.BtnClose.TabIndex = 19
@@ -71,7 +73,7 @@ Partial Class HapusJenisLocker
         '
         'Label3
         '
-        Me.Label3.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Calibri Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(105, 85)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(242, 26)
@@ -81,7 +83,7 @@ Partial Class HapusJenisLocker
         '
         'Label4
         '
-        Me.Label4.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Font = New System.Drawing.Font("Calibri Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(105, 138)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(242, 26)
@@ -89,11 +91,22 @@ Partial Class HapusJenisLocker
         Me.Label4.Text = "(Value Biaya)"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
+        'BtnDelete
+        '
+        Me.BtnDelete.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnDelete.Location = New System.Drawing.Point(109, 208)
+        Me.BtnDelete.Name = "BtnDelete"
+        Me.BtnDelete.Size = New System.Drawing.Size(138, 35)
+        Me.BtnDelete.TabIndex = 24
+        Me.BtnDelete.Text = "Hapus"
+        Me.BtnDelete.UseVisualStyleBackColor = True
+        '
         'HapusJenisLocker
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(359, 307)
+        Me.ClientSize = New System.Drawing.Size(359, 325)
+        Me.Controls.Add(Me.BtnDelete)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
@@ -112,4 +125,5 @@ Partial Class HapusJenisLocker
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
+    Friend WithEvents BtnDelete As Button
 End Class

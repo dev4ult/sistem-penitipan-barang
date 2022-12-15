@@ -63,7 +63,7 @@ Partial Class UpdateJenisLocker
         '
         'TxtUkuran
         '
-        Me.TxtUkuran.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtUkuran.Font = New System.Drawing.Font("Calibri Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtUkuran.Location = New System.Drawing.Point(90, 81)
         Me.TxtUkuran.Name = "TxtUkuran"
         Me.TxtUkuran.Size = New System.Drawing.Size(233, 27)
@@ -71,7 +71,7 @@ Partial Class UpdateJenisLocker
         '
         'TxtBiaya
         '
-        Me.TxtBiaya.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtBiaya.Font = New System.Drawing.Font("Calibri Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtBiaya.Location = New System.Drawing.Point(90, 128)
         Me.TxtBiaya.Name = "TxtBiaya"
         Me.TxtBiaya.Size = New System.Drawing.Size(233, 27)
@@ -79,6 +79,7 @@ Partial Class UpdateJenisLocker
         '
         'BtnSubmit
         '
+        Me.BtnSubmit.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnSubmit.Location = New System.Drawing.Point(111, 202)
         Me.BtnSubmit.Name = "BtnSubmit"
         Me.BtnSubmit.Size = New System.Drawing.Size(138, 35)
@@ -88,6 +89,7 @@ Partial Class UpdateJenisLocker
         '
         'BtnClose
         '
+        Me.BtnClose.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnClose.Location = New System.Drawing.Point(111, 243)
         Me.BtnClose.Name = "BtnClose"
         Me.BtnClose.Size = New System.Drawing.Size(138, 35)
