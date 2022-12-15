@@ -26,6 +26,7 @@ Public Class Database
         If type = "number" Then
             value = Integer.Parse(value)
         End If
+
         cmd.Parameters.AddWithValue("@" & name, value)
     End Sub
 
@@ -41,6 +42,8 @@ Public Class Database
         PrepareStmt()
 
         affectedRows = cmd.ExecuteNonQuery()
+
+        cmd.Parameters.Clear()
         conn.Close()
 
         Return affectedRows
@@ -55,6 +58,7 @@ Public Class Database
         dataTable.Load(dataReader)
 
         dataReader.Close()
+        cmd.Parameters.Clear()
         conn.Close()
 
         Return dataTable
