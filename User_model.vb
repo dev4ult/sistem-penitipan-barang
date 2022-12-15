@@ -10,7 +10,7 @@
 
         Dim list_user As New DataTable
         list_user.Load(db.Fetch())
-
+        db.closeConn()
         Return list_user
     End Function
 
@@ -20,7 +20,7 @@
         db.Bind("username", "text", username)
         db.Bind("email", "text", email)
         db.Bind("password", "text", password)
-
+        db.closeConn()
         db.Execute()
     End Sub
 End Class
