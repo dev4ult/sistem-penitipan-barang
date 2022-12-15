@@ -1,5 +1,6 @@
 ﻿Imports System.Net.Mail
 Imports System.Security.Cryptography
+Imports System.Text
 Imports System.Text.Encoding
 
 Public Class User_model
@@ -48,36 +49,36 @@ Public Class User_model
         End If
     End Function
 
-    Public Function HashPassword(password As String) As String
-        Return New SHA256Managed().ComputeHash(UTF8.GetBytes(password)).ToString()
+    Public Function EncryptPassword(password As String) As String
+        Dim bytes = New SHA256Managed().ComputeHash(UTF8.GetBytes(password))
+
+        Dim stringBuilder As New StringBuilder()
+
+        For Each b In bytes
+            stringBuilder.Append(b.ToString("x2").ToLower())
+        Next
+
+        Return stringBuilder.ToString()
     End Function
 
-    Public Function ValidateSignUp(username As String, email As String, password As String) As Boolean
-        'Cek jika username sudah terpakai
-        If IsRowExist("username", username) Then
-            MessageBox.Show("Gagal! Username sudah teregistrasi")
-            Return False
-        End If
+    Public Function ValidateLogin(umail As String, password As String) As Boolean
+        db.Query("SELECT * FROM users WHERE 
+                    username = @username OR 
+                    email = @email AND 
+                    password = @password")
 
-        'Cek jika email sudah terpakai
-        If IsRowExist("email", email) Then
-            MessageBox.Show("Gagal! Email sudah teregistrasi")
-            Return False
-        End If
+        db.Bind("username", "text", umail)
+        db.Bind("email", "text", umail)
+        db.Bind("password", "text", EncryptPassword(password))
 
-        'Cek jika email tidak valid
-        If Not IsEmail(email) Then
-            MessageBox.Show("Gagal! Email tidak valid")
-            Return False
-        End If
+        Dim tempDTB = db.Fetch()
 
-        password = HashPassword(password)
-
-        'Cek jika insert berhasil
-        If InsertNewUser(username, email, password) > 0 Then
+        If tempDTB.Rows.Count > 0 Then
             Return True
         Else
+            MessageBox.Show("Username/email atau Password salah")
             Return False
         End If
+
     End Function
 End Class
