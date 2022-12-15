@@ -40,7 +40,7 @@ Partial Class JenisLocker
         '
         'BtnCreate
         '
-        Me.BtnCreate.Location = New System.Drawing.Point(205, 442)
+        Me.BtnCreate.Location = New System.Drawing.Point(207, 437)
         Me.BtnCreate.Name = "BtnCreate"
         Me.BtnCreate.Size = New System.Drawing.Size(97, 33)
         Me.BtnCreate.TabIndex = 1
@@ -49,7 +49,7 @@ Partial Class JenisLocker
         '
         'BtnUpdate
         '
-        Me.BtnUpdate.Location = New System.Drawing.Point(329, 442)
+        Me.BtnUpdate.Location = New System.Drawing.Point(329, 437)
         Me.BtnUpdate.Name = "BtnUpdate"
         Me.BtnUpdate.Size = New System.Drawing.Size(97, 33)
         Me.BtnUpdate.TabIndex = 2
@@ -58,7 +58,7 @@ Partial Class JenisLocker
         '
         'BtnDelete
         '
-        Me.BtnDelete.Location = New System.Drawing.Point(450, 442)
+        Me.BtnDelete.Location = New System.Drawing.Point(449, 437)
         Me.BtnDelete.Name = "BtnDelete"
         Me.BtnDelete.Size = New System.Drawing.Size(92, 33)
         Me.BtnDelete.TabIndex = 3
