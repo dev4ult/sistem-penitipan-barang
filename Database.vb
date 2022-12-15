@@ -32,7 +32,10 @@ Public Class Database
     End Sub
 
     Public Function Fetch() As MySqlDataReader
-        Return cmd.ExecuteReader()
+        Return cmd.ExecuteReader
     End Function
 
+    Public Sub closeConn()
+        conn.Close()
+    End Sub
 End Class
