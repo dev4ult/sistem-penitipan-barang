@@ -111,20 +111,11 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <Compile Include="JenisLocker.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="JenisLocker.Designer.vb">
       <DependentUpon>JenisLocker.vb</DependentUpon>
-=======
-    <Compile Include="Database.vb" />
-    <Compile Include="Login.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Login.Designer.vb">
-      <DependentUpon>Login.vb</DependentUpon>
->>>>>>> origin/database
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -145,13 +136,8 @@
     <Compile Include="User_model.vb" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <EmbeddedResource Include="JenisLocker.resx">
       <DependentUpon>JenisLocker.vb</DependentUpon>
-=======
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.vb</DependentUpon>
->>>>>>> origin/database
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
