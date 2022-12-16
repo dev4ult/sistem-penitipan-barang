@@ -28,9 +28,6 @@ Public Class FormSewa
         'Console.WriteLine(Chr(66))
         'Console.WriteLine(Chr(67))
         'Console.WriteLine(Chr(90))
-
-
-
         'Console.WriteLine("ROWS: {0}", "A-" & (table.Rows(table.Rows.Count - 1)(0) + 10).ToString())
     End Sub
 
@@ -49,24 +46,6 @@ Public Class FormSewa
     End Sub
 
 
-
-    Public Function GetTable() As DataTable
-        ' Create new DataTable instance.
-        Dim table As New DataTable
-
-        ' Create 3 typed columns in the DataTable.
-        table.Columns.Add("Dosage", GetType(Integer))
-        table.Columns.Add("Drug", GetType(String))
-        table.Columns.Add("PatientID", GetType(String))
-
-        ' Add five rows with those columns filled in the DataTable.
-        table.Rows.Add(25, "Drug A", "10")
-        table.Rows.Add(50, "Drug B", "50")
-        table.Rows.Add(10, "Drug C", "51")
-        table.Rows.Add(21, "Drug D", "52")
-        table.Rows.Add(100, "Drug E", "11")
-        Return table
-    End Function
 
 
 
