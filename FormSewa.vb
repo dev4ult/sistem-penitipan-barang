@@ -43,6 +43,13 @@ Public Class FormSewa
         Next
         'MsgBox("ok")
     End Sub
+
+    Private Sub LsbLockerTersedia_SelectedValueChanged(sender As Object, e As EventArgs) Handles LsbLockerTersedia.SelectedValueChanged
+        LblNamaLocker.Text = LsbLockerTersedia.SelectedItem()
+    End Sub
+
+
+
     Public Function GetTable() As DataTable
         ' Create new DataTable instance.
         Dim table As New DataTable
@@ -60,5 +67,8 @@ Public Class FormSewa
         table.Rows.Add(100, "Drug E", "11")
         Return table
     End Function
+
+
+
 
 End Class
