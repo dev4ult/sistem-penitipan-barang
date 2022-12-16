@@ -38,4 +38,16 @@
 
         Return result
     End Function
+
+
+    Public Function getBiayaLokerPerUkuran(ukuranLocker As String) As Integer
+        stmt = "SELECT biaya FROM jenis_ukuran
+                WHERE ukuran =@ukuran"
+        db.Query(stmt)
+        db.Bind("ukuran", "text", ukuranLocker)
+        sqlRead = db.Fetch()
+        Return sqlRead.Rows(0)(0)
+    End Function
+
+
 End Class
