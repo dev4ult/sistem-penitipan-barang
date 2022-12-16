@@ -111,6 +111,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Database.vb" />
     <Compile Include="FormSewa.Designer.vb">
       <DependentUpon>FormSewa.vb</DependentUpon>
     </Compile>
@@ -133,6 +134,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Sewa_Model.vb" />
+    <Compile Include="User_model.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="FormSewa.resx">
