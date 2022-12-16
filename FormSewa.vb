@@ -3,6 +3,9 @@
 Public Class FormSewa
     Private sewa_model As Sewa_Model
     Private panjangKarakter As Integer
+    Private selectedItem As String
+    Dim str As String = ""
+    Dim total As Integer
     Public Sub New()
 
         ' This call is required by the designer.
@@ -35,8 +38,12 @@ Public Class FormSewa
 
     Private Sub CBUkuranLocker_SelectedValueChanged(sender As Object, e As EventArgs) Handles CBUkuranLocker.SelectedValueChanged
         LsbLockerTersedia.Items.Clear()
-        Dim selectedItem As String = CBUkuranLocker.SelectedItem()
+        selectedItem = CBUkuranLocker.SelectedItem()
         LblBiayaPerJam.Text = sewa_model.getBiayaLokerPerUkuran(selectedItem)
+        LblNamaLocker.Text = "Null"
+        LblLamaSewa.Text = NUDLamaSewa.Value
+        total = NUDLamaSewa.Value * sewa_model.getBiayaLokerPerUkuran(selectedItem)
+        LblTotalBiaya.Text = total
         For Each gNT In sewa_model.getLockerTersedia(selectedItem)
             LsbLockerTersedia.Items.Add(gNT)
         Next
@@ -45,7 +52,6 @@ Public Class FormSewa
 
     Private Sub LsbLockerTersedia_SelectedValueChanged(sender As Object, e As EventArgs) Handles LsbLockerTersedia.SelectedValueChanged
         LblNamaLocker.Text = LsbLockerTersedia.SelectedItem()
-
     End Sub
 
     Private Sub RTBKetUser_KeyPress(sender As Object, e As KeyPressEventArgs) Handles RTBKetUser.KeyPress
@@ -68,5 +74,9 @@ Public Class FormSewa
         MsgBox(RTBKetUser.Text.Length)
     End Sub
 
-
+    Private Sub NUDLamaSewa_ValueChanged(sender As Object, e As EventArgs) Handles NUDLamaSewa.ValueChanged
+        LblLamaSewa.Text = NUDLamaSewa.Value
+        total = NUDLamaSewa.Value * sewa_model.getBiayaLokerPerUkuran(selectedItem)
+        LblTotalBiaya.Text = total
+    End Sub
 End Class
