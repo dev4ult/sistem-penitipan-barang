@@ -57,9 +57,10 @@
     End Function
 
     'Update Data
-    Public Function UpdateDataJenisLocker(Ukuran As String, Biaya As Integer) As Integer
-        db.Query("UPDATE jenis_ukuran SET ukuran= @ukuran, biaya= @biaya")
+    Public Function UpdateDataJenisLocker(Id As Integer, Ukuran As String, Biaya As Integer) As Integer
+        db.Query("UPDATE jenis_ukuran SET ukuran= @ukuran, biaya= @biaya WHERE id= @id")
 
+        db.Bind("id", "number", Id)
         db.Bind("ukuran", "text", Ukuran)
         db.Bind("biaya", "number", Biaya)
 

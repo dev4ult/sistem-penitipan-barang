@@ -10,7 +10,16 @@
     End Sub
 
     Private Sub BtnSubmit_Click(sender As Object, e As EventArgs) Handles BtnSubmit.Click
+        FormJenisLocker.jenisLocker.UkuranJenisLockerProperty = TxtUkuran.Text.ToString()
+        FormJenisLocker.jenisLocker.BiayaJenisLockerProperty = TxtBiaya.Text.ToString()
 
+
+        FormJenisLocker.jenisLocker.UpdateDataJenisLocker(FormJenisLocker.selectedTableKoleksi,
+                                                          FormJenisLocker.jenisLocker.UkuranJenisLockerProperty,
+                                                          FormJenisLocker.jenisLocker.BiayaJenisLockerProperty
+                                                          )
+        FormJenisLocker.Show()
+        Me.Close()
     End Sub
 
     Private Sub BtnClose_Click(sender As Object, e As EventArgs) Handles BtnClose.Click
