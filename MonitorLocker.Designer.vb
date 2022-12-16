@@ -23,12 +23,6 @@ Partial Class MonitorLocker
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.DataGridLocker = New System.Windows.Forms.DataGridView()
-        Me.IdLocker = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NamaLocker = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Ukuran = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Biaya = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Lokasi = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Status = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.btntambahlocker = New System.Windows.Forms.Button()
         Me.btnupdatestatus = New System.Windows.Forms.Button()
         Me.btnhapuslocker = New System.Windows.Forms.Button()
@@ -39,70 +33,39 @@ Partial Class MonitorLocker
         'DataGridLocker
         '
         Me.DataGridLocker.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridLocker.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdLocker, Me.NamaLocker, Me.Ukuran, Me.Biaya, Me.Lokasi, Me.Status})
-        Me.DataGridLocker.Location = New System.Drawing.Point(17, 74)
+        Me.DataGridLocker.Location = New System.Drawing.Point(23, 91)
+        Me.DataGridLocker.Margin = New System.Windows.Forms.Padding(4)
         Me.DataGridLocker.Name = "DataGridLocker"
-        Me.DataGridLocker.Size = New System.Drawing.Size(811, 280)
+        Me.DataGridLocker.RowHeadersWidth = 51
+        Me.DataGridLocker.Size = New System.Drawing.Size(1081, 345)
         Me.DataGridLocker.TabIndex = 0
-        '
-        'IdLocker
-        '
-        Me.IdLocker.HeaderText = "ID Locker"
-        Me.IdLocker.Name = "IdLocker"
-        Me.IdLocker.Width = 150
-        '
-        'NamaLocker
-        '
-        Me.NamaLocker.HeaderText = "NamaLocker"
-        Me.NamaLocker.Name = "NamaLocker"
-        Me.NamaLocker.Width = 150
-        '
-        'Ukuran
-        '
-        Me.Ukuran.HeaderText = "Ukuran"
-        Me.Ukuran.Name = "Ukuran"
-        Me.Ukuran.Width = 120
-        '
-        'Biaya
-        '
-        Me.Biaya.HeaderText = "Biaya"
-        Me.Biaya.Name = "Biaya"
-        Me.Biaya.Width = 120
-        '
-        'Lokasi
-        '
-        Me.Lokasi.HeaderText = "Lokasi"
-        Me.Lokasi.Name = "Lokasi"
-        '
-        'Status
-        '
-        Me.Status.HeaderText = "Status"
-        Me.Status.Name = "Status"
-        Me.Status.Width = 130
         '
         'btntambahlocker
         '
-        Me.btntambahlocker.Location = New System.Drawing.Point(211, 467)
+        Me.btntambahlocker.Location = New System.Drawing.Point(281, 575)
+        Me.btntambahlocker.Margin = New System.Windows.Forms.Padding(4)
         Me.btntambahlocker.Name = "btntambahlocker"
-        Me.btntambahlocker.Size = New System.Drawing.Size(100, 23)
+        Me.btntambahlocker.Size = New System.Drawing.Size(133, 28)
         Me.btntambahlocker.TabIndex = 1
         Me.btntambahlocker.Text = "Tambah Locker"
         Me.btntambahlocker.UseVisualStyleBackColor = True
         '
         'btnupdatestatus
         '
-        Me.btnupdatestatus.Location = New System.Drawing.Point(465, 467)
+        Me.btnupdatestatus.Location = New System.Drawing.Point(620, 575)
+        Me.btnupdatestatus.Margin = New System.Windows.Forms.Padding(4)
         Me.btnupdatestatus.Name = "btnupdatestatus"
-        Me.btnupdatestatus.Size = New System.Drawing.Size(100, 23)
+        Me.btnupdatestatus.Size = New System.Drawing.Size(133, 28)
         Me.btnupdatestatus.TabIndex = 2
         Me.btnupdatestatus.Text = "Update Status"
         Me.btnupdatestatus.UseVisualStyleBackColor = True
         '
         'btnhapuslocker
         '
-        Me.btnhapuslocker.Location = New System.Drawing.Point(335, 467)
+        Me.btnhapuslocker.Location = New System.Drawing.Point(447, 575)
+        Me.btnhapuslocker.Margin = New System.Windows.Forms.Padding(4)
         Me.btnhapuslocker.Name = "btnhapuslocker"
-        Me.btnhapuslocker.Size = New System.Drawing.Size(100, 23)
+        Me.btnhapuslocker.Size = New System.Drawing.Size(133, 28)
         Me.btnhapuslocker.TabIndex = 3
         Me.btnhapuslocker.Text = "Hapus Locker"
         Me.btnhapuslocker.UseVisualStyleBackColor = True
@@ -111,22 +74,24 @@ Partial Class MonitorLocker
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(20, 39)
+        Me.Label1.Location = New System.Drawing.Point(27, 48)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(161, 31)
+        Me.Label1.Size = New System.Drawing.Size(200, 39)
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "Data Locker"
         '
         'MonitorLocker
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(845, 537)
+        Me.ClientSize = New System.Drawing.Size(1127, 661)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnhapuslocker)
         Me.Controls.Add(Me.btnupdatestatus)
         Me.Controls.Add(Me.btntambahlocker)
         Me.Controls.Add(Me.DataGridLocker)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "MonitorLocker"
         Me.Text = "MonitorLocker"
         CType(Me.DataGridLocker, System.ComponentModel.ISupportInitialize).EndInit()
@@ -136,12 +101,6 @@ Partial Class MonitorLocker
     End Sub
 
     Friend WithEvents DataGridLocker As DataGridView
-    Friend WithEvents IdLocker As DataGridViewTextBoxColumn
-    Friend WithEvents NamaLocker As DataGridViewTextBoxColumn
-    Friend WithEvents Ukuran As DataGridViewTextBoxColumn
-    Friend WithEvents Biaya As DataGridViewTextBoxColumn
-    Friend WithEvents Lokasi As DataGridViewTextBoxColumn
-    Friend WithEvents Status As DataGridViewTextBoxColumn
     Friend WithEvents btntambahlocker As Button
     Friend WithEvents btnupdatestatus As Button
     Friend WithEvents btnhapuslocker As Button

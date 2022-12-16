@@ -14,8 +14,6 @@
 
     Public Sub ReloadDataTableDatabase()
 
-        DataGridLocker.DataSource = database.GetDataBaseLocker()
-
 
     End Sub
 
@@ -23,5 +21,16 @@
     Private Sub MonitorLocker_Activated(sender As Object, e As EventArgs) Handles Me.Activated
 
         ReloadDataTableDatabase()
+    End Sub
+
+    Private Sub btntambahlocker_Click(sender As Object, e As EventArgs) Handles btntambahlocker.Click
+        Dim tambah = New TambahLocker
+        tambah.Show()
+    End Sub
+
+    Private Sub btnhapuslocker_Click(sender As Object, e As EventArgs) Handles btnhapuslocker.Click
+        Dim hapus = New HapusLocker
+        hapus.Show()
+
     End Sub
 End Class

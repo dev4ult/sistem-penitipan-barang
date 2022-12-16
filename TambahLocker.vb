@@ -1,14 +1,38 @@
 ﻿Public Class TambahLocker
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+    Private locker_model As Locker_model
+    Private ukuran As String
 
+    Private lokasi As String
+    Private status As String
+
+
+    Public Sub New()
+
+        ' This call is required by the designer.
+        InitializeComponent()
+
+        ' Add any initialization after the InitializeComponent() call.
+        locker_model = New Locker_model()
+        ukuran = ""
+        lokasi = ""
+        status = ""
+    End Sub
+    Private Sub btntambah_Click(sender As Object, e As EventArgs) Handles btntambah.Click
+
+        lokasi = TBlokasi.Text
+
+        If ukuran = "" Or lokasi = "" Then
+            MessageBox.Show("Input tidak bisa bersifat kosong!")
+        Else
+            If locker_model.InsertNewLocker(ukuran, lokasi) Then
+                MessageBox.Show("Berhasil menambahkan loker baru")
+
+            End If
+        End If
     End Sub
 
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TBnama.TextChanged
-
-    End Sub
-
-    Private Sub TambahLocker_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+    Private Sub CBukuran_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CBukuran.SelectedIndexChanged
+        ukuran = CBukuran.SelectedItem
     End Sub
 
 
