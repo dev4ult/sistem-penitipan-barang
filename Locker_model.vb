@@ -6,7 +6,8 @@
     End Sub
 
     Public Function FetchAllLocker() As DataTable
-        db.Query("SELECT * FROM locker")
+        db.Query("SELECT locker.id as ID,locker.lokasi as Lokasi,jenis_ukuran.ukuran as Ukuran  FROM locker 
+        JOIN jenis_ukuran ON jenis_ukuran.id = locker.id_ukuran")
         Return db.Fetch()
     End Function
 
@@ -54,4 +55,6 @@
 
 
     End Function
+
+
 End Class

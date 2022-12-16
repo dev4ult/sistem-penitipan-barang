@@ -1,7 +1,8 @@
 ﻿Public Class MonitorLocker
 
+    Private locker_model As Locker_model
 
-    Public Shared database As Database
+
 
     Public Sub New()
 
@@ -10,18 +11,11 @@
 
         ' Add any initialization after the InitializeComponent() call.
 
+
+        locker_model = New Locker_model
+        ReloadDataGridLocker()
     End Sub
 
-    Public Sub ReloadDataTableDatabase()
-
-
-    End Sub
-
-
-    Private Sub MonitorLocker_Activated(sender As Object, e As EventArgs) Handles Me.Activated
-
-        ReloadDataTableDatabase()
-    End Sub
 
     Private Sub btntambahlocker_Click(sender As Object, e As EventArgs) Handles btntambahlocker.Click
         Dim tambah = New TambahLocker
@@ -33,4 +27,11 @@
         hapus.Show()
 
     End Sub
+
+    Public Sub ReloadDataGridLocker()
+        DataGridLocker.DataSource = locker_model.FetchAllLocker()
+
+    End Sub
+
+
 End Class
