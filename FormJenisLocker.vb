@@ -1,13 +1,13 @@
 ﻿Public Class FormJenisLocker
 
-    Public Shared jenisKoleksi As Jenis_Locker
+    Public Shared jenisLocker As Jenis_Locker
     Public Sub New()
 
         ' This call is required by the designer.
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-        jenisKoleksi = New Jenis_Locker
+        jenisLocker = New Jenis_Locker
     End Sub
 
     Private Sub FormJenisLocker_Activated(sender As Object, e As EventArgs) Handles Me.Activated
@@ -15,7 +15,7 @@
     End Sub
 
     Private Sub ReloadDataTableDatabase()
-        DataKoleksiJenisLocker.DataSource = jenisKoleksi.GetDataJenisLocker()
+        DataKoleksiJenisLocker.DataSource = jenisLocker.GetDataJenisLocker()
     End Sub
 
     Private Sub BtnCreate_Click(sender As Object, e As EventArgs) Handles BtnCreate.Click

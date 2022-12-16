@@ -1,15 +1,22 @@
 ﻿Public Class TambahJenisLocker
+
     Public Sub New()
 
         ' This call is required by the designer.
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-
     End Sub
 
     Private Sub BtnAdd_Click(sender As Object, e As EventArgs) Handles BtnAdd.Click
+        FormJenisLocker.jenisLocker.UkuranJenisLockerProperty = TxtUkuran.Text
+        FormJenisLocker.jenisLocker.BiayaJenisLockerProperty = TxtBiaya.Text
 
+        FormJenisLocker.jenisLocker.AddDataJenisLocker(FormJenisLocker.jenisLocker.UkuranJenisLockerProperty,
+                                                       FormJenisLocker.jenisLocker.BiayaJenisLockerProperty)
+
+        FormJenisLocker.Show()
+        Me.Close()
     End Sub
 
     Private Sub BtnClose_Click(sender As Object, e As EventArgs) Handles BtnClose.Click
