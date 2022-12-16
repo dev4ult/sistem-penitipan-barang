@@ -47,7 +47,7 @@ Partial Class FormSewa
         Me.Label18 = New System.Windows.Forms.Label()
         Me.RTBKetUser = New System.Windows.Forms.RichTextBox()
         Me.Label19 = New System.Windows.Forms.Label()
-        Me.Label20 = New System.Windows.Forms.Label()
+        Me.LblJumlahKomentar = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label1
@@ -199,7 +199,7 @@ Partial Class FormSewa
         '
         'BtnYesSewa
         '
-        Me.BtnYesSewa.Cursor = System.Windows.Forms.Cursors.No
+        Me.BtnYesSewa.Cursor = System.Windows.Forms.Cursors.Arrow
         Me.BtnYesSewa.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.BtnYesSewa.Location = New System.Drawing.Point(348, 581)
         Me.BtnYesSewa.Name = "BtnYesSewa"
@@ -210,7 +210,7 @@ Partial Class FormSewa
         '
         'BtnNoSewa
         '
-        Me.BtnNoSewa.Cursor = System.Windows.Forms.Cursors.No
+        Me.BtnNoSewa.Cursor = System.Windows.Forms.Cursors.Arrow
         Me.BtnNoSewa.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.BtnNoSewa.Location = New System.Drawing.Point(128, 581)
         Me.BtnNoSewa.Name = "BtnNoSewa"
@@ -296,23 +296,23 @@ Partial Class FormSewa
         Me.Label19.TabIndex = 41
         Me.Label19.Text = "Isi Mengenai Barangmu"
         '
-        'Label20
+        'LblJumlahKomentar
         '
-        Me.Label20.AutoSize = True
-        Me.Label20.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.Label20.Location = New System.Drawing.Point(308, 337)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(34, 25)
-        Me.Label20.TabIndex = 42
-        Me.Label20.Text = "50"
+        Me.LblJumlahKomentar.AutoSize = True
+        Me.LblJumlahKomentar.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.LblJumlahKomentar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.LblJumlahKomentar.Location = New System.Drawing.Point(308, 337)
+        Me.LblJumlahKomentar.Name = "LblJumlahKomentar"
+        Me.LblJumlahKomentar.Size = New System.Drawing.Size(34, 25)
+        Me.LblJumlahKomentar.TabIndex = 42
+        Me.LblJumlahKomentar.Text = "50"
         '
         'FormSewa
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(686, 706)
-        Me.Controls.Add(Me.Label20)
+        Me.Controls.Add(Me.LblJumlahKomentar)
         Me.Controls.Add(Me.Label19)
         Me.Controls.Add(Me.RTBKetUser)
         Me.Controls.Add(Me.Label18)
@@ -370,5 +370,5 @@ Partial Class FormSewa
     Friend WithEvents Label18 As Label
     Friend WithEvents RTBKetUser As RichTextBox
     Friend WithEvents Label19 As Label
-    Friend WithEvents Label20 As Label
+    Friend WithEvents LblJumlahKomentar As Label
 End Class
