@@ -1,5 +1,6 @@
 ﻿Imports System.Net.Mail
 Imports System.Security.Cryptography
+Imports System.Text
 Imports System.Text.Encoding
 
 Public Class User_model
@@ -17,6 +18,7 @@ Public Class User_model
 
         Return list_user
     End Function
+
     Public Function InsertNewUser(username As String, email As String, password As String) As Integer
         db.Query("INSERT INTO users VALUES ('',@username, @email, @password)")
 
@@ -49,7 +51,15 @@ Public Class User_model
     End Function
 
     Public Function HashPassword(password As String) As String
-        Return New SHA256Managed().ComputeHash(UTF8.GetBytes(password)).ToString()
+        Dim bytes = New SHA256Managed().ComputeHash(UTF8.GetBytes(password))
+
+        Dim stringBuilder As New StringBuilder()
+
+        For Each b In bytes
+            stringBuilder.Append(b.ToString("x2").ToLower())
+        Next
+
+        Return stringBuilder.ToString()
     End Function
 
     Public Function ValidateSignUp(username As String, email As String, password As String) As Boolean
