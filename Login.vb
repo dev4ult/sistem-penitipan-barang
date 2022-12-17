@@ -14,7 +14,6 @@
         LBFMError.Visible = True
     End Sub
 
-
     Private Sub BTNLogin_Click(sender As Object, e As EventArgs) Handles BTNLogin.Click
         Dim umail = TXTUmail.Text
         Dim password = TXTPassword.Text
@@ -23,7 +22,8 @@
             SetFlashMessage("Input tidak boleh bersifat kosong")
         Else
             If user_model.ValidateLogin(umail, password) Then
-                MessageBox.Show("Login berhasil")
+                SewaLocker.Show()
+                Me.Close()
             End If
         End If
     End Sub
