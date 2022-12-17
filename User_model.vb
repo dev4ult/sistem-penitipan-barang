@@ -50,7 +50,7 @@ Public Class User_model
         End If
     End Function
 
-    Public Function HashPassword(password As String) As String
+    Public Function EncryptPassword(password As String) As String
         Dim bytes = New SHA256Managed().ComputeHash(UTF8.GetBytes(password))
 
         Dim stringBuilder As New StringBuilder()
@@ -81,7 +81,7 @@ Public Class User_model
             Return False
         End If
 
-        password = HashPassword(password)
+        password = EncryptPassword(password)
 
         'Cek jika insert berhasil
         If InsertNewUser(username, email, password) > 0 Then
