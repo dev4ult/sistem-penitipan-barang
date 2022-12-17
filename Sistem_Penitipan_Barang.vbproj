@@ -112,16 +112,29 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Database.vb" />
-    <Compile Include="FormSewa.Designer.vb">
-      <DependentUpon>FormSewa.vb</DependentUpon>
+    <Compile Include="SewaLocker.Designer.vb">
+      <DependentUpon>SewaLocker.vb</DependentUpon>
     </Compile>
-    <Compile Include="FormSewa.vb">
+    <Compile Include="SewaLocker.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JenisLocker.Designer.vb">
+      <DependentUpon>JenisLocker.vb</DependentUpon>
+    </Compile>
+    <Compile Include="JenisLocker.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Login.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -139,12 +152,18 @@
     <Compile Include="Signup.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Sewa_Model.vb" />
+    <Compile Include="Sewa_model.vb" />
     <Compile Include="User_model.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="FormSewa.resx">
-      <DependentUpon>FormSewa.vb</DependentUpon>
+    <EmbeddedResource Include="SewaLocker.resx">
+      <DependentUpon>SewaLocker.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JenisLocker.resx">
+      <DependentUpon>JenisLocker.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
