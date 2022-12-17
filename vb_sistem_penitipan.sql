@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 15, 2022 at 05:46 AM
+-- Generation Time: Dec 17, 2022 at 03:54 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -24,44 +24,24 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `jenis_tempat`
---
-
-CREATE TABLE `jenis_tempat` (
-  `id` int(11) NOT NULL,
-  `namaTempat` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `jenis_tempat`
---
-
-INSERT INTO `jenis_tempat` (`id`, `namaTempat`) VALUES
-(1, 'Bandara'),
-(2, 'Pelabuhan'),
-(3, 'Stasiun'),
-(4, 'Toko');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `jenis_ukuran`
 --
 
 CREATE TABLE `jenis_ukuran` (
   `id` int(11) NOT NULL,
   `ukuran` varchar(50) DEFAULT NULL,
-  `biaya` int(10) DEFAULT NULL
+  `biaya` int(10) DEFAULT NULL,
+  `infoKet` varchar(30) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `jenis_ukuran`
 --
 
-INSERT INTO `jenis_ukuran` (`id`, `ukuran`, `biaya`) VALUES
-(1, 'Large', 100),
-(2, 'Medium', 75),
-(3, 'Small', 50);
+INSERT INTO `jenis_ukuran` (`id`, `ukuran`, `biaya`, `infoKet`) VALUES
+(1, 'Large', 100, 'Berat barang maks. 3 kg'),
+(2, 'Medium', 75, 'Berat barang maks. 2 kg'),
+(3, 'Small', 50, 'Berat barang maks. 1 kg');
 
 -- --------------------------------------------------------
 
@@ -73,7 +53,6 @@ CREATE TABLE `locker` (
   `id` int(11) NOT NULL,
   `id_ukuran` int(10) DEFAULT NULL,
   `lokasi` varchar(50) DEFAULT NULL,
-  `id_tempat` int(11) DEFAULT NULL,
   `status` enum('Terisi','Kosong') DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -81,12 +60,17 @@ CREATE TABLE `locker` (
 -- Dumping data for table `locker`
 --
 
-INSERT INTO `locker` (`id`, `id_ukuran`, `lokasi`, `id_tempat`, `status`) VALUES
-(1, 1, 'Soetta', 1, 'Kosong'),
-(2, 2, 'Soetta', 1, 'Kosong'),
-(3, 1, 'Bakauheuni', 2, 'Terisi'),
-(4, 3, 'Bakauheuni', 2, 'Kosong'),
-(5, 2, 'Bakauheuni', 2, 'Terisi');
+INSERT INTO `locker` (`id`, `id_ukuran`, `lokasi`, `status`) VALUES
+(6, 1, 'A-1', 'Kosong'),
+(7, 1, 'A-2', 'Kosong'),
+(8, 1, 'A-3', 'Kosong'),
+(9, 1, 'A-4', 'Terisi'),
+(10, 1, 'A-5', 'Kosong'),
+(11, 2, 'B-1', 'Terisi'),
+(12, 2, 'B-2', 'Kosong'),
+(13, 2, 'B-3', 'Kosong'),
+(14, 2, 'B-4', 'Kosong'),
+(15, 2, 'B-5', 'Terisi');
 
 -- --------------------------------------------------------
 
@@ -96,7 +80,7 @@ INSERT INTO `locker` (`id`, `id_ukuran`, `lokasi`, `id_tempat`, `status`) VALUES
 
 CREATE TABLE `penyewaan` (
   `id` int(11) NOT NULL,
-  `id_locker` int(11) DEFAULT NULL,
+  `id_locker` int(11) NOT NULL,
   `tanggal_sewa` date DEFAULT NULL,
   `tanggal_kembali` date DEFAULT NULL,
   `bayar_sebelum_pinjam` int(10) DEFAULT NULL,
@@ -123,12 +107,6 @@ CREATE TABLE `users` (
 --
 
 --
--- Indexes for table `jenis_tempat`
---
-ALTER TABLE `jenis_tempat`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `jenis_ukuran`
 --
 ALTER TABLE `jenis_ukuran`
@@ -139,8 +117,8 @@ ALTER TABLE `jenis_ukuran`
 --
 ALTER TABLE `locker`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `fk_locker_ukuran` (`id_ukuran`),
-  ADD KEY `fk_locker_tempat` (`id_tempat`);
+  ADD UNIQUE KEY `lokasi_uk` (`lokasi`),
+  ADD KEY `fk_locker_ukuran` (`id_ukuran`);
 
 --
 -- Indexes for table `penyewaan`
@@ -160,12 +138,6 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT for table `jenis_tempat`
---
-ALTER TABLE `jenis_tempat`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
 -- AUTO_INCREMENT for table `jenis_ukuran`
 --
 ALTER TABLE `jenis_ukuran`
@@ -175,7 +147,7 @@ ALTER TABLE `jenis_ukuran`
 -- AUTO_INCREMENT for table `locker`
 --
 ALTER TABLE `locker`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `penyewaan`
@@ -197,14 +169,13 @@ ALTER TABLE `users`
 -- Constraints for table `locker`
 --
 ALTER TABLE `locker`
-  ADD CONSTRAINT `fk_locker_tempat` FOREIGN KEY (`id_tempat`) REFERENCES `jenis_tempat` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
   ADD CONSTRAINT `fk_locker_ukuran` FOREIGN KEY (`id_ukuran`) REFERENCES `jenis_ukuran` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
 -- Constraints for table `penyewaan`
 --
 ALTER TABLE `penyewaan`
-  ADD CONSTRAINT `fk_sewa_locker` FOREIGN KEY (`id_locker`) REFERENCES `locker` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
+  ADD CONSTRAINT `fk_sewa_locker` FOREIGN KEY (`id_locker`) REFERENCES `locker` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
