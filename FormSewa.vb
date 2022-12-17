@@ -1,4 +1,5 @@
 ﻿Imports Mysqlx.XDevAPI.Common
+Imports Org.BouncyCastle.Asn1
 
 Public Class FormSewa
     Private sewa_model As Sewa_Model
@@ -6,6 +7,7 @@ Public Class FormSewa
     Private selectedItem As String
     Dim str As String = ""
     Dim total As Integer
+    Dim listResult As New List(Of String)
     Public Sub New()
 
         ' This call is required by the designer.
@@ -44,8 +46,16 @@ Public Class FormSewa
         LblLamaSewa.Text = NUDLamaSewa.Value
         total = NUDLamaSewa.Value * sewa_model.getBiayaLokerPerUkuran(selectedItem)
         LblTotalBiaya.Text = total
-        For Each gNT In sewa_model.getLockerTersedia(selectedItem)
-            LsbLockerTersedia.Items.Add(gNT)
+        listResult = sewa_model.getLockerTersedia(selectedItem)
+
+        For i = 0 To listResult.Count - 1
+            If i = listResult.Count - 1 Then
+                Console.WriteLine(listResult(i))
+                LblKetUkuran.Text = listResult(i)
+            Else
+                Console.WriteLine(listResult(i))
+                LsbLockerTersedia.Items.Add(listResult(i))
+            End If
         Next
         'MsgBox("ok")
     End Sub

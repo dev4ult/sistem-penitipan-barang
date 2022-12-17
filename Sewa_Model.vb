@@ -24,7 +24,7 @@
 
     Public Function getLockerTersedia(ukuranLocker As String) As List(Of String)
         result.Clear()
-        stmt = "SELECT l.lokasi FROM locker l
+        stmt = "SELECT l.lokasi, jk.infoKet FROM locker l
                 JOIN jenis_ukuran jk
                 ON l.id_ukuran = jk.id
                 WHERE jk.ukuran = @ukuran
@@ -32,10 +32,12 @@
         db.Query(stmt)
         db.Bind("ukuran", "text", ukuranLocker)
         sqlRead = db.Fetch()
+        'Set untuk nama loker
         For Each locker As DataRow In sqlRead.Rows
             result.Add(locker.Field(Of String)(0))
         Next
-
+        'Set untuk info ket ukuran locker
+        result.Add(sqlRead.Rows(0)(1))
         Return result
     End Function
 
