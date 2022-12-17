@@ -49,6 +49,7 @@ Partial Class FormSewa
         Me.LblJumlahKomentar = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.NUDLamaSewa = New System.Windows.Forms.NumericUpDown()
+        Me.LblKetUkuran = New System.Windows.Forms.Label()
         CType(Me.NUDLamaSewa, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -324,11 +325,22 @@ Partial Class FormSewa
         Me.NUDLamaSewa.Size = New System.Drawing.Size(89, 22)
         Me.NUDLamaSewa.TabIndex = 44
         '
+        'LblKetUkuran
+        '
+        Me.LblKetUkuran.AutoSize = True
+        Me.LblKetUkuran.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
+        Me.LblKetUkuran.Location = New System.Drawing.Point(125, 163)
+        Me.LblKetUkuran.Name = "LblKetUkuran"
+        Me.LblKetUkuran.Size = New System.Drawing.Size(33, 17)
+        Me.LblKetUkuran.TabIndex = 45
+        Me.LblKetUkuran.Text = "Ket."
+        '
         'FormSewa
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(690, 706)
+        Me.Controls.Add(Me.LblKetUkuran)
         Me.Controls.Add(Me.NUDLamaSewa)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.LblJumlahKomentar)
@@ -391,4 +403,5 @@ Partial Class FormSewa
     Friend WithEvents LblJumlahKomentar As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents NUDLamaSewa As NumericUpDown
+    Friend WithEvents LblKetUkuran As Label
 End Class
