@@ -60,10 +60,6 @@ Public Class Database
         dataTable.Load(dataReader)
 
         dataReader.Close()
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/signup
         cmd.Parameters.Clear()
         conn.Close()
 

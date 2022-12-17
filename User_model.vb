@@ -79,15 +79,22 @@ Public Class User_model
         If tempDTB.Rows.Count > 0 Then
             Return True
         Else
-            MessageBox.Show("Username/email atau Password salah")
+            Login.SetFlashMessage("Gagal! Username / email atau password salah")
             Return False
         End If
     End Function
 
-    Public Function ValidateSignUp(username As String, email As String, password As String) As Boolean
+    Public Function ValidateSignUp(username As String, email As String, password As String, passwordConfirmation As String) As Boolean
+
+        'Cek jika konfirmasi password tidak sama
+        If Not password = passwordConfirmation Then
+            Signup.SetFlashMessage("Gagal! Password konfirmasi tidak sama")
+            Return False
+        End If
+
         'Cek jika username sudah terpakai
         If IsNameOrEmailExist(username, email) Then
-            MessageBox.Show("Gagal! Username atau email sudah teregistrasi")
+            Signup.SetFlashMessage("Gagal! Username atau email sudah teregistrasi")
             Return False
         End If
 
@@ -97,7 +104,7 @@ Public Class User_model
         If InsertNewUser(username, email, password) > 0 Then
             Return True
         Else
-            MessageBox.Show("Username/email atau Password salah")
+            Signup.SetFlashMessage("Gagal! Telah terjadi kesalahan, Silahkan registrasi ulang")
             Return False
         End If
 
