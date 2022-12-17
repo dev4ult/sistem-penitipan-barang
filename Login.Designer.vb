@@ -150,7 +150,7 @@ Partial Class Login
         Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Controls.Add(Me.BTNLogin)
         Me.Panel2.Controls.Add(Me.PanelUmail)
-        Me.Panel2.Location = New System.Drawing.Point(174, 147)
+        Me.Panel2.Location = New System.Drawing.Point(174, 141)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Padding = New System.Windows.Forms.Padding(18)
         Me.Panel2.Size = New System.Drawing.Size(347, 354)
@@ -204,7 +204,7 @@ Partial Class Login
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Inter", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(165, 37)
+        Me.Label5.Location = New System.Drawing.Point(165, 31)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(196, 49)
         Me.Label5.TabIndex = 2
@@ -214,7 +214,7 @@ Partial Class Login
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Inter", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(170, 97)
+        Me.Label6.Location = New System.Drawing.Point(170, 91)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(351, 24)
         Me.Label6.TabIndex = 3

@@ -207,7 +207,7 @@ Partial Class Signup
         Me.LinkLBLogin.AutoSize = True
         Me.LinkLBLogin.Font = New System.Drawing.Font("Inter", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LinkLBLogin.LinkColor = System.Drawing.Color.RoyalBlue
-        Me.LinkLBLogin.Location = New System.Drawing.Point(145, 315)
+        Me.LinkLBLogin.Location = New System.Drawing.Point(175, 315)
         Me.LinkLBLogin.Name = "LinkLBLogin"
         Me.LinkLBLogin.Size = New System.Drawing.Size(48, 19)
         Me.LinkLBLogin.TabIndex = 9
@@ -220,9 +220,9 @@ Partial Class Signup
         Me.Label3.Font = New System.Drawing.Font("Inter", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(18, 315)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(129, 19)
+        Me.Label3.Size = New System.Drawing.Size(163, 19)
         Me.Label3.TabIndex = 8
-        Me.Label3.Text = "Sudah ada akun?"
+        Me.Label3.Text = "Sudah memiliki akun?"
         '
         'Panel1
         '
