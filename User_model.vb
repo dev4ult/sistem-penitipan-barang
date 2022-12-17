@@ -37,12 +37,14 @@ Public Class User_model
         End Try
     End Function
 
-    Public Function IsRowExist(field As String, value As String) As Boolean
-        db.Query("SELECT * FROM users WHERE " & field & " = @value")
+    Public Function IsNameOrEmailExist(ByVal username As String, ByVal email As String) As Boolean
+        db.Query("SELECT * FROM users WHERE username = @username OR email = @email")
 
-        db.Bind("value", "text", value)
+        db.Bind("username", "text", username)
+        db.Bind("email", "text", email)
 
-        If db.Fetch().Rows.Count > 0 Then
+        Dim tempDTB = db.Fetch()
+        If tempDTB.Rows.Count > 0 Then
             Return True
         Else
             Return False
@@ -61,6 +63,7 @@ Public Class User_model
         Return stringBuilder.ToString()
     End Function
 
+
     Public Function ValidateLogin(umail As String, password As String) As Boolean
         db.Query("SELECT * FROM users WHERE 
                     username = @username OR 
@@ -74,6 +77,24 @@ Public Class User_model
         Dim tempDTB = db.Fetch()
 
         If tempDTB.Rows.Count > 0 Then
+            Return True
+        Else
+            MessageBox.Show("Username/email atau Password salah")
+            Return False
+        End If
+    End Function
+
+    Public Function ValidateSignUp(username As String, email As String, password As String) As Boolean
+        'Cek jika username sudah terpakai
+        If IsNameOrEmailExist(username, email) Then
+            MessageBox.Show("Gagal! Username atau email sudah teregistrasi")
+            Return False
+        End If
+
+        password = EncryptPassword(password)
+
+        'Cek jika insert berhasil
+        If InsertNewUser(username, email, password) > 0 Then
             Return True
         Else
             MessageBox.Show("Username/email atau Password salah")

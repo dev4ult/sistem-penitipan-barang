@@ -12,10 +12,12 @@ Public Class Database
                                  password=;
                                  database=vb_sistem_penitipan"
     End Sub
+
     Public Sub Open()
         cmd.Connection = conn
         conn.Open()
     End Sub
+
     Public Sub Query(query As String)
         Open()
         queryString = query
@@ -58,6 +60,10 @@ Public Class Database
         dataTable.Load(dataReader)
 
         dataReader.Close()
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/signup
         cmd.Parameters.Clear()
         conn.Close()
 
