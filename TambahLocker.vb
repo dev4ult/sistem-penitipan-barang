@@ -32,6 +32,7 @@ Public Class TambahLocker
 
     Private Sub CBukuran_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CBukuran.SelectedIndexChanged
         ukuran = CBukuran.SelectedItem
+        lblharga.Text = "Rp." & locker_model.GetLokerCost(ukuran)
     End Sub
 
     Private Sub CBLokasi_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CBLokasi.SelectedIndexChanged

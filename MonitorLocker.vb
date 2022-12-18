@@ -37,7 +37,7 @@
     Private Sub DataGridLocker_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridLocker.CellClick
         If Not e.RowIndex = -1 Then
             Dim dataRows = DataGridLocker.Rows(e.RowIndex)
-            selectedLocker = dataRows.Cells(e.ColumnIndex).Value
+            selectedLocker = dataRows.Cells(0).Value
         End If
     End Sub
 
@@ -48,4 +48,6 @@
             UpdateStatusLocker.Show()
         End If
     End Sub
+
+
 End Class

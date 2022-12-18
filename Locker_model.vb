@@ -1,4 +1,6 @@
-﻿Public Class Locker_model
+﻿Imports System.Data.Common
+
+Public Class Locker_model
     Private db As Database
 
     Public Sub New()
@@ -76,5 +78,14 @@
         db.Bind("lokasi", "text", lokasi)
 
         Return db.Execute()
+    End Function
+
+    Public Function GetLokerCost(ukuran As String) As Integer
+
+        db.Query("SELECT biaya FROM jenis_ukuran WHERE ukuran = @ukuran")
+        db.Bind("ukuran", "text", ukuran)
+
+
+        Return db.Fetch()(0)(0)
     End Function
 End Class
