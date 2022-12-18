@@ -23,57 +23,62 @@ Partial Class HapusLocker
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.lblnama = New System.Windows.Forms.Label()
-        Me.btnhapus = New System.Windows.Forms.Button()
-        Me.btnkembali = New System.Windows.Forms.Button()
+        Me.LBNamaLoker = New System.Windows.Forms.Label()
+        Me.BTNHapus = New System.Windows.Forms.Button()
+        Me.BTNKembali = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(63, 25)
+        Me.Label1.Location = New System.Drawing.Point(84, 31)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(196, 13)
+        Me.Label1.Size = New System.Drawing.Size(243, 16)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Apakah anda Ingin menghapus locker ?"
         '
-        'lblnama
+        'LBNamaLoker
         '
-        Me.lblnama.AutoSize = True
-        Me.lblnama.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblnama.Location = New System.Drawing.Point(106, 102)
-        Me.lblnama.Name = "lblnama"
-        Me.lblnama.Size = New System.Drawing.Size(97, 20)
-        Me.lblnama.TabIndex = 1
-        Me.lblnama.Text = "Nama locker"
+        Me.LBNamaLoker.AutoSize = True
+        Me.LBNamaLoker.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LBNamaLoker.Location = New System.Drawing.Point(141, 126)
+        Me.LBNamaLoker.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LBNamaLoker.Name = "LBNamaLoker"
+        Me.LBNamaLoker.Size = New System.Drawing.Size(121, 25)
+        Me.LBNamaLoker.TabIndex = 1
+        Me.LBNamaLoker.Text = "Nama locker"
         '
-        'btnhapus
+        'BTNHapus
         '
-        Me.btnhapus.Location = New System.Drawing.Point(54, 148)
-        Me.btnhapus.Name = "btnhapus"
-        Me.btnhapus.Size = New System.Drawing.Size(75, 23)
-        Me.btnhapus.TabIndex = 2
-        Me.btnhapus.Text = "Hapus"
-        Me.btnhapus.UseVisualStyleBackColor = True
+        Me.BTNHapus.Location = New System.Drawing.Point(72, 182)
+        Me.BTNHapus.Margin = New System.Windows.Forms.Padding(4)
+        Me.BTNHapus.Name = "BTNHapus"
+        Me.BTNHapus.Size = New System.Drawing.Size(100, 28)
+        Me.BTNHapus.TabIndex = 2
+        Me.BTNHapus.Text = "Hapus"
+        Me.BTNHapus.UseVisualStyleBackColor = True
         '
-        'btnkembali
+        'BTNKembali
         '
-        Me.btnkembali.Location = New System.Drawing.Point(184, 148)
-        Me.btnkembali.Name = "btnkembali"
-        Me.btnkembali.Size = New System.Drawing.Size(75, 23)
-        Me.btnkembali.TabIndex = 3
-        Me.btnkembali.Text = "Kembali"
-        Me.btnkembali.UseVisualStyleBackColor = True
+        Me.BTNKembali.Location = New System.Drawing.Point(245, 182)
+        Me.BTNKembali.Margin = New System.Windows.Forms.Padding(4)
+        Me.BTNKembali.Name = "BTNKembali"
+        Me.BTNKembali.Size = New System.Drawing.Size(100, 28)
+        Me.BTNKembali.TabIndex = 3
+        Me.BTNKembali.Text = "Kembali"
+        Me.BTNKembali.UseVisualStyleBackColor = True
         '
         'HapusLocker
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(311, 245)
-        Me.Controls.Add(Me.btnkembali)
-        Me.Controls.Add(Me.btnhapus)
-        Me.Controls.Add(Me.lblnama)
+        Me.ClientSize = New System.Drawing.Size(415, 302)
+        Me.Controls.Add(Me.BTNKembali)
+        Me.Controls.Add(Me.BTNHapus)
+        Me.Controls.Add(Me.LBNamaLoker)
         Me.Controls.Add(Me.Label1)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "HapusLocker"
         Me.Text = "HapusLocker"
         Me.ResumeLayout(False)
@@ -82,7 +87,7 @@ Partial Class HapusLocker
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents lblnama As Label
-    Friend WithEvents btnhapus As Button
-    Friend WithEvents btnkembali As Button
+    Friend WithEvents LBNamaLoker As Label
+    Friend WithEvents BTNHapus As Button
+    Friend WithEvents BTNKembali As Button
 End Class
