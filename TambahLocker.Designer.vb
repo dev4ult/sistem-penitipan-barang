@@ -26,13 +26,13 @@ Partial Class TambahLocker
         Me.CBukuran = New System.Windows.Forms.ComboBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.TBlokasi = New System.Windows.Forms.TextBox()
         Me.btntambah = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.lblharga = New System.Windows.Forms.Label()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
+        Me.CBLokasi = New System.Windows.Forms.ComboBox()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.SuspendLayout()
@@ -70,20 +70,12 @@ Partial Class TambahLocker
         '
         'Panel3
         '
-        Me.Panel3.Controls.Add(Me.TBlokasi)
+        Me.Panel3.Controls.Add(Me.CBLokasi)
         Me.Panel3.Location = New System.Drawing.Point(61, 235)
         Me.Panel3.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(312, 58)
         Me.Panel3.TabIndex = 4
-        '
-        'TBlokasi
-        '
-        Me.TBlokasi.Location = New System.Drawing.Point(15, 16)
-        Me.TBlokasi.Margin = New System.Windows.Forms.Padding(4)
-        Me.TBlokasi.Name = "TBlokasi"
-        Me.TBlokasi.Size = New System.Drawing.Size(271, 22)
-        Me.TBlokasi.TabIndex = 2
         '
         'btntambah
         '
@@ -135,6 +127,16 @@ Partial Class TambahLocker
         Me.lblharga.TabIndex = 10
         Me.lblharga.Text = "RP.0"
         '
+        'CBLokasi
+        '
+        Me.CBLokasi.FormattingEnabled = True
+        Me.CBLokasi.Items.AddRange(New Object() {"A", "B", "C", "D"})
+        Me.CBLokasi.Location = New System.Drawing.Point(15, 15)
+        Me.CBLokasi.Margin = New System.Windows.Forms.Padding(4)
+        Me.CBLokasi.Name = "CBLokasi"
+        Me.CBLokasi.Size = New System.Drawing.Size(271, 24)
+        Me.CBLokasi.TabIndex = 3
+        '
         'TambahLocker
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -153,7 +155,6 @@ Partial Class TambahLocker
         Me.Text = "TambahLocker"
         Me.Panel2.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
-        Me.Panel3.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -163,11 +164,11 @@ Partial Class TambahLocker
     Friend WithEvents CBukuran As ComboBox
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel3 As Panel
-    Friend WithEvents TBlokasi As TextBox
     Friend WithEvents btntambah As Button
     Friend WithEvents Label2 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents lblharga As Label
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
+    Friend WithEvents CBLokasi As ComboBox
 End Class

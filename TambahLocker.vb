@@ -20,16 +20,12 @@ Public Class TambahLocker
 
     End Sub
     Private Sub btntambah_Click(sender As Object, e As EventArgs) Handles btntambah.Click
-
-        lokasi = TBlokasi.Text
-
         If ukuran = "" Or lokasi = "" Then
-            MessageBox.Show("Input tidak bisa bersifat kosong!")
+            MessageBox.Show("Input tidak boleh bersifat kosong!")
         Else
             If locker_model.InsertNewLocker(ukuran, lokasi) Then
                 MessageBox.Show("Berhasil menambahkan loker baru")
                 MonitorLocker.ReloadDataGridLocker()
-
             End If
         End If
     End Sub
@@ -38,6 +34,7 @@ Public Class TambahLocker
         ukuran = CBukuran.SelectedItem
     End Sub
 
-
-
+    Private Sub CBLokasi_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CBLokasi.SelectedIndexChanged
+        lokasi = CBLokasi.SelectedItem
+    End Sub
 End Class
