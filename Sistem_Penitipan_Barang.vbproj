@@ -118,6 +118,7 @@
     <Compile Include="HapusLocker.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Locker_model.vb" />
     <Compile Include="MonitorLocker.Designer.vb">
       <DependentUpon>MonitorLocker.vb</DependentUpon>
     </Compile>

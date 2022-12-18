@@ -24,8 +24,9 @@ Partial Class UpdateStatusLocker
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GBstatus = New System.Windows.Forms.GroupBox()
-        Me.rbterisi = New System.Windows.Forms.RadioButton()
-        Me.rbkosong = New System.Windows.Forms.RadioButton()
+        Me.RBKosong = New System.Windows.Forms.RadioButton()
+        Me.RBTerisi = New System.Windows.Forms.RadioButton()
+        Me.BTNSimpan = New System.Windows.Forms.Button()
         Me.GBstatus.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -33,52 +34,68 @@ Partial Class UpdateStatusLocker
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(99, 33)
+        Me.Label1.Location = New System.Drawing.Point(132, 41)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(83, 25)
+        Me.Label1.Size = New System.Drawing.Size(102, 31)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Locker"
         '
         'GBstatus
         '
-        Me.GBstatus.Controls.Add(Me.rbkosong)
-        Me.GBstatus.Controls.Add(Me.rbterisi)
-        Me.GBstatus.Location = New System.Drawing.Point(32, 73)
+        Me.GBstatus.Controls.Add(Me.RBKosong)
+        Me.GBstatus.Controls.Add(Me.RBTerisi)
+        Me.GBstatus.Location = New System.Drawing.Point(43, 90)
+        Me.GBstatus.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GBstatus.Name = "GBstatus"
-        Me.GBstatus.Size = New System.Drawing.Size(222, 78)
+        Me.GBstatus.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GBstatus.Size = New System.Drawing.Size(296, 96)
         Me.GBstatus.TabIndex = 1
         Me.GBstatus.TabStop = False
         Me.GBstatus.Text = "Status"
         '
-        'rbterisi
+        'RBKosong
         '
-        Me.rbterisi.AutoSize = True
-        Me.rbterisi.Location = New System.Drawing.Point(47, 22)
-        Me.rbterisi.Name = "rbterisi"
-        Me.rbterisi.Size = New System.Drawing.Size(50, 17)
-        Me.rbterisi.TabIndex = 0
-        Me.rbterisi.TabStop = True
-        Me.rbterisi.Text = "Terisi"
-        Me.rbterisi.UseVisualStyleBackColor = True
+        Me.RBKosong.AutoSize = True
+        Me.RBKosong.Location = New System.Drawing.Point(63, 59)
+        Me.RBKosong.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.RBKosong.Name = "RBKosong"
+        Me.RBKosong.Size = New System.Drawing.Size(74, 20)
+        Me.RBKosong.TabIndex = 1
+        Me.RBKosong.TabStop = True
+        Me.RBKosong.Text = "Kosong"
+        Me.RBKosong.UseVisualStyleBackColor = True
         '
-        'rbkosong
+        'RBTerisi
         '
-        Me.rbkosong.AutoSize = True
-        Me.rbkosong.Location = New System.Drawing.Point(47, 48)
-        Me.rbkosong.Name = "rbkosong"
-        Me.rbkosong.Size = New System.Drawing.Size(61, 17)
-        Me.rbkosong.TabIndex = 1
-        Me.rbkosong.TabStop = True
-        Me.rbkosong.Text = "Kosong"
-        Me.rbkosong.UseVisualStyleBackColor = True
+        Me.RBTerisi.AutoSize = True
+        Me.RBTerisi.Location = New System.Drawing.Point(63, 27)
+        Me.RBTerisi.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.RBTerisi.Name = "RBTerisi"
+        Me.RBTerisi.Size = New System.Drawing.Size(62, 20)
+        Me.RBTerisi.TabIndex = 0
+        Me.RBTerisi.TabStop = True
+        Me.RBTerisi.Text = "Terisi"
+        Me.RBTerisi.UseVisualStyleBackColor = True
+        '
+        'BTNSimpan
+        '
+        Me.BTNSimpan.Location = New System.Drawing.Point(264, 193)
+        Me.BTNSimpan.Name = "BTNSimpan"
+        Me.BTNSimpan.Size = New System.Drawing.Size(75, 23)
+        Me.BTNSimpan.TabIndex = 2
+        Me.BTNSimpan.Text = "Simpan"
+        Me.BTNSimpan.UseVisualStyleBackColor = True
         '
         'UpdateStatusLocker
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(286, 183)
+        Me.ClientSize = New System.Drawing.Size(381, 225)
+        Me.Controls.Add(Me.BTNSimpan)
         Me.Controls.Add(Me.GBstatus)
         Me.Controls.Add(Me.Label1)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "UpdateStatusLocker"
         Me.Text = "UpdateStatusLocker"
         Me.GBstatus.ResumeLayout(False)
@@ -90,6 +107,7 @@ Partial Class UpdateStatusLocker
 
     Friend WithEvents Label1 As Label
     Friend WithEvents GBstatus As GroupBox
-    Friend WithEvents rbkosong As RadioButton
-    Friend WithEvents rbterisi As RadioButton
+    Friend WithEvents RBKosong As RadioButton
+    Friend WithEvents RBTerisi As RadioButton
+    Friend WithEvents BTNSimpan As Button
 End Class
