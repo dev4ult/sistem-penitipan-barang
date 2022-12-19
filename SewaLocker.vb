@@ -34,6 +34,7 @@ Public Class SewaLocker
     Private Sub CBUkuranLocker_SelectedValueChanged(sender As Object, e As EventArgs) Handles CBUkuranLocker.SelectedValueChanged
         LsbLockerTersedia.Items.Clear()
         ukuran = CBUkuranLocker.SelectedItem()
+        LblNamaLocker.Text = ""
 
         LblKetUkuran.Text = "Ket : " & sewa_model.GetLockerDetail(ukuran)
 

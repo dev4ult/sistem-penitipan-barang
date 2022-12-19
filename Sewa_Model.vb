@@ -36,7 +36,7 @@
     End Function
 
     Public Function GetLockerDetail(ukuran As String) As String
-        stmt = "SELECT info_ket FROM jenis_ukuran WHERE ukuran = @ukuran"
+        stmt = "SELECT infoKet FROM jenis_ukuran WHERE ukuran = @ukuran"
 
         db.Query(stmt)
         db.Bind("ukuran", "text", ukuran)
