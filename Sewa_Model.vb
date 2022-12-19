@@ -40,8 +40,7 @@
 
         db.Query(stmt)
         db.Bind("ukuran", "text", ukuran)
-
-        Return db.Fetch()(0)(0)
+        Return db.Fetch().Rows(0)(0)
     End Function
 
     Public Function GetLockerCost(ukuran As String) As Integer
@@ -59,11 +58,11 @@
         db.Query(stmt)
         db.Bind("lokasi", "text", lokasi)
 
-        Return db.Fetch(0)(0)
+        Return db.Fetch.Rows(0)(0)
     End Function
 
-    Public Function InsertNewRentHistory(lokasi As String, lamaSewa As Integer, waktuBayar As Boolean,
-                                         totalBiaya As String, keterangan As String) As Integer
+    Public Function InsertNewRentHistory(lokasi As String, lamaSewa As Integer, waktuBayar As String,
+                                         totalBiaya As Integer, keterangan As String) As Integer
         Dim idLoker = GetLockerId(lokasi)
 
         stmt = "INSERT INTO 
@@ -74,9 +73,11 @@
 
         db.Query(stmt)
 
-        db.Bind("id_locker", "text", idLoker)
-        db.Bind("tanggal_sewa", "text", String.Format("dd/MM/yyyy", DateTime.Now))
-        db.Bind("bayar_sebelum_pinjam", "number", waktuBayar)
+
+        Console.WriteLine(waktuBayar)
+        db.Bind("id_locker", "number", idLoker)
+        db.Bind("tanggal_sewa", "date", DateTime.Now.ToString("yyyy/MM/dd"))
+        db.Bind("bayar_sebelum_pinjam", "text", waktuBayar)
         db.Bind("rencana_pinjam", "number", lamaSewa)
         db.Bind("kelebihan_pinjam", "number", 0)
         db.Bind("total_bayar", "number", totalBiaya)
@@ -84,7 +85,7 @@
         Return db.Execute()
     End Function
 
-    Public Function ValidateNewRentData(lokasi As String, lamaSewa As Integer, waktuBayar As Boolean,
+    Public Function ValidateNewRentData(lokasi As String, lamaSewa As Integer, waktuBayar As String,
                                          totalBiaya As String, keterangan As String) As Boolean
         If lokasi = "" Then
             MessageBox.Show("Pilih lokasi loker terlebih dahulu")
@@ -97,11 +98,23 @@
         End If
 
         If InsertNewRentHistory(lokasi, lamaSewa, waktuBayar,
-                                totalBiaya, keterangan) Then
+                                totalBiaya, keterangan) And updateStatusLockerWhenInsert(lokasi) Then
             Return True
         Else
-            MessageBox.Show("Terjadi kesalaha, silahkan input ulang")
+            MessageBox.Show("Terjadi kesalahan, silahkan input ulang")
             Return False
         End If
+    End Function
+
+    Public Function updateStatusLockerWhenInsert(lokasi) As Integer
+        Dim idLocker = GetLockerId(lokasi)
+        Console.WriteLine(idLocker)
+
+        stmt = "UPDATE locker SET status = 'Terisi'
+                WHERE id=@idloker"
+        db.Query(stmt)
+        db.Bind("idloker", "number", idLocker)
+
+        Return db.Execute()
     End Function
 End Class
