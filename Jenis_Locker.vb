@@ -29,7 +29,7 @@
     End Property
 
     'Create Data
-    Public Function AddDataJenisLocker(Ukuran As String, Biaya As Integer) As Integer
+    Public Function AddDataLocker(Ukuran As String, Biaya As Integer) As Integer
         db.Query("INSERT INTO jenis_ukuran VALUES ('', @ukuran, @biaya)")
 
         db.Bind("ukuran", "text", Ukuran)
@@ -38,14 +38,14 @@
         Return db.Execute()
     End Function
 
-    Public Function GetDataJenisLocker()
+    Public Function FetchAllDataLeckerTypes()
         db.Query("SELECT id AS 'ID', ukuran AS 'Ukuran Locker', biaya AS 'Biaya Locker' FROM jenis_ukuran")
 
         Return db.Fetch()
     End Function
 
     'Select Data 
-    Public Function GetDataJenisLockerByIdDatabase(id As Integer)
+    Public Function GetDataLockerTypeById(id As Integer)
         db.Query("SELECT ukuran, biaya FROM jenis_ukuran WHERE id = @id")
         db.Bind("id", "number", id)
 
@@ -53,7 +53,7 @@
     End Function
 
     'Update Data
-    Public Function UpdateDataJenisLocker(Id As Integer, Ukuran As String, Biaya As Integer) As Integer
+    Public Function UpdateLockerType(Id As Integer, Ukuran As String, Biaya As Integer) As Integer
         db.Query("UPDATE jenis_ukuran SET ukuran= @ukuran, biaya= @biaya WHERE id= @id")
 
         db.Bind("id", "number", Id)
@@ -64,7 +64,7 @@
     End Function
 
     'Delete Data
-    Public Function DeleteDataJenisLocker(id As Integer)
+    Public Function DeleteLockerType(id As Integer)
         db.Query("DELETE FROM jenis_ukuran WHERE id = @id")
 
         db.Bind("id", "number", id)
