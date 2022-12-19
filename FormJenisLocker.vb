@@ -1,10 +1,10 @@
 ﻿Public Class FormJenisLocker
 
-    Public Shared jenisLocker As Jenis_Locker
+    Private locker_model As Locker_model
 
-    Dim selectedRow As DataGridViewRow
-    Public Shared selectedTableKoleksi
-    Private Shared selectedTableKoleksiNama
+    Private ukuran As String
+    Private biaya As Integer
+    Private infoKet As String
 
     Public Sub New()
 
@@ -12,46 +12,67 @@
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-        jenisLocker = New Jenis_Locker
+        locker_model = New Locker_model
         ReloadDataTableDatabase()
     End Sub
 
-    Private Sub FormJenisLocker_Activated(sender As Object, e As EventArgs) Handles Me.Activated
-        ReloadDataTableDatabase()
-    End Sub
+    Public Property GSUkuran() As String
+        Get
+            Return ukuran
+        End Get
+        Set(value As String)
+            ukuran = value
+        End Set
+    End Property
 
-    Private Sub ReloadDataTableDatabase()
-        DataKoleksiJenisLocker.DataSource = jenisLocker.GetDataJenisLocker()
+    Public Property GSBiaya() As Integer
+        Get
+            Return biaya
+        End Get
+        Set(value As Integer)
+            biaya = value
+        End Set
+    End Property
+
+    Public Property GSInfoKet() As String
+        Get
+            Return infoKet
+        End Get
+        Set(value As String)
+            infoKet = value
+        End Set
+    End Property
+
+    Public Sub ReloadDataTableDatabase()
+        DataKoleksiJenisLocker.DataSource = locker_model.FetchAllLockerTypes()
     End Sub
 
     Private Sub DataKoleksiJenisLocker_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataKoleksiJenisLocker.CellClick
-        If e.RowIndex > -1 Then
-            Dim index As Integer = e.RowIndex
-            selectedRow = DataKoleksiJenisLocker.Rows(index)
-
-            selectedTableKoleksi = selectedRow.Cells(0).Value
-            selectedTableKoleksiNama = selectedRow.Cells(1).Value
+        If Not e.RowIndex = -1 Then
+            Dim dataRow = DataKoleksiJenisLocker.Rows(e.RowIndex)
+            ukuran = dataRow.Cells(0).Value
+            biaya = Integer.Parse(dataRow.Cells(1).Value)
+            infoKet = dataRow.Cells(2).Value
         End If
     End Sub
 
     Private Sub BtnCreate_Click(sender As Object, e As EventArgs) Handles BtnCreate.Click
         TambahJenisLocker.Show()
-        Me.Hide()
     End Sub
 
     Private Sub BtnUpdate_Click(sender As Object, e As EventArgs) Handles BtnUpdate.Click
-        jenisLocker.UkuranJenisLockerProperty = selectedRow.Cells(1).Value
-        jenisLocker.BiayaJenisLockerProperty = selectedRow.Cells(2).Value
-
-        UpdateJenisLocker.Show()
-        Me.Hide()
+        If ukuran = "" Or biaya = 0 Or infoKet = "" Then
+            MessageBox.Show("Silahkan pilih jenis loker terlebih dahulu")
+        Else
+            UpdateJenisLocker.Show()
+        End If
     End Sub
 
     Private Sub BtnDelete_Click(sender As Object, e As EventArgs) Handles BtnDelete.Click
-        jenisLocker.UkuranJenisLockerProperty = selectedRow.Cells(1).Value
-        jenisLocker.BiayaJenisLockerProperty = selectedRow.Cells(2).Value
-
-        HapusJenisLocker.Show()
-        Me.Hide()
+        If ukuran = "" Or biaya = 0 Or infoKet = "" Then
+            MessageBox.Show("Silahkan pilih jenis loker terlebih dahulu")
+        Else
+            HapusJenisLocker.Show()
+        End If
     End Sub
 End Class

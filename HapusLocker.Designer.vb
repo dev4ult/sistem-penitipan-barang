@@ -26,9 +26,7 @@ Partial Class HapusLocker
         Me.LBNamaLoker = New System.Windows.Forms.Label()
         Me.BTNHapus = New System.Windows.Forms.Button()
         Me.BTNKembali = New System.Windows.Forms.Button()
-        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
@@ -64,7 +62,7 @@ Partial Class HapusLocker
         Me.BTNHapus.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BTNHapus.Font = New System.Drawing.Font("Inter", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BTNHapus.ForeColor = System.Drawing.SystemColors.HighlightText
-        Me.BTNHapus.Location = New System.Drawing.Point(227, 247)
+        Me.BTNHapus.Location = New System.Drawing.Point(215, 247)
         Me.BTNHapus.Margin = New System.Windows.Forms.Padding(4)
         Me.BTNHapus.Name = "BTNHapus"
         Me.BTNHapus.Size = New System.Drawing.Size(111, 37)
@@ -80,7 +78,7 @@ Partial Class HapusLocker
         Me.BTNKembali.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BTNKembali.Font = New System.Drawing.Font("Inter", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BTNKembali.ForeColor = System.Drawing.Color.Black
-        Me.BTNKembali.Location = New System.Drawing.Point(80, 247)
+        Me.BTNKembali.Location = New System.Drawing.Point(86, 247)
         Me.BTNKembali.Margin = New System.Windows.Forms.Padding(4)
         Me.BTNKembali.Name = "BTNKembali"
         Me.BTNKembali.Size = New System.Drawing.Size(111, 37)
@@ -88,27 +86,18 @@ Partial Class HapusLocker
         Me.BTNKembali.Text = "KEMBALI"
         Me.BTNKembali.UseVisualStyleBackColor = False
         '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(136, Byte), Integer))
-        Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(423, 71)
-        Me.Panel1.TabIndex = 12
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.White
         Me.Label2.Font = New System.Drawing.Font("Inter", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label2.Location = New System.Drawing.Point(86, 19)
+        Me.Label2.ForeColor = System.Drawing.Color.Black
+        Me.Label2.Location = New System.Drawing.Point(110, 19)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(225, 36)
+        Me.Label2.Size = New System.Drawing.Size(197, 36)
         Me.Label2.TabIndex = 0
-        Me.Label2.Text = "HAPUS LOKER"
+        Me.Label2.Text = "Hapus Loker"
         '
         'HapusLocker
         '
@@ -116,7 +105,7 @@ Partial Class HapusLocker
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(423, 314)
-        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.BTNKembali)
         Me.Controls.Add(Me.BTNHapus)
         Me.Controls.Add(Me.LBNamaLoker)
@@ -124,8 +113,6 @@ Partial Class HapusLocker
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "HapusLocker"
         Me.Text = "HapusLocker"
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -135,6 +122,5 @@ Partial Class HapusLocker
     Friend WithEvents LBNamaLoker As Label
     Friend WithEvents BTNHapus As Button
     Friend WithEvents BTNKembali As Button
-    Friend WithEvents Panel1 As Panel
     Friend WithEvents Label2 As Label
 End Class

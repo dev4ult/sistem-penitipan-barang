@@ -1,26 +1,34 @@
 ﻿Public Class UpdateJenisLocker
 
+    Private locker_model As Locker_model
+    Private ukuranLama As String
+
     Public Sub New()
 
         ' This call is required by the designer.
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-        TxtUkuran.Text = FormJenisLocker.jenisLocker.UkuranJenisLockerProperty
-        TxtBiaya.Text = FormJenisLocker.jenisLocker.BiayaJenisLockerProperty
+        locker_model = New Locker_model
+
+        ukuranLama = FormJenisLocker.GSUkuran()
+        TxtUkuran.Text = ukuranLama
+
+        TxtBiaya.Text = FormJenisLocker.GSBiaya()
+        TxtInfoKet.Text = FormJenisLocker.GSInfoKet()
+
     End Sub
 
     Private Sub BtnSubmit_Click(sender As Object, e As EventArgs) Handles BtnSubmit.Click
-        FormJenisLocker.jenisLocker.UkuranJenisLockerProperty = TxtUkuran.Text.ToString()
-        FormJenisLocker.jenisLocker.BiayaJenisLockerProperty = TxtBiaya.Text.ToString()
+        Dim ukuran As String = TxtUkuran.Text
+        Dim biaya As Integer = Integer.Parse(TxtBiaya.Text)
+        Dim infoKet As String = TxtInfoKet.Text
 
-
-        FormJenisLocker.jenisLocker.UpdateDataJenisLocker(FormJenisLocker.selectedTableKoleksi,
-                                                          FormJenisLocker.jenisLocker.UkuranJenisLockerProperty,
-                                                          FormJenisLocker.jenisLocker.BiayaJenisLockerProperty
-                                                          )
-        FormJenisLocker.Show()
-        Me.Close()
+        If locker_model.ValidateFormUpdateLockerType(ukuran, biaya, infoKet, ukuranLama) Then
+            FormJenisLocker.ReloadDataTableDatabase()
+            FormJenisLocker.Show()
+            Me.Close()
+        End If
     End Sub
 
     Private Sub BtnClose_Click(sender As Object, e As EventArgs) Handles BtnClose.Click
