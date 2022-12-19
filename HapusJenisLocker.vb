@@ -6,7 +6,8 @@
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-
+        ValueUkuran.Text = FormJenisLocker.jenisLocker.UkuranJenisLockerProperty
+        ValueBiaya.Text = FormJenisLocker.jenisLocker.BiayaJenisLockerProperty
     End Sub
 
     Private Sub BtnClose_Click(sender As Object, e As EventArgs) Handles BtnClose.Click

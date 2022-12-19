@@ -24,10 +24,10 @@ Partial Class HapusJenisLocker
     Private Sub InitializeComponent()
         Me.LblHapusJenisLocker = New System.Windows.Forms.Label()
         Me.BtnClose = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
+        Me.LblUkuran = New System.Windows.Forms.Label()
+        Me.LblBiaya = New System.Windows.Forms.Label()
+        Me.ValueUkuran = New System.Windows.Forms.Label()
+        Me.ValueBiaya = New System.Windows.Forms.Label()
         Me.BtnDelete = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
@@ -51,45 +51,45 @@ Partial Class HapusJenisLocker
         Me.BtnClose.Text = "Kembali"
         Me.BtnClose.UseVisualStyleBackColor = True
         '
-        'Label1
+        'LblUkuran
         '
-        Me.Label1.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(12, 85)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(83, 26)
-        Me.Label1.TabIndex = 20
-        Me.Label1.Text = "Ukuran   : "
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LblUkuran.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblUkuran.Location = New System.Drawing.Point(12, 85)
+        Me.LblUkuran.Name = "LblUkuran"
+        Me.LblUkuran.Size = New System.Drawing.Size(83, 26)
+        Me.LblUkuran.TabIndex = 20
+        Me.LblUkuran.Text = "Ukuran   : "
+        Me.LblUkuran.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label2
+        'LblBiaya
         '
-        Me.Label2.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(12, 138)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(83, 26)
-        Me.Label2.TabIndex = 21
-        Me.Label2.Text = "Biaya      : "
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LblBiaya.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblBiaya.Location = New System.Drawing.Point(12, 138)
+        Me.LblBiaya.Name = "LblBiaya"
+        Me.LblBiaya.Size = New System.Drawing.Size(83, 26)
+        Me.LblBiaya.TabIndex = 21
+        Me.LblBiaya.Text = "Biaya      : "
+        Me.LblBiaya.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label3
+        'ValueUkuran
         '
-        Me.Label3.Font = New System.Drawing.Font("Calibri Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(105, 85)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(242, 26)
-        Me.Label3.TabIndex = 22
-        Me.Label3.Text = "(Value Ukuran)"
-        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.ValueUkuran.Font = New System.Drawing.Font("Calibri Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ValueUkuran.Location = New System.Drawing.Point(105, 85)
+        Me.ValueUkuran.Name = "ValueUkuran"
+        Me.ValueUkuran.Size = New System.Drawing.Size(242, 26)
+        Me.ValueUkuran.TabIndex = 22
+        Me.ValueUkuran.Text = "(Value Ukuran)"
+        Me.ValueUkuran.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label4
+        'ValueBiaya
         '
-        Me.Label4.Font = New System.Drawing.Font("Calibri Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(105, 138)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(242, 26)
-        Me.Label4.TabIndex = 23
-        Me.Label4.Text = "(Value Biaya)"
-        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.ValueBiaya.Font = New System.Drawing.Font("Calibri Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ValueBiaya.Location = New System.Drawing.Point(105, 138)
+        Me.ValueBiaya.Name = "ValueBiaya"
+        Me.ValueBiaya.Size = New System.Drawing.Size(242, 26)
+        Me.ValueBiaya.TabIndex = 23
+        Me.ValueBiaya.Text = "(Value Biaya)"
+        Me.ValueBiaya.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'BtnDelete
         '
@@ -107,10 +107,10 @@ Partial Class HapusJenisLocker
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(359, 325)
         Me.Controls.Add(Me.BtnDelete)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.ValueBiaya)
+        Me.Controls.Add(Me.ValueUkuran)
+        Me.Controls.Add(Me.LblBiaya)
+        Me.Controls.Add(Me.LblUkuran)
         Me.Controls.Add(Me.BtnClose)
         Me.Controls.Add(Me.LblHapusJenisLocker)
         Me.Name = "HapusJenisLocker"
@@ -121,9 +121,9 @@ Partial Class HapusJenisLocker
 
     Friend WithEvents LblHapusJenisLocker As Label
     Friend WithEvents BtnClose As Button
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
+    Friend WithEvents LblUkuran As Label
+    Friend WithEvents LblBiaya As Label
+    Friend WithEvents ValueUkuran As Label
+    Friend WithEvents ValueBiaya As Label
     Friend WithEvents BtnDelete As Button
 End Class

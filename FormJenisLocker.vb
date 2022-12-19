@@ -40,7 +40,6 @@
     End Sub
 
     Private Sub BtnUpdate_Click(sender As Object, e As EventArgs) Handles BtnUpdate.Click
-
         jenisLocker.UkuranJenisLockerProperty = selectedRow.Cells(1).Value
         jenisLocker.BiayaJenisLockerProperty = selectedRow.Cells(2).Value
 
@@ -49,6 +48,9 @@
     End Sub
 
     Private Sub BtnDelete_Click(sender As Object, e As EventArgs) Handles BtnDelete.Click
+        jenisLocker.UkuranJenisLockerProperty = selectedRow.Cells(1).Value
+        jenisLocker.BiayaJenisLockerProperty = selectedRow.Cells(2).Value
+
         HapusJenisLocker.Show()
         Me.Hide()
     End Sub
