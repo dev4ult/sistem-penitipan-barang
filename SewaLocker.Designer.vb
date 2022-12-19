@@ -51,8 +51,8 @@ Partial Class SewaLocker
         Me.NUDLamaSewa = New System.Windows.Forms.NumericUpDown()
         Me.LblKetUkuran = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.RBSekarang = New System.Windows.Forms.RadioButton()
         Me.RBNanti = New System.Windows.Forms.RadioButton()
+        Me.RBSekarang = New System.Windows.Forms.RadioButton()
         CType(Me.NUDLamaSewa, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -349,17 +349,6 @@ Partial Class SewaLocker
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Waktu bayar"
         '
-        'RBSekarang
-        '
-        Me.RBSekarang.AutoSize = True
-        Me.RBSekarang.Location = New System.Drawing.Point(9, 21)
-        Me.RBSekarang.Name = "RBSekarang"
-        Me.RBSekarang.Size = New System.Drawing.Size(87, 20)
-        Me.RBSekarang.TabIndex = 0
-        Me.RBSekarang.TabStop = True
-        Me.RBSekarang.Text = "Sekarang"
-        Me.RBSekarang.UseVisualStyleBackColor = True
-        '
         'RBNanti
         '
         Me.RBNanti.AutoSize = True
@@ -370,6 +359,17 @@ Partial Class SewaLocker
         Me.RBNanti.TabStop = True
         Me.RBNanti.Text = "Nanti"
         Me.RBNanti.UseVisualStyleBackColor = True
+        '
+        'RBSekarang
+        '
+        Me.RBSekarang.AutoSize = True
+        Me.RBSekarang.Location = New System.Drawing.Point(9, 21)
+        Me.RBSekarang.Name = "RBSekarang"
+        Me.RBSekarang.Size = New System.Drawing.Size(87, 20)
+        Me.RBSekarang.TabIndex = 0
+        Me.RBSekarang.TabStop = True
+        Me.RBSekarang.Text = "Sekarang"
+        Me.RBSekarang.UseVisualStyleBackColor = True
         '
         'SewaLocker
         '
@@ -406,6 +406,7 @@ Partial Class SewaLocker
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label1)
         Me.Name = "SewaLocker"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FormSewa"
         CType(Me.NUDLamaSewa, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)

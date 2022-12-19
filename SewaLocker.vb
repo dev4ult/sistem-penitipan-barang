@@ -7,7 +7,7 @@ Public Class SewaLocker
     Private lamaSewa As Integer
     Private totalBiaya As Integer
     Private keteranganIsiLocker As String
-    Private waktuBayar As Boolean
+    Private waktuBayar As String
 
     Dim str As String = ""
     Private panjangKarakter As Integer
@@ -73,10 +73,17 @@ Public Class SewaLocker
         lamaSewa = Integer.Parse(LblLamaSewa.Text)
         keteranganIsiLocker = RTBKetUser.Text
 
+        If RBSekarang.Checked() Then
+            waktuBayar = "Yes"
+        ElseIf RBNanti.Checked() Then
+            waktuBayar = "No"
+        End If
+
         If sewa_model.ValidateNewRentData(lokasiLoker, lamaSewa, waktuBayar,
                                           totalBiaya, keteranganIsiLocker) Then
-            MessageBox.Show("berhasil menambah data sewa")
+            MessageBox.Show("Berhasil menambah data sewa")
         End If
+        resetFormFill()
     End Sub
 
     Private Sub NUDLamaSewa_ValueChanged(sender As Object, e As EventArgs) Handles NUDLamaSewa.ValueChanged
@@ -85,11 +92,19 @@ Public Class SewaLocker
         LblTotalBiaya.Text = totalBiaya
     End Sub
 
-    Private Sub RBSekarang_CheckedChanged(sender As Object, e As EventArgs) Handles RBSekarang.CheckedChanged
-        waktuBayar = True
-    End Sub
 
-    Private Sub RBNanti_CheckedChanged(sender As Object, e As EventArgs) Handles RBNanti.CheckedChanged
-        waktuBayar = False
+    Private Sub resetFormFill()
+        CBUkuranLocker.Text = "-- Pilih Ukuran --"
+        LsbLockerTersedia.Items.Clear()
+        RTBKetUser.Clear()
+        NUDLamaSewa.Value = 0
+        LblNamaLocker.Text = ""
+        LblLamaSewa.Text = ""
+        'LblJumlahKomentar.Text = 50
+        LblBiayaPerJam.Text = 0
+        LblKetUkuran.Text = "Ket."
+        LblTotalBiaya.Text = 0
+        RBNanti.Checked = False
+        RBSekarang.Checked = True
     End Sub
 End Class
