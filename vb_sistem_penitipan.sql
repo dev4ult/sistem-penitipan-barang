@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 17, 2022 at 03:54 AM
+-- Generation Time: Dec 19, 2022 at 09:11 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -64,13 +64,13 @@ INSERT INTO `locker` (`id`, `id_ukuran`, `lokasi`, `status`) VALUES
 (6, 1, 'A-1', 'Kosong'),
 (7, 1, 'A-2', 'Kosong'),
 (8, 1, 'A-3', 'Kosong'),
-(9, 1, 'A-4', 'Terisi'),
+(9, 1, 'A-4', 'Kosong'),
 (10, 1, 'A-5', 'Kosong'),
 (11, 2, 'B-1', 'Terisi'),
 (12, 2, 'B-2', 'Kosong'),
 (13, 2, 'B-3', 'Kosong'),
 (14, 2, 'B-4', 'Kosong'),
-(15, 2, 'B-5', 'Terisi');
+(15, 2, 'B-5', 'Kosong');
 
 -- --------------------------------------------------------
 
@@ -83,7 +83,7 @@ CREATE TABLE `penyewaan` (
   `id_locker` int(11) NOT NULL,
   `tanggal_sewa` date DEFAULT NULL,
   `tanggal_kembali` date DEFAULT NULL,
-  `bayar_sebelum_pinjam` int(10) DEFAULT NULL,
+  `bayar_sebelum_pinjam` enum('Yes','No') DEFAULT NULL,
   `rencana_pinjam` int(10) DEFAULT NULL,
   `kelebihan_pinjam` int(10) DEFAULT NULL,
   `total_bayar` int(10) DEFAULT NULL
@@ -125,7 +125,7 @@ ALTER TABLE `locker`
 --
 ALTER TABLE `penyewaan`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `fk_sewa_locker` (`id_locker`);
+  ADD UNIQUE KEY `id_loker_tanggal_sewa` (`id_locker`,`tanggal_sewa`);
 
 --
 -- Indexes for table `users`
