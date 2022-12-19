@@ -28,6 +28,13 @@
         End Set
     End Property
 
+    Public Function IsLockerTypeExist(ukuran As String) As String
+        db.Query("SELECT ukuran WHERE ukuran = @ukuran")
+        db.Bind("ukuran", "text", ukuran)
+
+        Return db.Fetch()(0)(0)
+    End Function
+
     'Insert Data
     Public Function InsertNewLockerType(Ukuran As String, Biaya As Integer, info_ket As String) As Integer
         db.Query("INSERT INTO jenis_ukuran VALUES ('', @ukuran, @biaya, @info_ket)")
@@ -36,6 +43,16 @@
         db.Bind("biaya", "number", Biaya)
 
         Return db.Execute()
+    End Function
+
+    Public Function ValidateFormAddLockerTypes(Ukuran As String, Biaya As Integer, info_ket As String)
+        If IsLockerTypeExist(Ukuran) Then
+            Return False
+        End If
+
+        If InsertNewLockerType(Ukuran, Biaya, info_ket) Then
+            Return True
+        End If
     End Function
 
     Public Function FetchAllDataLeckerTypes()
