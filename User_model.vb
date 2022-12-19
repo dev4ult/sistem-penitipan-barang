@@ -18,6 +18,7 @@ Public Class User_model
 
         Return list_user
     End Function
+
     Public Function InsertNewUser(username As String, email As String, password As String) As Integer
         db.Query("INSERT INTO users VALUES ('',@username, @email, @password)")
 
@@ -107,6 +108,6 @@ Public Class User_model
             Signup.SetFlashMessage("Gagal! Telah terjadi kesalahan, Silahkan registrasi ulang")
             Return False
         End If
-
     End Function
+    
 End Class
