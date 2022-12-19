@@ -81,7 +81,7 @@ Public Class FormSewa
     End Sub
 
     Private Sub BtnYesSewa_Click(sender As Object, e As EventArgs) Handles BtnYesSewa.Click
-        MsgBox(RTBKetUser.Text.Length)
+
     End Sub
 
     Private Sub NUDLamaSewa_ValueChanged(sender As Object, e As EventArgs) Handles NUDLamaSewa.ValueChanged

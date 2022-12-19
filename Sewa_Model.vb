@@ -3,6 +3,8 @@
     Private result As New List(Of String)
     Dim sqlRead As New DataTable
     Private db As Database
+    Private total_biaya_sebelum_pinjam As Integer
+    Private jmlHariPinjam As Integer
     Public Sub New()
         db = New Database()
     End Sub
@@ -50,7 +52,4 @@
         sqlRead = db.Fetch()
         Return sqlRead.Rows(0)(0)
     End Function
-
-
-
 End Class
