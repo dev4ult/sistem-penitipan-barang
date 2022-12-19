@@ -13,4 +13,10 @@
         FormJenisLocker.Show()
         Me.Close()
     End Sub
+
+    Private Sub BtnDelete_Click(sender As Object, e As EventArgs) Handles BtnDelete.Click
+        FormJenisLocker.jenisLocker.DeleteDataJenisLocker(FormJenisLocker.selectedTableKoleksi)
+        FormJenisLocker.Show()
+        Me.Close()
+    End Sub
 End Class
