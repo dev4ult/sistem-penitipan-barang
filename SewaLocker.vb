@@ -50,7 +50,8 @@ Public Class SewaLocker
     End Sub
 
     Private Sub LsbLockerTersedia_SelectedValueChanged(sender As Object, e As EventArgs) Handles LsbLockerTersedia.SelectedValueChanged
-        LblNamaLocker.Text = LsbLockerTersedia.SelectedItem
+        lokasiLoker = LsbLockerTersedia.SelectedItem()
+        LblNamaLocker.Text = lokasiLoker
     End Sub
 
     Private Sub RTBKetUser_KeyPress(sender As Object, e As KeyPressEventArgs) Handles RTBKetUser.KeyPress
@@ -69,9 +70,9 @@ Public Class SewaLocker
     End Sub
 
     Private Sub BtnYesSewa_Click(sender As Object, e As EventArgs) Handles BtnYesSewa.Click
-        lokasiLoker = LblNamaLocker.Text
-        lamaSewa = Integer.Parse(LblLamaSewa.Text)
         keteranganIsiLocker = RTBKetUser.Text
+        sewa_model.GS_Status_Locker = "Terisi"
+        Dim statusLocker As String = sewa_model.GS_Status_Locker()
 
         If RBSekarang.Checked() Then
             waktuBayar = "Yes"
@@ -79,16 +80,26 @@ Public Class SewaLocker
             waktuBayar = "No"
         End If
 
-        If sewa_model.ValidateNewRentData(lokasiLoker, lamaSewa, waktuBayar,
-                                          totalBiaya, keteranganIsiLocker) Then
-            MessageBox.Show("Berhasil menambah data sewa")
+        'Validasi Form Isiannya
+
+        If validationOfFormFill() IsNot Nothing Then
+            MsgBox(validationOfFormFill(), MsgBoxStyle.Critical, "Kesalahan")
+        Else
+            If sewa_model.ValidateNewRentData(lokasiLoker, lamaSewa, waktuBayar,
+                                          totalBiaya, keteranganIsiLocker, statusLocker) Then
+                MessageBox.Show("Berhasil menambah data sewa")
+            End If
+            'Reset Isian Form
+            resetFormFill()
         End If
-        resetFormFill()
+
+
     End Sub
 
     Private Sub NUDLamaSewa_ValueChanged(sender As Object, e As EventArgs) Handles NUDLamaSewa.ValueChanged
-        LblLamaSewa.Text = NUDLamaSewa.Value
-        totalBiaya = NUDLamaSewa.Value * sewa_model.GetLockerCost(ukuran)
+        lamaSewa = NUDLamaSewa.Value
+        LblLamaSewa.Text = lamaSewa
+        totalBiaya = lamaSewa * sewa_model.GetLockerCost(ukuran)
         LblTotalBiaya.Text = totalBiaya
     End Sub
 
@@ -100,11 +111,32 @@ Public Class SewaLocker
         NUDLamaSewa.Value = 0
         LblNamaLocker.Text = ""
         LblLamaSewa.Text = ""
-        'LblJumlahKomentar.Text = 50
+        LblJumlahKomentar.Text = 50
         LblBiayaPerJam.Text = 0
         LblKetUkuran.Text = "Ket."
         LblTotalBiaya.Text = 0
         RBNanti.Checked = False
         RBSekarang.Checked = True
     End Sub
+
+    Public Function validationOfFormFill()
+        Dim infoKesalahan As String
+
+        If ukuran Is Nothing Then
+            infoKesalahan = "Harap Isi Ukuran Locker"
+            CBUkuranLocker.Select()
+        ElseIf lamaSewa = 0 Then
+            infoKesalahan = "Harap Isi Jumlah Hari Sewa"
+            NUDLamaSewa.Select()
+        ElseIf lokasiLoker Is Nothing Then
+            infoKesalahan = "Harap Pilih Lokasi Lokernya yaa"
+        ElseIf keteranganIsiLocker.Length = 0 Then
+            infoKesalahan = "Harap Isi Dekripsi Barang Anda"
+            RTBKetUser.Select()
+        ElseIf waktuBayar Is Nothing Then
+            infoKesalahan = "Harap Pilih Waktu Bayar Loker"
+        End If
+
+        Return infoKesalahan
+    End Function
 End Class
