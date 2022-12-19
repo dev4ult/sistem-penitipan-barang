@@ -13,7 +13,7 @@ Public Class Locker_model
         Return db.Fetch()
     End Function
 
-    Public Function NextIndexLocation(lokasi As String) As Integer
+    Private Function NextIndexLocation(lokasi As String) As Integer
         db.Query("SELECT lokasi FROM locker WHERE lokasi LIKE @lokasi")
         db.Bind("lokasi", "text", lokasi & "%")
 
@@ -38,13 +38,6 @@ Public Class Locker_model
         Return indexLocation + 1
     End Function
 
-    Public Function DeleteLockerByLocation(lokasi As String) As Integer
-        db.Query("DELETE FROM locker WHERE lokasi = @lokasi")
-        db.Bind("lokasi", "text", lokasi)
-
-        Return db.Execute()
-    End Function
-
     Public Function InsertNewLocker(ukuran As String, lokasi As String) As Integer
         Dim locationId = NextIndexLocation(lokasi)
         db.Query("INSERT INTO locker(id_ukuran, lokasi) VALUES (@id_ukuran, @lokasi)")
@@ -65,6 +58,13 @@ Public Class Locker_model
         Return db.Execute()
     End Function
 
+    Public Function DeleteLockerByLocation(lokasi As String) As Integer
+        db.Query("DELETE FROM locker WHERE lokasi = @lokasi")
+        db.Bind("lokasi", "text", lokasi)
+
+        Return db.Execute()
+    End Function
+
     Public Function GetLockerStatus(lokasi As String) As String
         db.Query("SELECT status FROM locker WHERE lokasi = @lokasi")
         db.Bind("lokasi", "text", lokasi)
@@ -80,8 +80,7 @@ Public Class Locker_model
         Return db.Execute()
     End Function
 
-    Public Function GetLokerCost(ukuran As String) As Integer
-
+    Private Function GetLokerCost(ukuran As String) As Integer
         db.Query("SELECT biaya FROM jenis_ukuran WHERE ukuran = @ukuran")
         db.Bind("ukuran", "text", ukuran)
 
@@ -89,8 +88,7 @@ Public Class Locker_model
         Return db.Fetch()(0)(0)
     End Function
 
-
-    Public Function GetLockerTypeId(ukuran As String) As Integer
+    Private Function GetLockerTypeId(ukuran As String) As Integer
         db.Query("SELECT id FROM jenis_ukuran WHERE ukuran = @ukuran")
         db.Bind("ukuran", "text", ukuran)
 
@@ -102,8 +100,9 @@ Public Class Locker_model
         End If
     End Function
 
-    Public Function InsertNewLockerType(ukuran As String, biaya As Integer, info_ket As String) As Integer
-        db.Query("INSERT INTO jenis_ukuran VALUES ('', @ukuran, @biaya, @info_ket)")
+    Private Function InsertNewLockerType(ukuran As String, biaya As Integer, info_ket As String) As Integer
+        db.Query("INSERT INTO jenis_ukuran (ukuran, biaya, info_ket) 
+                              VALUES (@ukuran, @biaya, @info_ket)")
 
         db.Bind("ukuran", "text", ukuran)
         db.Bind("biaya", "number", biaya)
@@ -112,7 +111,6 @@ Public Class Locker_model
         Return db.Execute()
     End Function
 
-    'Insert Data
     Public Function ValidateFormAddLockerType(ukuran As String, biaya As Integer, infoKet As String) As Boolean
         MessageBox.Show(ukuran)
         If GetLockerTypeId(ukuran) Then
@@ -126,15 +124,14 @@ Public Class Locker_model
         End If
     End Function
 
-    Public Function FetchAllLockerTypes()
+    Public Function FetchAllLockerTypes() As DataTable
         db.Query("SELECT ukuran AS 'Ukuran Locker', 
                   biaya AS 'Biaya Loker', info_ket AS 'Info Keterangan' 
                   FROM jenis_ukuran")
         Return db.Fetch()
     End Function
 
-    'Update Data
-    Public Function UpdateLockerType(ukuran As String, biaya As Integer, infoKet As String, ukuranLama As String) As Integer
+    Private Function UpdateLockerType(ukuran As String, biaya As Integer, infoKet As String, ukuranLama As String) As Integer
         Dim lockerId = GetLockerTypeId(ukuranLama)
 
         db.Query("UPDATE jenis_ukuran SET ukuran = @ukuran, 
@@ -156,7 +153,6 @@ Public Class Locker_model
         End If
     End Function
 
-    'Delete Data
     Public Function DeleteLockerTypeBySize(ukuran As String) As Integer
         db.Query("DELETE FROM jenis_ukuran WHERE ukuran = @ukuran")
 

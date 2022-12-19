@@ -10,16 +10,7 @@ Public Class User_model
         db = New Database()
     End Sub
 
-    Public Function GetAllUserAsDataTable() As DataTable
-        db.Query("SELECT * FROM users")
-
-        Dim list_user As New DataTable
-        list_user.Load(db.Fetch())
-
-        Return list_user
-    End Function
-
-    Public Function InsertNewUser(username As String, email As String, password As String) As Integer
+    Private Function InsertNewUser(username As String, email As String, password As String) As Integer
         db.Query("INSERT INTO users VALUES ('',@username, @email, @password)")
 
         db.Bind("username", "text", username)
@@ -29,7 +20,7 @@ Public Class User_model
         Return db.Execute()
     End Function
 
-    Public Function IsEmail(email As String) As Boolean
+    Private Function IsEmail(email As String) As Boolean
         Try
             Dim address = New MailAddress(email)
             Return True
@@ -38,7 +29,7 @@ Public Class User_model
         End Try
     End Function
 
-    Public Function IsNameOrEmailExist(ByVal username As String, ByVal email As String) As Boolean
+    Private Function IsNameOrEmailExist(username As String, email As String) As Boolean
         db.Query("SELECT * FROM users WHERE username = @username OR email = @email")
 
         db.Bind("username", "text", username)
@@ -52,7 +43,7 @@ Public Class User_model
         End If
     End Function
 
-    Public Function EncryptPassword(password As String) As String
+    Private Function EncryptPassword(password As String) As String
         Dim bytes = New SHA256Managed().ComputeHash(UTF8.GetBytes(password))
 
         Dim stringBuilder As New StringBuilder()
@@ -63,7 +54,6 @@ Public Class User_model
 
         Return stringBuilder.ToString()
     End Function
-
 
     Public Function ValidateLogin(umail As String, password As String) As Boolean
         db.Query("SELECT * FROM users WHERE 
@@ -90,6 +80,11 @@ Public Class User_model
         'Cek jika konfirmasi password tidak sama
         If Not password = passwordConfirmation Then
             Signup.SetFlashMessage("Gagal! Password konfirmasi tidak sama")
+            Return False
+        End If
+
+        If Not IsEmail(email) Then
+            Signup.SetFlashMessage("Gagal! Email tidak valid")
             Return False
         End If
 
