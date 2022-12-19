@@ -34,47 +34,58 @@ Partial Class HapusLocker
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.GhostWhite
-        Me.Label1.Location = New System.Drawing.Point(12, 90)
+        Me.Label1.BackColor = System.Drawing.Color.White
+        Me.Label1.Font = New System.Drawing.Font("Inter", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Black
+        Me.Label1.Location = New System.Drawing.Point(36, 119)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(298, 18)
+        Me.Label1.Size = New System.Drawing.Size(357, 21)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Apakah anda Ingin menghapus locker ?"
+        Me.Label1.Text = "Apakah anda Ingin menghapus loker ini?"
         '
         'LBNamaLoker
         '
         Me.LBNamaLoker.AutoSize = True
-        Me.LBNamaLoker.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LBNamaLoker.ForeColor = System.Drawing.SystemColors.HighlightText
-        Me.LBNamaLoker.Location = New System.Drawing.Point(100, 141)
+        Me.LBNamaLoker.Font = New System.Drawing.Font("Inter", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LBNamaLoker.ForeColor = System.Drawing.Color.Black
+        Me.LBNamaLoker.Location = New System.Drawing.Point(185, 172)
+        Me.LBNamaLoker.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LBNamaLoker.Name = "LBNamaLoker"
-        Me.LBNamaLoker.Size = New System.Drawing.Size(97, 20)
+        Me.LBNamaLoker.Size = New System.Drawing.Size(43, 24)
         Me.LBNamaLoker.TabIndex = 1
-        Me.LBNamaLoker.Text = "Nama locker"
+        Me.LBNamaLoker.Text = "X-X"
         '
         'BTNHapus
         '
-        Me.BTNHapus.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(136, Byte), Integer))
-        Me.BTNHapus.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTNHapus.BackColor = System.Drawing.Color.Black
+        Me.BTNHapus.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BTNHapus.FlatAppearance.BorderSize = 0
+        Me.BTNHapus.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BTNHapus.Font = New System.Drawing.Font("Inter", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BTNHapus.ForeColor = System.Drawing.SystemColors.HighlightText
-        Me.BTNHapus.Location = New System.Drawing.Point(193, 201)
+        Me.BTNHapus.Location = New System.Drawing.Point(227, 247)
+        Me.BTNHapus.Margin = New System.Windows.Forms.Padding(4)
         Me.BTNHapus.Name = "BTNHapus"
-        Me.BTNHapus.Size = New System.Drawing.Size(83, 30)
+        Me.BTNHapus.Size = New System.Drawing.Size(111, 37)
         Me.BTNHapus.TabIndex = 2
-        Me.BTNHapus.Text = "Hapus"
+        Me.BTNHapus.Text = "HAPUS"
         Me.BTNHapus.UseVisualStyleBackColor = False
         '
         'BTNKembali
         '
-        Me.BTNKembali.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(136, Byte), Integer))
-        Me.BTNKembali.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTNKembali.ForeColor = System.Drawing.SystemColors.HighlightText
-        Me.BTNKembali.Location = New System.Drawing.Point(35, 201)
+        Me.BTNKembali.BackColor = System.Drawing.Color.White
+        Me.BTNKembali.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BTNKembali.FlatAppearance.BorderSize = 2
+        Me.BTNKembali.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BTNKembali.Font = New System.Drawing.Font("Inter", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTNKembali.ForeColor = System.Drawing.Color.Black
+        Me.BTNKembali.Location = New System.Drawing.Point(80, 247)
+        Me.BTNKembali.Margin = New System.Windows.Forms.Padding(4)
         Me.BTNKembali.Name = "BTNKembali"
-        Me.BTNKembali.Size = New System.Drawing.Size(83, 30)
+        Me.BTNKembali.Size = New System.Drawing.Size(111, 37)
         Me.BTNKembali.TabIndex = 3
-        Me.BTNKembali.Text = "Kembali"
+        Me.BTNKembali.Text = "KEMBALI"
         Me.BTNKembali.UseVisualStyleBackColor = False
         '
         'Panel1
@@ -82,32 +93,35 @@ Partial Class HapusLocker
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(136, Byte), Integer))
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(317, 58)
+        Me.Panel1.Size = New System.Drawing.Size(423, 71)
         Me.Panel1.TabIndex = 12
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Tahoma", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Inter", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label2.Location = New System.Drawing.Point(84, 19)
+        Me.Label2.Location = New System.Drawing.Point(86, 19)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(146, 24)
+        Me.Label2.Size = New System.Drawing.Size(225, 36)
         Me.Label2.TabIndex = 0
-        Me.Label2.Text = "Hapus Locker"
+        Me.Label2.Text = "HAPUS LOKER"
         '
         'HapusLocker
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(317, 255)
+        Me.BackColor = System.Drawing.Color.White
+        Me.ClientSize = New System.Drawing.Size(423, 314)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.BTNKembali)
         Me.Controls.Add(Me.BTNHapus)
         Me.Controls.Add(Me.LBNamaLoker)
         Me.Controls.Add(Me.Label1)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "HapusLocker"
         Me.Text = "HapusLocker"
         Me.Panel1.ResumeLayout(False)

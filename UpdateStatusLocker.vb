@@ -35,4 +35,5 @@
             MonitorLocker.ReloadDataGridLocker()
         End If
     End Sub
+
 End Class

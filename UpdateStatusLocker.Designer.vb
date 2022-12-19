@@ -34,13 +34,16 @@ Partial Class UpdateStatusLocker
         '
         'GBstatus
         '
+        Me.GBstatus.BackColor = System.Drawing.Color.Transparent
         Me.GBstatus.Controls.Add(Me.RBKosong)
         Me.GBstatus.Controls.Add(Me.RBTerisi)
-        Me.GBstatus.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GBstatus.ForeColor = System.Drawing.Color.GhostWhite
-        Me.GBstatus.Location = New System.Drawing.Point(48, 77)
+        Me.GBstatus.Font = New System.Drawing.Font("Inter", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GBstatus.ForeColor = System.Drawing.Color.Black
+        Me.GBstatus.Location = New System.Drawing.Point(48, 92)
+        Me.GBstatus.Margin = New System.Windows.Forms.Padding(4)
         Me.GBstatus.Name = "GBstatus"
-        Me.GBstatus.Size = New System.Drawing.Size(222, 97)
+        Me.GBstatus.Padding = New System.Windows.Forms.Padding(4)
+        Me.GBstatus.Size = New System.Drawing.Size(206, 119)
         Me.GBstatus.TabIndex = 1
         Me.GBstatus.TabStop = False
         Me.GBstatus.Text = "Status"
@@ -48,9 +51,12 @@ Partial Class UpdateStatusLocker
         'RBKosong
         '
         Me.RBKosong.AutoSize = True
-        Me.RBKosong.Location = New System.Drawing.Point(40, 59)
+        Me.RBKosong.Font = New System.Drawing.Font("Inter", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RBKosong.ForeColor = System.Drawing.Color.Black
+        Me.RBKosong.Location = New System.Drawing.Point(16, 73)
+        Me.RBKosong.Margin = New System.Windows.Forms.Padding(4)
         Me.RBKosong.Name = "RBKosong"
-        Me.RBKosong.Size = New System.Drawing.Size(80, 22)
+        Me.RBKosong.Size = New System.Drawing.Size(95, 25)
         Me.RBKosong.TabIndex = 1
         Me.RBKosong.TabStop = True
         Me.RBKosong.Text = "Kosong"
@@ -59,9 +65,12 @@ Partial Class UpdateStatusLocker
         'RBTerisi
         '
         Me.RBTerisi.AutoSize = True
-        Me.RBTerisi.Location = New System.Drawing.Point(40, 28)
+        Me.RBTerisi.Font = New System.Drawing.Font("Inter", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RBTerisi.ForeColor = System.Drawing.Color.Black
+        Me.RBTerisi.Location = New System.Drawing.Point(16, 34)
+        Me.RBTerisi.Margin = New System.Windows.Forms.Padding(4)
         Me.RBTerisi.Name = "RBTerisi"
-        Me.RBTerisi.Size = New System.Drawing.Size(69, 22)
+        Me.RBTerisi.Size = New System.Drawing.Size(76, 25)
         Me.RBTerisi.TabIndex = 0
         Me.RBTerisi.TabStop = True
         Me.RBTerisi.Text = "Terisi"
@@ -69,15 +78,18 @@ Partial Class UpdateStatusLocker
         '
         'BTNSimpan
         '
-        Me.BTNSimpan.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(136, Byte), Integer))
-        Me.BTNSimpan.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTNSimpan.BackColor = System.Drawing.Color.Black
+        Me.BTNSimpan.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BTNSimpan.FlatAppearance.BorderSize = 0
+        Me.BTNSimpan.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BTNSimpan.Font = New System.Drawing.Font("Inter", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BTNSimpan.ForeColor = System.Drawing.SystemColors.HighlightText
-        Me.BTNSimpan.Location = New System.Drawing.Point(198, 195)
-        Me.BTNSimpan.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.BTNSimpan.Location = New System.Drawing.Point(158, 226)
+        Me.BTNSimpan.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BTNSimpan.Name = "BTNSimpan"
-        Me.BTNSimpan.Size = New System.Drawing.Size(72, 25)
+        Me.BTNSimpan.Size = New System.Drawing.Size(96, 37)
         Me.BTNSimpan.TabIndex = 2
-        Me.BTNSimpan.Text = "Simpan"
+        Me.BTNSimpan.Text = "SIMPAN"
         Me.BTNSimpan.UseVisualStyleBackColor = False
         '
         'Panel1
@@ -85,30 +97,33 @@ Partial Class UpdateStatusLocker
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(136, Byte), Integer))
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(317, 58)
+        Me.Panel1.Size = New System.Drawing.Size(423, 71)
         Me.Panel1.TabIndex = 13
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Tahoma", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Inter", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label2.Location = New System.Drawing.Point(84, 19)
+        Me.Label2.Location = New System.Drawing.Point(55, 24)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(156, 24)
+        Me.Label2.Size = New System.Drawing.Size(199, 30)
         Me.Label2.TabIndex = 0
-        Me.Label2.Text = "Update Locker"
+        Me.Label2.Text = "STATUS LOKER"
         '
         'UpdateStatusLocker
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(317, 231)
+        Me.BackColor = System.Drawing.Color.White
+        Me.ClientSize = New System.Drawing.Size(307, 284)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.BTNSimpan)
         Me.Controls.Add(Me.GBstatus)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "UpdateStatusLocker"
         Me.Text = "UpdateStatusLocker"
         Me.GBstatus.ResumeLayout(False)
