@@ -1,4 +1,10 @@
-﻿Public Class FormJenisLocker
+﻿Imports Org.BouncyCastle.Asn1
+
+Public Class FormJenisLocker
+
+    Private ukuran As String
+    Private biaya As Integer
+    Private info_ket As String
 
     Public Shared jenisLocker As JLocker_Model
 
@@ -15,6 +21,34 @@
         jenisLocker = New JLocker_Model
         ReloadDataTableDatabase()
     End Sub
+
+    'Getter & Setter untuk Ukuran dan Biaya
+    Public Property GSUkuran() As String
+        Get
+            Return ukuran
+        End Get
+        Set(ByVal value As String)
+            ukuran = value
+        End Set
+    End Property
+
+    Public Property GSBBiaya() As Integer
+        Get
+            Return biaya
+        End Get
+        Set(ByVal value As Integer)
+            biaya = value
+        End Set
+    End Property
+
+    Public Property GSInfo_Ket() As String
+        Get
+            Return info_ket
+        End Get
+        Set(ByVal value As String)
+            info_ket = value
+        End Set
+    End Property
 
     Private Sub ReloadDataTableDatabase()
         DataKoleksiJenisLocker.DataSource = jenisLocker.FetchAllDataLeckerTypes()
@@ -36,16 +70,18 @@
     End Sub
 
     Private Sub BtnUpdate_Click(sender As Object, e As EventArgs) Handles BtnUpdate.Click
-        jenisLocker.UkuranJenisLockerProperty = selectedRow.Cells(1).Value
-        jenisLocker.BiayaJenisLockerProperty = selectedRow.Cells(2).Value
+        GSUkuran = selectedRow.Cells(1).Value
+        GSBBiaya = selectedRow.Cells(2).Value
+        GSInfo_Ket = selectedRow.Cells(3).Value
 
         UpdateJenisLocker.Show()
         Me.Hide()
     End Sub
 
     Private Sub BtnDelete_Click(sender As Object, e As EventArgs) Handles BtnDelete.Click
-        jenisLocker.UkuranJenisLockerProperty = selectedRow.Cells(1).Value
-        jenisLocker.BiayaJenisLockerProperty = selectedRow.Cells(2).Value
+        GSUkuran = selectedRow.Cells(1).Value
+        GSBBiaya = selectedRow.Cells(2).Value
+        GSInfo_Ket = selectedRow.Cells(3).Value
 
         HapusJenisLocker.Show()
         Me.Hide()

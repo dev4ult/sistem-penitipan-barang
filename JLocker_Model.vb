@@ -1,42 +1,9 @@
 ﻿Public Class JLocker_Model
-
-    Private ukuran As String
-    Private biaya As Integer
-    Private info_ket As String
-
     Private db As Database
 
     Public Sub New()
         db = New Database()
     End Sub
-
-    'Getter & Setter untuk Ukuran dan Biaya
-    Public Property GSUkuran() As String
-        Get
-            Return ukuran
-        End Get
-        Set(ByVal value As String)
-            ukuran = value
-        End Set
-    End Property
-
-    Public Property GSBBiaya() As Integer
-        Get
-            Return biaya
-        End Get
-        Set(ByVal value As Integer)
-            biaya = value
-        End Set
-    End Property
-
-    Public Property GSInfo_Ket() As String
-        Get
-            Return info_ket
-        End Get
-        Set(ByVal value As String)
-            info_ket = value
-        End Set
-    End Property
 
     Public Function IsLockerTypeExist(ukuran As String) As String
         db.Query("SELECT ukuran WHERE ukuran = @ukuran")
