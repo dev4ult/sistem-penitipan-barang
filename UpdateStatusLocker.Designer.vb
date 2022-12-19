@@ -22,34 +22,25 @@ Partial Class UpdateStatusLocker
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.GBstatus = New System.Windows.Forms.GroupBox()
         Me.RBKosong = New System.Windows.Forms.RadioButton()
         Me.RBTerisi = New System.Windows.Forms.RadioButton()
         Me.BTNSimpan = New System.Windows.Forms.Button()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.GBstatus.SuspendLayout()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(132, 41)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(102, 31)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Locker"
         '
         'GBstatus
         '
         Me.GBstatus.Controls.Add(Me.RBKosong)
         Me.GBstatus.Controls.Add(Me.RBTerisi)
-        Me.GBstatus.Location = New System.Drawing.Point(43, 90)
-        Me.GBstatus.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GBstatus.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GBstatus.ForeColor = System.Drawing.Color.GhostWhite
+        Me.GBstatus.Location = New System.Drawing.Point(48, 77)
         Me.GBstatus.Name = "GBstatus"
-        Me.GBstatus.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.GBstatus.Size = New System.Drawing.Size(296, 96)
+        Me.GBstatus.Size = New System.Drawing.Size(222, 97)
         Me.GBstatus.TabIndex = 1
         Me.GBstatus.TabStop = False
         Me.GBstatus.Text = "Status"
@@ -57,10 +48,9 @@ Partial Class UpdateStatusLocker
         'RBKosong
         '
         Me.RBKosong.AutoSize = True
-        Me.RBKosong.Location = New System.Drawing.Point(63, 59)
-        Me.RBKosong.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.RBKosong.Location = New System.Drawing.Point(40, 59)
         Me.RBKosong.Name = "RBKosong"
-        Me.RBKosong.Size = New System.Drawing.Size(74, 20)
+        Me.RBKosong.Size = New System.Drawing.Size(80, 22)
         Me.RBKosong.TabIndex = 1
         Me.RBKosong.TabStop = True
         Me.RBKosong.Text = "Kosong"
@@ -69,10 +59,9 @@ Partial Class UpdateStatusLocker
         'RBTerisi
         '
         Me.RBTerisi.AutoSize = True
-        Me.RBTerisi.Location = New System.Drawing.Point(63, 27)
-        Me.RBTerisi.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.RBTerisi.Location = New System.Drawing.Point(40, 28)
         Me.RBTerisi.Name = "RBTerisi"
-        Me.RBTerisi.Size = New System.Drawing.Size(62, 20)
+        Me.RBTerisi.Size = New System.Drawing.Size(69, 22)
         Me.RBTerisi.TabIndex = 0
         Me.RBTerisi.TabStop = True
         Me.RBTerisi.Text = "Terisi"
@@ -80,34 +69,59 @@ Partial Class UpdateStatusLocker
         '
         'BTNSimpan
         '
-        Me.BTNSimpan.Location = New System.Drawing.Point(264, 193)
+        Me.BTNSimpan.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(136, Byte), Integer))
+        Me.BTNSimpan.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTNSimpan.ForeColor = System.Drawing.SystemColors.HighlightText
+        Me.BTNSimpan.Location = New System.Drawing.Point(198, 195)
+        Me.BTNSimpan.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.BTNSimpan.Name = "BTNSimpan"
-        Me.BTNSimpan.Size = New System.Drawing.Size(75, 23)
+        Me.BTNSimpan.Size = New System.Drawing.Size(72, 25)
         Me.BTNSimpan.TabIndex = 2
         Me.BTNSimpan.Text = "Simpan"
-        Me.BTNSimpan.UseVisualStyleBackColor = True
+        Me.BTNSimpan.UseVisualStyleBackColor = False
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(177, Byte), Integer), CType(CType(136, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(317, 58)
+        Me.Panel1.TabIndex = 13
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Tahoma", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label2.Location = New System.Drawing.Point(84, 19)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(156, 24)
+        Me.Label2.TabIndex = 0
+        Me.Label2.Text = "Update Locker"
         '
         'UpdateStatusLocker
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(381, 225)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(49, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(317, 231)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.BTNSimpan)
         Me.Controls.Add(Me.GBstatus)
-        Me.Controls.Add(Me.Label1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "UpdateStatusLocker"
         Me.Text = "UpdateStatusLocker"
         Me.GBstatus.ResumeLayout(False)
         Me.GBstatus.PerformLayout()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents Label1 As Label
     Friend WithEvents GBstatus As GroupBox
     Friend WithEvents RBKosong As RadioButton
     Friend WithEvents RBTerisi As RadioButton
     Friend WithEvents BTNSimpan As Button
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Label2 As Label
 End Class
