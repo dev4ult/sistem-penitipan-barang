@@ -2,6 +2,7 @@
 
     Private ukuran As String
     Private biaya As Integer
+    Private info_ket As String
 
     Private db As Database
 
@@ -10,7 +11,7 @@
     End Sub
 
     'Getter & Setter untuk Ukuran dan Biaya
-    Public Property UkuranJenisLockerProperty() As String
+    Public Property GSUkuran() As String
         Get
             Return ukuran
         End Get
@@ -19,12 +20,21 @@
         End Set
     End Property
 
-    Public Property BiayaJenisLockerProperty() As Integer
+    Public Property GSBBiaya() As Integer
         Get
             Return biaya
         End Get
         Set(ByVal value As Integer)
             biaya = value
+        End Set
+    End Property
+
+    Public Property GSInfo_Ket() As String
+        Get
+            Return info_ket
+        End Get
+        Set(ByVal value As String)
+            info_ket = value
         End Set
     End Property
 
@@ -41,6 +51,7 @@
 
         db.Bind("ukuran", "text", Ukuran)
         db.Bind("biaya", "number", Biaya)
+        db.Bind("info_ket", "text", info_ket)
 
         Return db.Execute()
     End Function
