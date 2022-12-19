@@ -35,9 +35,12 @@ Partial Class FormJenisLocker
         '
         'DataKoleksiJenisLocker
         '
+        Me.DataKoleksiJenisLocker.AllowUserToAddRows = False
+        Me.DataKoleksiJenisLocker.AllowUserToDeleteRows = False
         Me.DataKoleksiJenisLocker.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataKoleksiJenisLocker.Location = New System.Drawing.Point(26, 58)
         Me.DataKoleksiJenisLocker.Name = "DataKoleksiJenisLocker"
+        Me.DataKoleksiJenisLocker.ReadOnly = True
         Me.DataKoleksiJenisLocker.Size = New System.Drawing.Size(344, 380)
         Me.DataKoleksiJenisLocker.TabIndex = 0
         '
