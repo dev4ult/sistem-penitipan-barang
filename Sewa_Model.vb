@@ -2,6 +2,7 @@
     Private stmt As String
     Private result As New List(Of String)
     Private db As Database
+    Private statusLocker As String = "Terisi"
 
     Public Sub New()
         db = New Database()
@@ -67,9 +68,9 @@
 
         stmt = "INSERT INTO 
                 penyewaan (id_locker, tanggal_sewa, bayar_sebelum_pinjam, 
-                           rencana_pinjam, kelebihan_pinjam, total_bayar) 
+                           rencana_pinjam, kelebihan_pinjam, total_bayar, ketUser) 
                 VALUES (@id_locker, @tanggal_sewa, @bayar_sebelum_pinjam, 
-                        @rencana_pinjam, @kelebihan_pinjam, @total_bayar)"
+                        @rencana_pinjam, @kelebihan_pinjam, @total_bayar, @ket_User)"
 
         db.Query(stmt)
 
@@ -81,12 +82,13 @@
         db.Bind("rencana_pinjam", "number", lamaSewa)
         db.Bind("kelebihan_pinjam", "number", 0)
         db.Bind("total_bayar", "number", totalBiaya)
+        db.Bind("ket_User", "text", keterangan)
 
         Return db.Execute()
     End Function
 
     Public Function ValidateNewRentData(lokasi As String, lamaSewa As Integer, waktuBayar As String,
-                                         totalBiaya As String, keterangan As String) As Boolean
+                                         totalBiaya As String, keterangan As String, statusLocker As String) As Boolean
         If lokasi = "" Then
             MessageBox.Show("Pilih lokasi loker terlebih dahulu")
             Return False
@@ -98,7 +100,7 @@
         End If
 
         If InsertNewRentHistory(lokasi, lamaSewa, waktuBayar,
-                                totalBiaya, keterangan) And updateStatusLockerWhenInsert(lokasi) Then
+                                totalBiaya, keterangan) And updateStatusLocker(lokasi, statusLocker) Then
             Return True
         Else
             MessageBox.Show("Terjadi kesalahan, silahkan input ulang")
@@ -106,15 +108,58 @@
         End If
     End Function
 
-    Public Function updateStatusLockerWhenInsert(lokasi) As Integer
+    Public Function updateStatusLocker(lokasi As String, status As String) As Integer
         Dim idLocker = GetLockerId(lokasi)
         Console.WriteLine(idLocker)
 
-        stmt = "UPDATE locker SET status = 'Terisi'
+        stmt = "UPDATE locker SET status = @status
                 WHERE id=@idloker"
         db.Query(stmt)
         db.Bind("idloker", "number", idLocker)
+        db.Bind("status", "text", status)
 
         Return db.Execute()
     End Function
+
+
+    Public Function getAllRentData()
+        stmt = "SELECT locker.lokasi as 'Nama Loker', 
+                tanggal_sewa as 'Tanggal Sewa', 
+                CASE WHEN tanggal_kembali IS NULL THEN 'Belum diambil' 
+                WHEN tanggal_kembali IS NOT NULL THEN tanggal_kembali
+                END AS 'Tanggal Kembali', 
+                bayar_sebelum_pinjam as 'Bayar Saat Sewa', 
+                rencana_pinjam as 'Jumlah Hari Sewa', 
+                kelebihan_pinjam as 'Telat Hari', 
+                CASE WHEN kelebihan_pinjam > 0 THEN total_bayar + 10 * kelebihan_pinjam 
+                ELSE total_bayar 
+                END AS 'Total Bayar', 
+                ketUser AS 'Keterangan Pengguna' 
+                FROM penyewaan 
+                JOIN locker ON penyewaan.id_locker = locker.id;"
+        db.Query(stmt)
+
+        Return db.Fetch()
+    End Function
+
+
+    Public Function removeRentData(lockerName As String)
+        Dim idLocker = GetLockerId(lockerName)
+        stmt = "DELETE FROM penyewaan 
+                WHERE id_locker = @locker"
+        db.Query(stmt)
+        db.Bind("locker", "number", idLocker)
+        Return db.Execute()
+    End Function
+
+
+    'GETTER DAN SETTER
+    Public Property GS_Status_Locker() As String
+        Get
+            Return statusLocker
+        End Get
+        Set(value As String)
+            statusLocker = value
+        End Set
+    End Property
 End Class
