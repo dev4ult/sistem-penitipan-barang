@@ -19,7 +19,6 @@ Public Class Database
         cmd.Connection = conn
         conn.Open()
     End Sub
-
     Public Sub Query(query As String)
         Open()
         queryString = query
@@ -67,4 +66,5 @@ Public Class Database
 
         Return dataTable
     End Function
+
 End Class
