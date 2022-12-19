@@ -49,11 +49,7 @@
         db.Query("SELECT ukuran, biaya FROM jenis_ukuran WHERE id = @id")
         db.Bind("id", "number", id)
 
-        If db.Fetch().Rows.Count > 0 Then
-            Return True
-        Else
-            Return False
-        End If
+        Return db.Fetch()
     End Function
 
     'Update Data
