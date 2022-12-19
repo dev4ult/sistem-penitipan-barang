@@ -6,7 +6,7 @@ Public Class FormJenisLocker
     Private biaya As Integer
     Private info_ket As String
 
-    Public Shared jenisLocker As JLocker_Model
+    Public Shared JLocker_Model As JLocker_Model
 
     Dim selectedRow As DataGridViewRow
     Public Shared selectedTableKoleksi
@@ -18,7 +18,7 @@ Public Class FormJenisLocker
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-        jenisLocker = New JLocker_Model
+        JLocker_Model = New JLocker_Model
         ReloadDataTableDatabase()
     End Sub
 
@@ -32,7 +32,7 @@ Public Class FormJenisLocker
         End Set
     End Property
 
-    Public Property GSBBiaya() As Integer
+    Public Property GSBiaya() As Integer
         Get
             Return biaya
         End Get
