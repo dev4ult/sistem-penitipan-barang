@@ -1,6 +1,6 @@
 ﻿Public Class FormJenisLocker
 
-    Public Shared jenisLocker As Jenis_Locker
+    Public Shared jenisLocker As JLocker_Model
 
     Dim selectedRow As DataGridViewRow
     Public Shared selectedTableKoleksi
@@ -12,16 +12,12 @@
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-        jenisLocker = New Jenis_Locker
-        ReloadDataTableDatabase()
-    End Sub
-
-    Private Sub FormJenisLocker_Activated(sender As Object, e As EventArgs) Handles Me.Activated
+        jenisLocker = New JLocker_Model
         ReloadDataTableDatabase()
     End Sub
 
     Private Sub ReloadDataTableDatabase()
-        DataKoleksiJenisLocker.DataSource = jenisLocker.GetDataJenisLocker()
+        DataKoleksiJenisLocker.DataSource = jenisLocker.FetchAllDataLeckerTypes()
     End Sub
 
     Private Sub DataKoleksiJenisLocker_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataKoleksiJenisLocker.CellClick
