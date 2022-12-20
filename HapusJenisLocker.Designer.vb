@@ -31,14 +31,11 @@ Partial Class HapusJenisLocker
         Me.BtnDelete = New System.Windows.Forms.Button()
         Me.LbValueInfoKet = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-<<<<<<< HEAD
-=======
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
->>>>>>> origin/form-jenis-locker
         Me.SuspendLayout()
         '
         'LblHapusJenisLocker
@@ -46,30 +43,16 @@ Partial Class HapusJenisLocker
         Me.LblHapusJenisLocker.BackColor = System.Drawing.Color.Black
         Me.LblHapusJenisLocker.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.LblHapusJenisLocker.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-<<<<<<< HEAD
-        Me.LblHapusJenisLocker.Location = New System.Drawing.Point(16, 26)
-        Me.LblHapusJenisLocker.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblHapusJenisLocker.Name = "LblHapusJenisLocker"
-        Me.LblHapusJenisLocker.Size = New System.Drawing.Size(447, 32)
-=======
         Me.LblHapusJenisLocker.ForeColor = System.Drawing.Color.White
         Me.LblHapusJenisLocker.Location = New System.Drawing.Point(-1, 0)
         Me.LblHapusJenisLocker.Name = "LblHapusJenisLocker"
         Me.LblHapusJenisLocker.Size = New System.Drawing.Size(410, 52)
->>>>>>> origin/form-jenis-locker
         Me.LblHapusJenisLocker.TabIndex = 12
         Me.LblHapusJenisLocker.Text = "HAPUS JENIS LOKER"
         Me.LblHapusJenisLocker.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'BtnClose
         '
-<<<<<<< HEAD
-        Me.BtnClose.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnClose.Location = New System.Drawing.Point(144, 344)
-        Me.BtnClose.Margin = New System.Windows.Forms.Padding(4)
-        Me.BtnClose.Name = "BtnClose"
-        Me.BtnClose.Size = New System.Drawing.Size(184, 43)
-=======
         Me.BtnClose.BackColor = System.Drawing.Color.White
         Me.BtnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnClose.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -77,7 +60,6 @@ Partial Class HapusJenisLocker
         Me.BtnClose.Location = New System.Drawing.Point(299, 273)
         Me.BtnClose.Name = "BtnClose"
         Me.BtnClose.Size = New System.Drawing.Size(91, 35)
->>>>>>> origin/form-jenis-locker
         Me.BtnClose.TabIndex = 19
         Me.BtnClose.Text = "BATAL"
         Me.BtnClose.UseVisualStyleBackColor = False
@@ -85,16 +67,9 @@ Partial Class HapusJenisLocker
         'LblUkuran
         '
         Me.LblUkuran.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-<<<<<<< HEAD
-        Me.LblUkuran.Location = New System.Drawing.Point(16, 105)
-        Me.LblUkuran.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblUkuran.Name = "LblUkuran"
-        Me.LblUkuran.Size = New System.Drawing.Size(111, 32)
-=======
         Me.LblUkuran.Location = New System.Drawing.Point(18, 11)
         Me.LblUkuran.Name = "LblUkuran"
         Me.LblUkuran.Size = New System.Drawing.Size(102, 26)
->>>>>>> origin/form-jenis-locker
         Me.LblUkuran.TabIndex = 20
         Me.LblUkuran.Text = "Ukuran         : "
         Me.LblUkuran.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -102,16 +77,9 @@ Partial Class HapusJenisLocker
         'LblBiaya
         '
         Me.LblBiaya.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-<<<<<<< HEAD
-        Me.LblBiaya.Location = New System.Drawing.Point(16, 170)
-        Me.LblBiaya.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LblBiaya.Name = "LblBiaya"
-        Me.LblBiaya.Size = New System.Drawing.Size(111, 32)
-=======
         Me.LblBiaya.Location = New System.Drawing.Point(18, 47)
         Me.LblBiaya.Name = "LblBiaya"
         Me.LblBiaya.Size = New System.Drawing.Size(103, 26)
->>>>>>> origin/form-jenis-locker
         Me.LblBiaya.TabIndex = 21
         Me.LblBiaya.Text = "Biaya            : "
         Me.LblBiaya.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -119,50 +87,25 @@ Partial Class HapusJenisLocker
         'LbValueUkuran
         '
         Me.LbValueUkuran.Font = New System.Drawing.Font("Calibri Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-<<<<<<< HEAD
-        Me.LbValueUkuran.Location = New System.Drawing.Point(140, 105)
-        Me.LbValueUkuran.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LbValueUkuran.Name = "LbValueUkuran"
-        Me.LbValueUkuran.Size = New System.Drawing.Size(323, 32)
-        Me.LbValueUkuran.TabIndex = 22
-        Me.LbValueUkuran.Text = "(Value Ukuran)"
-=======
         Me.LbValueUkuran.Location = New System.Drawing.Point(126, 11)
         Me.LbValueUkuran.Name = "LbValueUkuran"
         Me.LbValueUkuran.Size = New System.Drawing.Size(242, 26)
         Me.LbValueUkuran.TabIndex = 22
         Me.LbValueUkuran.Text = "XXXXX"
->>>>>>> origin/form-jenis-locker
         Me.LbValueUkuran.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'LbValueBiaya
         '
         Me.LbValueBiaya.Font = New System.Drawing.Font("Calibri Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-<<<<<<< HEAD
-        Me.LbValueBiaya.Location = New System.Drawing.Point(140, 170)
-        Me.LbValueBiaya.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.LbValueBiaya.Name = "LbValueBiaya"
-        Me.LbValueBiaya.Size = New System.Drawing.Size(323, 32)
-        Me.LbValueBiaya.TabIndex = 23
-        Me.LbValueBiaya.Text = "(Value Biaya)"
-=======
         Me.LbValueBiaya.Location = New System.Drawing.Point(126, 47)
         Me.LbValueBiaya.Name = "LbValueBiaya"
         Me.LbValueBiaya.Size = New System.Drawing.Size(242, 26)
         Me.LbValueBiaya.TabIndex = 23
         Me.LbValueBiaya.Text = "Rp. XXXXX"
->>>>>>> origin/form-jenis-locker
         Me.LbValueBiaya.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'BtnDelete
         '
-<<<<<<< HEAD
-        Me.BtnDelete.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnDelete.Location = New System.Drawing.Point(144, 293)
-        Me.BtnDelete.Margin = New System.Windows.Forms.Padding(4)
-        Me.BtnDelete.Name = "BtnDelete"
-        Me.BtnDelete.Size = New System.Drawing.Size(184, 43)
-=======
         Me.BtnDelete.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.BtnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnDelete.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -170,7 +113,6 @@ Partial Class HapusJenisLocker
         Me.BtnDelete.Location = New System.Drawing.Point(191, 273)
         Me.BtnDelete.Name = "BtnDelete"
         Me.BtnDelete.Size = New System.Drawing.Size(92, 35)
->>>>>>> origin/form-jenis-locker
         Me.BtnDelete.TabIndex = 24
         Me.BtnDelete.Text = "HAPUS"
         Me.BtnDelete.UseVisualStyleBackColor = False
@@ -258,24 +200,10 @@ Partial Class HapusJenisLocker
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-<<<<<<< HEAD
-        Me.ClientSize = New System.Drawing.Size(479, 400)
-        Me.Controls.Add(Me.LbValueInfoKet)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.BtnDelete)
-        Me.Controls.Add(Me.LbValueBiaya)
-        Me.Controls.Add(Me.LbValueUkuran)
-        Me.Controls.Add(Me.LblBiaya)
-        Me.Controls.Add(Me.LblUkuran)
-        Me.Controls.Add(Me.BtnClose)
-        Me.Controls.Add(Me.LblHapusJenisLocker)
-        Me.Margin = New System.Windows.Forms.Padding(4)
-=======
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(480, 394)
         Me.Controls.Add(Me.Panel2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
->>>>>>> origin/form-jenis-locker
         Me.Name = "HapusJenisLocker"
         Me.Text = "Hapus Jenis Loker"
         Me.Panel1.ResumeLayout(False)
@@ -294,10 +222,7 @@ Partial Class HapusJenisLocker
     Friend WithEvents BtnDelete As Button
     Friend WithEvents LbValueInfoKet As Label
     Friend WithEvents Label2 As Label
-<<<<<<< HEAD
-=======
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents Panel2 As Panel
->>>>>>> origin/form-jenis-locker
 End Class
