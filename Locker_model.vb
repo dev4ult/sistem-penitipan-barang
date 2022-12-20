@@ -1,6 +1,4 @@
-﻿Imports System.Data.Common
-
-Public Class Locker_model
+﻿Public Class Locker_model
     Private db As Database
 
     Public Sub New()

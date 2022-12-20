@@ -12,7 +12,7 @@
 
         LbValueUkuran.Text = FormJenisLocker.GSUkuran()
         LbValueBiaya.Text = "Rp." & FormJenisLocker.GSBiaya()
-        LbValueInfoKet.Text = FormJenisLocker.GSInfoKet()
+        LbValueKeterangan.Text = FormJenisLocker.GSInfoKet()
 
     End Sub
 

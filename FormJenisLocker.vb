@@ -1,7 +1,6 @@
 ﻿Public Class FormJenisLocker
 
-    Private locker_model As Locker_model
-
+    Private locker_model As Locker_Model
     Private ukuran As String
     Private biaya As Integer
     Private infoKet As String
@@ -12,7 +11,7 @@
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-        locker_model = New Locker_model
+        locker_model = New Locker_Model
         ReloadDataTableDatabase()
     End Sub
 
