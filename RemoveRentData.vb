@@ -1,5 +1,6 @@
 ﻿Public Class RemoveRentData
     Private sewa_model As Sewa_model
+    Private tanggalSewa As Date
     Public Sub New()
 
         ' This call is required by the designer.
@@ -12,7 +13,7 @@
     Private Sub BtnRemoveLockerName_Click(sender As Object, e As EventArgs) Handles BtnRemoveLockerName.Click
         sewa_model.GS_Status_Locker = "Kosong"
         Dim status_locker As String = sewa_model.GS_Status_Locker()
-        If sewa_model.removeRentData(LblRemoveLockerName.Text) And sewa_model.updateStatusLocker(LblRemoveLockerName.Text, status_locker) Then
+        If sewa_model.RemoveRentData(LblRemoveLockerName.Text, tanggalSewa) And sewa_model.UpdateStatusLocker(LblRemoveLockerName.Text, status_locker) Then
             MsgBox("Berhasil dihapus", MsgBoxStyle.Information, "Sukses")
             Me.Close()
         Else
@@ -24,4 +25,11 @@
         Me.Close()
         FormDataSewa.Show()
     End Sub
+
+    'Getter dan Setter
+    Public WriteOnly Property SetTanggalSewa() As Date
+        Set(value As Date)
+            tanggalSewa = value
+        End Set
+    End Property
 End Class
