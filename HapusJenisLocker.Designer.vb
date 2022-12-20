@@ -31,115 +31,149 @@ Partial Class HapusJenisLocker
         Me.BtnDelete = New System.Windows.Forms.Button()
         Me.LbValueInfoKet = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'LblHapusJenisLocker
         '
+        Me.LblHapusJenisLocker.BackColor = System.Drawing.Color.Black
+        Me.LblHapusJenisLocker.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.LblHapusJenisLocker.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblHapusJenisLocker.Location = New System.Drawing.Point(12, 21)
+        Me.LblHapusJenisLocker.ForeColor = System.Drawing.Color.White
+        Me.LblHapusJenisLocker.Location = New System.Drawing.Point(29, 20)
         Me.LblHapusJenisLocker.Name = "LblHapusJenisLocker"
-        Me.LblHapusJenisLocker.Size = New System.Drawing.Size(335, 26)
+        Me.LblHapusJenisLocker.Size = New System.Drawing.Size(373, 40)
         Me.LblHapusJenisLocker.TabIndex = 12
-        Me.LblHapusJenisLocker.Text = "Hapus Jenis Locker"
+        Me.LblHapusJenisLocker.Text = "Hapus Jenis Loker"
         Me.LblHapusJenisLocker.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'BtnClose
         '
-        Me.BtnClose.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnClose.Location = New System.Drawing.Point(281, 277)
+        Me.BtnClose.BackColor = System.Drawing.Color.White
+        Me.BtnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnClose.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnClose.ForeColor = System.Drawing.Color.Black
+        Me.BtnClose.Location = New System.Drawing.Point(321, 317)
         Me.BtnClose.Name = "BtnClose"
-        Me.BtnClose.Size = New System.Drawing.Size(138, 35)
+        Me.BtnClose.Size = New System.Drawing.Size(81, 35)
         Me.BtnClose.TabIndex = 19
-        Me.BtnClose.Text = "Kembali"
-        Me.BtnClose.UseVisualStyleBackColor = True
+        Me.BtnClose.Text = "Batal"
+        Me.BtnClose.UseVisualStyleBackColor = False
         '
         'LblUkuran
         '
         Me.LblUkuran.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblUkuran.Location = New System.Drawing.Point(12, 85)
+        Me.LblUkuran.Location = New System.Drawing.Point(18, 11)
         Me.LblUkuran.Name = "LblUkuran"
-        Me.LblUkuran.Size = New System.Drawing.Size(83, 26)
+        Me.LblUkuran.Size = New System.Drawing.Size(102, 26)
         Me.LblUkuran.TabIndex = 20
-        Me.LblUkuran.Text = "Ukuran   : "
+        Me.LblUkuran.Text = "Ukuran         : "
         Me.LblUkuran.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'LblBiaya
         '
         Me.LblBiaya.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblBiaya.Location = New System.Drawing.Point(12, 138)
+        Me.LblBiaya.Location = New System.Drawing.Point(18, 47)
         Me.LblBiaya.Name = "LblBiaya"
-        Me.LblBiaya.Size = New System.Drawing.Size(83, 26)
+        Me.LblBiaya.Size = New System.Drawing.Size(103, 26)
         Me.LblBiaya.TabIndex = 21
-        Me.LblBiaya.Text = "Biaya      : "
+        Me.LblBiaya.Text = "Biaya            : "
         Me.LblBiaya.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'LbValueUkuran
         '
         Me.LbValueUkuran.Font = New System.Drawing.Font("Calibri Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LbValueUkuran.Location = New System.Drawing.Point(177, 85)
+        Me.LbValueUkuran.Location = New System.Drawing.Point(126, 11)
         Me.LbValueUkuran.Name = "LbValueUkuran"
         Me.LbValueUkuran.Size = New System.Drawing.Size(242, 26)
         Me.LbValueUkuran.TabIndex = 22
-        Me.LbValueUkuran.Text = "(Value Ukuran)"
+        Me.LbValueUkuran.Text = "XXXXX"
         Me.LbValueUkuran.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'LbValueBiaya
         '
         Me.LbValueBiaya.Font = New System.Drawing.Font("Calibri Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LbValueBiaya.Location = New System.Drawing.Point(177, 138)
+        Me.LbValueBiaya.Location = New System.Drawing.Point(126, 47)
         Me.LbValueBiaya.Name = "LbValueBiaya"
         Me.LbValueBiaya.Size = New System.Drawing.Size(242, 26)
         Me.LbValueBiaya.TabIndex = 23
-        Me.LbValueBiaya.Text = "(Value Biaya)"
+        Me.LbValueBiaya.Text = "Rp. XXXXX"
         Me.LbValueBiaya.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'BtnDelete
         '
-        Me.BtnDelete.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnDelete.Location = New System.Drawing.Point(137, 277)
+        Me.BtnDelete.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.BtnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnDelete.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnDelete.ForeColor = System.Drawing.Color.White
+        Me.BtnDelete.Location = New System.Drawing.Point(227, 317)
         Me.BtnDelete.Name = "BtnDelete"
-        Me.BtnDelete.Size = New System.Drawing.Size(138, 35)
+        Me.BtnDelete.Size = New System.Drawing.Size(78, 35)
         Me.BtnDelete.TabIndex = 24
         Me.BtnDelete.Text = "Hapus"
-        Me.BtnDelete.UseVisualStyleBackColor = True
+        Me.BtnDelete.UseVisualStyleBackColor = False
         '
         'LbValueInfoKet
         '
         Me.LbValueInfoKet.Font = New System.Drawing.Font("Calibri Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LbValueInfoKet.Location = New System.Drawing.Point(177, 185)
+        Me.LbValueInfoKet.Location = New System.Drawing.Point(126, 84)
         Me.LbValueInfoKet.Name = "LbValueInfoKet"
         Me.LbValueInfoKet.Size = New System.Drawing.Size(242, 26)
         Me.LbValueInfoKet.TabIndex = 26
-        Me.LbValueInfoKet.Text = "(Value Info Keterangan)"
+        Me.LbValueInfoKet.Text = "XXXXX"
         Me.LbValueInfoKet.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Label2
         '
         Me.Label2.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(13, 185)
+        Me.Label2.Location = New System.Drawing.Point(18, 84)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(158, 26)
+        Me.Label2.Size = New System.Drawing.Size(103, 26)
         Me.Label2.TabIndex = 25
-        Me.Label2.Text = "Info Keterangan :"
+        Me.Label2.Text = "Keterangan  :"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Panel1
+        '
+        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.LblUkuran)
+        Me.Panel1.Controls.Add(Me.LbValueInfoKet)
+        Me.Panel1.Controls.Add(Me.LblBiaya)
+        Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.Controls.Add(Me.LbValueBiaya)
+        Me.Panel1.Controls.Add(Me.LbValueUkuran)
+        Me.Panel1.Location = New System.Drawing.Point(29, 116)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(373, 134)
+        Me.Panel1.TabIndex = 27
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(26, 81)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(329, 18)
+        Me.Label1.TabIndex = 28
+        Me.Label1.Text = "Apakah anda yakin ingin menghapus jenis loker ini ?"
         '
         'HapusJenisLocker
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(441, 347)
-        Me.Controls.Add(Me.LbValueInfoKet)
-        Me.Controls.Add(Me.Label2)
+        Me.ClientSize = New System.Drawing.Size(431, 389)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.BtnDelete)
-        Me.Controls.Add(Me.LbValueBiaya)
-        Me.Controls.Add(Me.LbValueUkuran)
-        Me.Controls.Add(Me.LblBiaya)
-        Me.Controls.Add(Me.LblUkuran)
         Me.Controls.Add(Me.BtnClose)
         Me.Controls.Add(Me.LblHapusJenisLocker)
         Me.Name = "HapusJenisLocker"
-        Me.Text = "HapusJenisLocker"
+        Me.Text = "Hapus Jenis Loker"
+        Me.Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -152,4 +186,6 @@ Partial Class HapusJenisLocker
     Friend WithEvents BtnDelete As Button
     Friend WithEvents LbValueInfoKet As Label
     Friend WithEvents Label2 As Label
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Label1 As Label
 End Class
