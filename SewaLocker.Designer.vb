@@ -50,11 +50,7 @@ Partial Class SewaLocker
         Me.Label11 = New System.Windows.Forms.Label()
         Me.NUDLamaSewa = New System.Windows.Forms.NumericUpDown()
         Me.LblKetUkuran = New System.Windows.Forms.Label()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.RBNanti = New System.Windows.Forms.RadioButton()
-        Me.RBSekarang = New System.Windows.Forms.RadioButton()
         CType(Me.NUDLamaSewa, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
@@ -338,45 +334,11 @@ Partial Class SewaLocker
         Me.LblKetUkuran.TabIndex = 45
         Me.LblKetUkuran.Text = "Ket."
         '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.RBNanti)
-        Me.GroupBox1.Controls.Add(Me.RBSekarang)
-        Me.GroupBox1.Location = New System.Drawing.Point(521, 80)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(138, 80)
-        Me.GroupBox1.TabIndex = 46
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Waktu bayar"
-        '
-        'RBNanti
-        '
-        Me.RBNanti.AutoSize = True
-        Me.RBNanti.Location = New System.Drawing.Point(9, 47)
-        Me.RBNanti.Name = "RBNanti"
-        Me.RBNanti.Size = New System.Drawing.Size(59, 20)
-        Me.RBNanti.TabIndex = 1
-        Me.RBNanti.TabStop = True
-        Me.RBNanti.Text = "Nanti"
-        Me.RBNanti.UseVisualStyleBackColor = True
-        '
-        'RBSekarang
-        '
-        Me.RBSekarang.AutoSize = True
-        Me.RBSekarang.Location = New System.Drawing.Point(9, 21)
-        Me.RBSekarang.Name = "RBSekarang"
-        Me.RBSekarang.Size = New System.Drawing.Size(87, 20)
-        Me.RBSekarang.TabIndex = 0
-        Me.RBSekarang.TabStop = True
-        Me.RBSekarang.Text = "Sekarang"
-        Me.RBSekarang.UseVisualStyleBackColor = True
-        '
         'SewaLocker
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(715, 706)
-        Me.Controls.Add(Me.GroupBox1)
+        Me.ClientSize = New System.Drawing.Size(695, 706)
         Me.Controls.Add(Me.LblKetUkuran)
         Me.Controls.Add(Me.NUDLamaSewa)
         Me.Controls.Add(Me.Label11)
@@ -409,8 +371,6 @@ Partial Class SewaLocker
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FormSewa"
         CType(Me.NUDLamaSewa, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -444,7 +404,4 @@ Partial Class SewaLocker
     Friend WithEvents Label11 As Label
     Friend WithEvents NUDLamaSewa As NumericUpDown
     Friend WithEvents LblKetUkuran As Label
-    Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents RBNanti As RadioButton
-    Friend WithEvents RBSekarang As RadioButton
 End Class
