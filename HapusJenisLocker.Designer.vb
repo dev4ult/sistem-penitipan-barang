@@ -181,6 +181,7 @@ Partial Class HapusJenisLocker
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(480, 394)
         Me.Controls.Add(Me.Panel2)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "HapusJenisLocker"
         Me.Text = "Hapus Jenis Loker"
         Me.Panel1.ResumeLayout(False)

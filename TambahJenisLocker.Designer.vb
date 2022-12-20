@@ -197,6 +197,7 @@ Partial Class TambahJenisLocker
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(460, 404)
         Me.Controls.Add(Me.Panel4)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "TambahJenisLocker"
         Me.Text = "Tambah Jenis Loker"
         Me.Panel1.ResumeLayout(False)

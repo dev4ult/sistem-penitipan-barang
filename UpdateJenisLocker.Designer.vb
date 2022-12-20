@@ -200,6 +200,7 @@ Partial Class UpdateJenisLocker
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(453, 395)
         Me.Controls.Add(Me.Panel1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "UpdateJenisLocker"
         Me.Text = "Update Jenis Loker"
         Me.Panel1.ResumeLayout(False)
