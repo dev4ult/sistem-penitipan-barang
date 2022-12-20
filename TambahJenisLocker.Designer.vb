@@ -59,7 +59,7 @@ Partial Class TambahJenisLocker
         '
         Me.TxtUkuran.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtUkuran.Font = New System.Drawing.Font("Calibri Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtUkuran.Location = New System.Drawing.Point(13, 6)
+        Me.TxtUkuran.Location = New System.Drawing.Point(11, 7)
         Me.TxtUkuran.Name = "TxtUkuran"
         Me.TxtUkuran.Size = New System.Drawing.Size(341, 20)
         Me.TxtUkuran.TabIndex = 14
@@ -87,7 +87,7 @@ Partial Class TambahJenisLocker
         'LblTambahJenisLocker
         '
         Me.LblTambahJenisLocker.BackColor = System.Drawing.Color.Black
-        Me.LblTambahJenisLocker.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblTambahJenisLocker.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Bold)
         Me.LblTambahJenisLocker.ForeColor = System.Drawing.Color.White
         Me.LblTambahJenisLocker.Location = New System.Drawing.Point(0, 0)
         Me.LblTambahJenisLocker.Name = "LblTambahJenisLocker"
