@@ -112,22 +112,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Database.vb" />
-    <Compile Include="SewaLocker.Designer.vb">
-      <DependentUpon>SewaLocker.vb</DependentUpon>
-    </Compile>
-    <Compile Include="SewaLocker.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="JenisLocker.Designer.vb">
-      <DependentUpon>JenisLocker.vb</DependentUpon>
-    </Compile>
-    <Compile Include="JenisLocker.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Login.Designer.vb">
       <DependentUpon>Login.vb</DependentUpon>
     </Compile>
     <Compile Include="Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SewaLocker.Designer.vb">
+      <DependentUpon>SewaLocker.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SewaLocker.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="HapusLocker.Designer.vb">
@@ -137,12 +131,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Locker_model.vb" />
-    <Compile Include="Login.Designer.vb">
-      <DependentUpon>Login.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Login.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="MonitorLocker.Designer.vb">
       <DependentUpon>MonitorLocker.vb</DependentUpon>
     </Compile>
@@ -188,11 +176,11 @@
     <Compile Include="User_model.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SewaLocker.resx">
       <DependentUpon>SewaLocker.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="JenisLocker.resx">
-      <DependentUpon>JenisLocker.vb</DependentUpon>
     </EmbeddedResource>
     <Compile Include="TambahLocker.Designer.vb">
       <DependentUpon>TambahLocker.vb</DependentUpon>
@@ -223,9 +211,6 @@
   <ItemGroup>
     <EmbeddedResource Include="HapusLocker.resx">
       <DependentUpon>HapusLocker.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormJenisLocker.resx">
       <DependentUpon>FormJenisLocker.vb</DependentUpon>
