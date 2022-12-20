@@ -128,7 +128,7 @@ Partial Class MonitorLocker
         Me.GroupBox1.Controls.Add(Me.btnhapuslocker)
         Me.GroupBox1.Location = New System.Drawing.Point(384, 77)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(129, 154)
+        Me.GroupBox1.Size = New System.Drawing.Size(129, 142)
         Me.GroupBox1.TabIndex = 6
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "MENU"
@@ -139,7 +139,7 @@ Partial Class MonitorLocker
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(390, 237)
+        Me.Button1.Location = New System.Drawing.Point(390, 230)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(117, 32)
         Me.Button1.TabIndex = 4
