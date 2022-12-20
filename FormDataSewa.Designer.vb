@@ -25,8 +25,8 @@ Partial Class FormDataSewa
         Me.DGV_DataSewa = New System.Windows.Forms.DataGridView()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.BtnTambahDataSewa = New System.Windows.Forms.Button()
-        Me.BtnUbahDataSewa = New System.Windows.Forms.Button()
         Me.BtnHapusDataSewa = New System.Windows.Forms.Button()
+        Me.BtnFormReturn = New System.Windows.Forms.Button()
         CType(Me.DGV_DataSewa, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -55,42 +55,42 @@ Partial Class FormDataSewa
         '
         Me.BtnTambahDataSewa.Cursor = System.Windows.Forms.Cursors.Arrow
         Me.BtnTambahDataSewa.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.BtnTambahDataSewa.Location = New System.Drawing.Point(12, 478)
+        Me.BtnTambahDataSewa.Location = New System.Drawing.Point(528, 478)
         Me.BtnTambahDataSewa.Name = "BtnTambahDataSewa"
         Me.BtnTambahDataSewa.Size = New System.Drawing.Size(191, 55)
         Me.BtnTambahDataSewa.TabIndex = 32
         Me.BtnTambahDataSewa.Text = "Tambah Data"
         Me.BtnTambahDataSewa.UseVisualStyleBackColor = True
         '
-        'BtnUbahDataSewa
-        '
-        Me.BtnUbahDataSewa.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.BtnUbahDataSewa.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.BtnUbahDataSewa.Location = New System.Drawing.Point(209, 478)
-        Me.BtnUbahDataSewa.Name = "BtnUbahDataSewa"
-        Me.BtnUbahDataSewa.Size = New System.Drawing.Size(191, 55)
-        Me.BtnUbahDataSewa.TabIndex = 33
-        Me.BtnUbahDataSewa.Text = "Edit Data"
-        Me.BtnUbahDataSewa.UseVisualStyleBackColor = True
-        '
         'BtnHapusDataSewa
         '
         Me.BtnHapusDataSewa.Cursor = System.Windows.Forms.Cursors.Arrow
         Me.BtnHapusDataSewa.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.BtnHapusDataSewa.Location = New System.Drawing.Point(406, 478)
+        Me.BtnHapusDataSewa.Location = New System.Drawing.Point(922, 478)
         Me.BtnHapusDataSewa.Name = "BtnHapusDataSewa"
         Me.BtnHapusDataSewa.Size = New System.Drawing.Size(191, 55)
         Me.BtnHapusDataSewa.TabIndex = 34
         Me.BtnHapusDataSewa.Text = "Hapus Data"
         Me.BtnHapusDataSewa.UseVisualStyleBackColor = True
         '
+        'BtnFormReturn
+        '
+        Me.BtnFormReturn.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.BtnFormReturn.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.BtnFormReturn.Location = New System.Drawing.Point(725, 478)
+        Me.BtnFormReturn.Name = "BtnFormReturn"
+        Me.BtnFormReturn.Size = New System.Drawing.Size(191, 55)
+        Me.BtnFormReturn.TabIndex = 35
+        Me.BtnFormReturn.Text = "Kembali Form"
+        Me.BtnFormReturn.UseVisualStyleBackColor = True
+        '
         'FormDataSewa
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1139, 545)
+        Me.Controls.Add(Me.BtnFormReturn)
         Me.Controls.Add(Me.BtnHapusDataSewa)
-        Me.Controls.Add(Me.BtnUbahDataSewa)
         Me.Controls.Add(Me.BtnTambahDataSewa)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.DGV_DataSewa)
@@ -106,6 +106,6 @@ Partial Class FormDataSewa
     Friend WithEvents DGV_DataSewa As DataGridView
     Friend WithEvents Label1 As Label
     Friend WithEvents BtnTambahDataSewa As Button
-    Friend WithEvents BtnUbahDataSewa As Button
     Friend WithEvents BtnHapusDataSewa As Button
+    Friend WithEvents BtnFormReturn As Button
 End Class
