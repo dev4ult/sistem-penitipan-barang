@@ -26,125 +26,192 @@ Partial Class UpdateJenisLocker
         Me.LblUkuran = New System.Windows.Forms.Label()
         Me.LblBiaya = New System.Windows.Forms.Label()
         Me.TxtUkuran = New System.Windows.Forms.TextBox()
-        Me.TxtBiaya = New System.Windows.Forms.TextBox()
         Me.BtnSubmit = New System.Windows.Forms.Button()
         Me.BtnClose = New System.Windows.Forms.Button()
+        Me.LblInfoKet = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Panel4 = New System.Windows.Forms.Panel()
         Me.TxtInfoKet = New System.Windows.Forms.TextBox()
+        Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.TxtBiaya = New System.Windows.Forms.TextBox()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Panel1.SuspendLayout()
+        Me.Panel4.SuspendLayout()
+        Me.Panel3.SuspendLayout()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'LblUpdateJenisLocker
         '
-        Me.LblUpdateJenisLocker.AutoSize = True
+        Me.LblUpdateJenisLocker.BackColor = System.Drawing.Color.Black
         Me.LblUpdateJenisLocker.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblUpdateJenisLocker.Location = New System.Drawing.Point(29, 26)
-        Me.LblUpdateJenisLocker.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblUpdateJenisLocker.ForeColor = System.Drawing.Color.White
+        Me.LblUpdateJenisLocker.Location = New System.Drawing.Point(-1, -1)
         Me.LblUpdateJenisLocker.Name = "LblUpdateJenisLocker"
-        Me.LblUpdateJenisLocker.Size = New System.Drawing.Size(237, 33)
+        Me.LblUpdateJenisLocker.Size = New System.Drawing.Size(410, 52)
         Me.LblUpdateJenisLocker.TabIndex = 5
-        Me.LblUpdateJenisLocker.Text = "Update Jenis Locker"
+        Me.LblUpdateJenisLocker.Text = "UPDATE JENIS LOKER"
+        Me.LblUpdateJenisLocker.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'LblUkuran
         '
         Me.LblUkuran.AutoSize = True
-        Me.LblUkuran.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblUkuran.Location = New System.Drawing.Point(33, 103)
-        Me.LblUkuran.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblUkuran.Font = New System.Drawing.Font("Calibri", 12.0!)
+        Me.LblUkuran.Location = New System.Drawing.Point(16, 69)
         Me.LblUkuran.Name = "LblUkuran"
-        Me.LblUkuran.Size = New System.Drawing.Size(72, 24)
+        Me.LblUkuran.Size = New System.Drawing.Size(55, 19)
         Me.LblUkuran.TabIndex = 6
         Me.LblUkuran.Text = "Ukuran"
         '
         'LblBiaya
         '
         Me.LblBiaya.AutoSize = True
-        Me.LblBiaya.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblBiaya.Location = New System.Drawing.Point(33, 161)
-        Me.LblBiaya.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LblBiaya.Font = New System.Drawing.Font("Calibri", 12.0!)
+        Me.LblBiaya.Location = New System.Drawing.Point(17, 136)
         Me.LblBiaya.Name = "LblBiaya"
-        Me.LblBiaya.Size = New System.Drawing.Size(55, 24)
+        Me.LblBiaya.Size = New System.Drawing.Size(45, 19)
         Me.LblBiaya.TabIndex = 7
         Me.LblBiaya.Text = "Biaya"
         '
         'TxtUkuran
         '
+        Me.TxtUkuran.BackColor = System.Drawing.Color.White
+        Me.TxtUkuran.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtUkuran.Font = New System.Drawing.Font("Calibri Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtUkuran.Location = New System.Drawing.Point(120, 100)
-        Me.TxtUkuran.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtUkuran.Location = New System.Drawing.Point(14, 7)
         Me.TxtUkuran.Name = "TxtUkuran"
-        Me.TxtUkuran.Size = New System.Drawing.Size(309, 32)
+        Me.TxtUkuran.Size = New System.Drawing.Size(340, 20)
         Me.TxtUkuran.TabIndex = 8
-        '
-        'TxtBiaya
-        '
-        Me.TxtBiaya.Font = New System.Drawing.Font("Calibri Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtBiaya.Location = New System.Drawing.Point(120, 158)
-        Me.TxtBiaya.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.TxtBiaya.Name = "TxtBiaya"
-        Me.TxtBiaya.Size = New System.Drawing.Size(309, 32)
-        Me.TxtBiaya.TabIndex = 9
         '
         'BtnSubmit
         '
-        Me.BtnSubmit.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnSubmit.Location = New System.Drawing.Point(148, 249)
-        Me.BtnSubmit.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnSubmit.BackColor = System.Drawing.Color.Black
+        Me.BtnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnSubmit.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.BtnSubmit.ForeColor = System.Drawing.Color.White
+        Me.BtnSubmit.Location = New System.Drawing.Point(197, 299)
         Me.BtnSubmit.Name = "BtnSubmit"
-        Me.BtnSubmit.Size = New System.Drawing.Size(184, 43)
+        Me.BtnSubmit.Size = New System.Drawing.Size(88, 35)
         Me.BtnSubmit.TabIndex = 10
-        Me.BtnSubmit.Text = "Simpan Perubahan"
-        Me.BtnSubmit.UseVisualStyleBackColor = True
+        Me.BtnSubmit.Text = "UPDATE"
+        Me.BtnSubmit.UseVisualStyleBackColor = False
         '
         'BtnClose
         '
-        Me.BtnClose.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnClose.Location = New System.Drawing.Point(148, 299)
-        Me.BtnClose.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnClose.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.BtnClose.Location = New System.Drawing.Point(300, 299)
         Me.BtnClose.Name = "BtnClose"
-        Me.BtnClose.Size = New System.Drawing.Size(184, 43)
+        Me.BtnClose.Size = New System.Drawing.Size(88, 35)
         Me.BtnClose.TabIndex = 18
-        Me.BtnClose.Text = "Kembali"
+        Me.BtnClose.Text = "BATAL"
         Me.BtnClose.UseVisualStyleBackColor = True
+        '
+        'LblInfoKet
+        '
+        Me.LblInfoKet.AutoSize = True
+        Me.LblInfoKet.Font = New System.Drawing.Font("Calibri", 12.0!)
+        Me.LblInfoKet.Location = New System.Drawing.Point(17, 213)
+        Me.LblInfoKet.Name = "LblInfoKet"
+        Me.LblInfoKet.Size = New System.Drawing.Size(83, 19)
+        Me.LblInfoKet.TabIndex = 19
+        Me.LblInfoKet.Text = "Keterangan"
+        '
+        'Panel1
+        '
+        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.Panel4)
+        Me.Panel1.Controls.Add(Me.BtnClose)
+        Me.Panel1.Controls.Add(Me.Panel3)
+        Me.Panel1.Controls.Add(Me.BtnSubmit)
+        Me.Panel1.Controls.Add(Me.Panel2)
+        Me.Panel1.Controls.Add(Me.LblUpdateJenisLocker)
+        Me.Panel1.Controls.Add(Me.LblInfoKet)
+        Me.Panel1.Controls.Add(Me.LblUkuran)
+        Me.Panel1.Controls.Add(Me.LblBiaya)
+        Me.Panel1.Location = New System.Drawing.Point(21, 22)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(410, 351)
+        Me.Panel1.TabIndex = 21
+        '
+        'Panel4
+        '
+        Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel4.Controls.Add(Me.TxtInfoKet)
+        Me.Panel4.Location = New System.Drawing.Point(20, 235)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(368, 35)
+        Me.Panel4.TabIndex = 9
         '
         'TxtInfoKet
         '
+        Me.TxtInfoKet.BackColor = System.Drawing.Color.White
+        Me.TxtInfoKet.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtInfoKet.Font = New System.Drawing.Font("Calibri Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtInfoKet.Location = New System.Drawing.Point(120, 209)
-        Me.TxtInfoKet.Margin = New System.Windows.Forms.Padding(4)
+        Me.TxtInfoKet.Location = New System.Drawing.Point(14, 7)
         Me.TxtInfoKet.Name = "TxtInfoKet"
-        Me.TxtInfoKet.Size = New System.Drawing.Size(309, 32)
-        Me.TxtInfoKet.TabIndex = 19
+        Me.TxtInfoKet.Size = New System.Drawing.Size(340, 20)
+        Me.TxtInfoKet.TabIndex = 8
+        '
+        'Panel3
+        '
+        Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel3.Controls.Add(Me.Label1)
+        Me.Panel3.Controls.Add(Me.TxtBiaya)
+        Me.Panel3.Location = New System.Drawing.Point(20, 158)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(368, 35)
+        Me.Panel3.TabIndex = 9
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(33, 212)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Font = New System.Drawing.Font("Calibri", 12.0!)
+        Me.Label1.Location = New System.Drawing.Point(4, 7)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(76, 24)
-        Me.Label1.TabIndex = 20
-        Me.Label1.Text = "Info Ket"
+        Me.Label1.Size = New System.Drawing.Size(30, 19)
+        Me.Label1.TabIndex = 9
+        Me.Label1.Text = "Rp."
+        '
+        'TxtBiaya
+        '
+        Me.TxtBiaya.BackColor = System.Drawing.Color.White
+        Me.TxtBiaya.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TxtBiaya.Font = New System.Drawing.Font("Calibri Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtBiaya.Location = New System.Drawing.Point(40, 7)
+        Me.TxtBiaya.Name = "TxtBiaya"
+        Me.TxtBiaya.Size = New System.Drawing.Size(317, 20)
+        Me.TxtBiaya.TabIndex = 8
+        '
+        'Panel2
+        '
+        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel2.Controls.Add(Me.TxtUkuran)
+        Me.Panel2.Location = New System.Drawing.Point(20, 91)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(368, 35)
+        Me.Panel2.TabIndex = 7
         '
         'UpdateJenisLocker
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(479, 399)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TxtInfoKet)
-        Me.Controls.Add(Me.BtnClose)
-        Me.Controls.Add(Me.BtnSubmit)
-        Me.Controls.Add(Me.TxtBiaya)
-        Me.Controls.Add(Me.TxtUkuran)
-        Me.Controls.Add(Me.LblBiaya)
-        Me.Controls.Add(Me.LblUkuran)
-        Me.Controls.Add(Me.LblUpdateJenisLocker)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BackColor = System.Drawing.Color.White
+        Me.ClientSize = New System.Drawing.Size(453, 395)
+        Me.Controls.Add(Me.Panel1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "UpdateJenisLocker"
-        Me.Text = "Update Jenis Locker"
+        Me.Text = "Update Jenis Loker"
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        Me.Panel4.ResumeLayout(False)
+        Me.Panel4.PerformLayout()
+        Me.Panel3.ResumeLayout(False)
+        Me.Panel3.PerformLayout()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
@@ -152,9 +219,14 @@ Partial Class UpdateJenisLocker
     Friend WithEvents LblUkuran As Label
     Friend WithEvents LblBiaya As Label
     Friend WithEvents TxtUkuran As TextBox
-    Friend WithEvents TxtBiaya As TextBox
     Friend WithEvents BtnSubmit As Button
     Friend WithEvents BtnClose As Button
+    Friend WithEvents LblInfoKet As Label
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents Panel4 As Panel
     Friend WithEvents TxtInfoKet As TextBox
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents TxtBiaya As TextBox
     Friend WithEvents Label1 As Label
 End Class
