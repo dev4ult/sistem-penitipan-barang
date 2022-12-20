@@ -7,7 +7,6 @@ Public Class SewaLocker
     Private lamaSewa As Integer
     Private totalBiaya As Integer
     Private keteranganIsiLocker As String
-    Private waktuBayar As String
 
     Dim str As String = ""
     Private panjangKarakter As Integer
@@ -71,22 +70,18 @@ Public Class SewaLocker
 
     Private Sub BtnYesSewa_Click(sender As Object, e As EventArgs) Handles BtnYesSewa.Click
         keteranganIsiLocker = RTBKetUser.Text
-        sewa_model.GS_Status_Locker = "Terisi"
-        Dim statusLocker As String = sewa_model.GS_Status_Locker()
-
-        If RBSekarang.Checked() Then
-            waktuBayar = "Yes"
-        ElseIf RBNanti.Checked() Then
-            waktuBayar = "No"
-        End If
+        'sewa_model.GS_Status_Locker = "Terisi"
+        'Dim statusLocker As String = sewa_model.GS_Status_Locker()
 
         'Validasi Form Isiannya
 
         If validationOfFormFill() IsNot Nothing Then
             MsgBox(validationOfFormFill(), MsgBoxStyle.Critical, "Kesalahan")
         Else
-            If sewa_model.ValidateNewRentData(lokasiLoker, lamaSewa, waktuBayar,
-                                          totalBiaya, keteranganIsiLocker, statusLocker) Then
+
+            If sewa_model.ValidateNewRentData(lokasiLoker, lamaSewa,
+                                          totalBiaya, keteranganIsiLocker) Then
+                sewa_model.UpdateStatusLocker(lokasiLoker, "Terisi")
                 MessageBox.Show("Berhasil menambah data sewa")
             End If
             'Reset Isian Form
@@ -115,8 +110,6 @@ Public Class SewaLocker
         LblBiayaPerJam.Text = 0
         LblKetUkuran.Text = "Ket."
         LblTotalBiaya.Text = 0
-        RBNanti.Checked = False
-        RBSekarang.Checked = True
     End Sub
 
     Public Function validationOfFormFill()
@@ -133,8 +126,6 @@ Public Class SewaLocker
         ElseIf keteranganIsiLocker.Length = 0 Then
             infoKesalahan = "Harap Isi Dekripsi Barang Anda"
             RTBKetUser.Select()
-        ElseIf waktuBayar Is Nothing Then
-            infoKesalahan = "Harap Pilih Waktu Bayar Loker"
         End If
 
         Return infoKesalahan
