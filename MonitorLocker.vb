@@ -1,7 +1,7 @@
 ﻿Public Class MonitorLocker
 
     Private locker_model As Locker_model
-    Public selectedLocker As String
+    Private selectedLocker As String
 
     Public Sub New()
 
@@ -9,14 +9,20 @@
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-
-
         locker_model = New Locker_model
 
         selectedLocker = ""
         ReloadDataGridLocker()
     End Sub
 
+    Public Property GSSelectedLocker() As String
+        Get
+            Return selectedLocker
+        End Get
+        Set(value As String)
+            selectedLocker = value
+        End Set
+    End Property
 
     Private Sub btntambahlocker_Click(sender As Object, e As EventArgs) Handles btntambahlocker.Click
         TambahLocker.Show()

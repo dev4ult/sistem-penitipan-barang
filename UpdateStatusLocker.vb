@@ -11,7 +11,8 @@
         ' Add any initialization after the InitializeComponent() call.
         locker_model = New Locker_model
 
-        namaLoker = MonitorLocker.selectedLocker
+        namaLoker = MonitorLocker.GSSelectedLocker
+        MonitorLocker.GSSelectedLocker = ""
         status = locker_model.GetLockerStatus(namaLoker)
 
         If status = "Terisi" Then

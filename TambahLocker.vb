@@ -2,11 +2,9 @@
 
 Public Class TambahLocker
     Private locker_model As Locker_model
+
     Private ukuran As String
-
     Private lokasi As String
-    Private monitor_loker As New MonitorLocker
-
 
     Public Sub New()
 
@@ -17,8 +15,8 @@ Public Class TambahLocker
         locker_model = New Locker_model()
         ukuran = ""
         lokasi = ""
-
     End Sub
+
     Private Sub btntambah_Click(sender As Object, e As EventArgs) Handles btntambah.Click
         If ukuran = "" Or lokasi = "" Then
             MessageBox.Show("Input tidak boleh bersifat kosong!")
@@ -32,22 +30,11 @@ Public Class TambahLocker
 
     Private Sub CBukuran_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CBukuran.SelectedIndexChanged
         ukuran = CBukuran.SelectedItem
-        lblharga.Text = "Rp." & locker_model.GetLokerCost(ukuran)
+        lblharga.Text = "Rp." & locker_model.GetLockerCost(ukuran)
     End Sub
 
     Private Sub CBLokasi_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CBLokasi.SelectedIndexChanged
         lokasi = CBLokasi.SelectedItem
     End Sub
 
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
-
-    End Sub
-
-    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
-
-    End Sub
-
-    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
-
-    End Sub
 End Class

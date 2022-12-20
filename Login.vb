@@ -14,7 +14,6 @@
         LBFMError.Visible = True
     End Sub
 
-
     Private Sub BTNLogin_Click(sender As Object, e As EventArgs) Handles BTNLogin.Click
         Dim umail = TXTUmail.Text
         Dim password = TXTPassword.Text
@@ -30,5 +29,6 @@
 
     Private Sub LinkLBSignup_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLBSignup.LinkClicked
         Signup.Show()
+        Me.Close()
     End Sub
 End Class

@@ -36,5 +36,6 @@ Public Class Signup
 
     Private Sub LinkLBLogin_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLBLogin.LinkClicked
         Login.Show()
+        Me.Close()
     End Sub
 End Class

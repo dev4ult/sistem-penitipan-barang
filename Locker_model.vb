@@ -80,10 +80,9 @@ Public Class Locker_model
         Return db.Execute()
     End Function
 
-    Private Function GetLokerCost(ukuran As String) As Integer
+    Public Function GetLockerCost(ukuran As String) As Integer
         db.Query("SELECT biaya FROM jenis_ukuran WHERE ukuran = @ukuran")
         db.Bind("ukuran", "text", ukuran)
-
 
         Return db.Fetch()(0)(0)
     End Function
