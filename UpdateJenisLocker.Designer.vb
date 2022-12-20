@@ -29,13 +29,15 @@ Partial Class UpdateJenisLocker
         Me.TxtBiaya = New System.Windows.Forms.TextBox()
         Me.BtnSubmit = New System.Windows.Forms.Button()
         Me.BtnClose = New System.Windows.Forms.Button()
+        Me.TxtInfoKet = New System.Windows.Forms.TextBox()
+        Me.LblInfoKet = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'LblUpdateJenisLocker
         '
         Me.LblUpdateJenisLocker.AutoSize = True
         Me.LblUpdateJenisLocker.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblUpdateJenisLocker.Location = New System.Drawing.Point(22, 21)
+        Me.LblUpdateJenisLocker.Location = New System.Drawing.Point(157, 20)
         Me.LblUpdateJenisLocker.Name = "LblUpdateJenisLocker"
         Me.LblUpdateJenisLocker.Size = New System.Drawing.Size(184, 26)
         Me.LblUpdateJenisLocker.TabIndex = 5
@@ -47,9 +49,9 @@ Partial Class UpdateJenisLocker
         Me.LblUkuran.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblUkuran.Location = New System.Drawing.Point(25, 84)
         Me.LblUkuran.Name = "LblUkuran"
-        Me.LblUkuran.Size = New System.Drawing.Size(59, 19)
+        Me.LblUkuran.Size = New System.Drawing.Size(63, 19)
         Me.LblUkuran.TabIndex = 6
-        Me.LblUkuran.Text = "Ukuran"
+        Me.LblUkuran.Text = "Ukuran:"
         '
         'LblBiaya
         '
@@ -64,25 +66,25 @@ Partial Class UpdateJenisLocker
         'TxtUkuran
         '
         Me.TxtUkuran.Font = New System.Drawing.Font("Calibri Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtUkuran.Location = New System.Drawing.Point(90, 81)
+        Me.TxtUkuran.Location = New System.Drawing.Point(171, 81)
         Me.TxtUkuran.Name = "TxtUkuran"
-        Me.TxtUkuran.Size = New System.Drawing.Size(233, 27)
+        Me.TxtUkuran.Size = New System.Drawing.Size(290, 27)
         Me.TxtUkuran.TabIndex = 8
         '
         'TxtBiaya
         '
         Me.TxtBiaya.Font = New System.Drawing.Font("Calibri Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtBiaya.Location = New System.Drawing.Point(90, 128)
+        Me.TxtBiaya.Location = New System.Drawing.Point(171, 128)
         Me.TxtBiaya.Name = "TxtBiaya"
-        Me.TxtBiaya.Size = New System.Drawing.Size(233, 27)
+        Me.TxtBiaya.Size = New System.Drawing.Size(290, 27)
         Me.TxtBiaya.TabIndex = 9
         '
         'BtnSubmit
         '
         Me.BtnSubmit.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnSubmit.Location = New System.Drawing.Point(111, 202)
+        Me.BtnSubmit.Location = New System.Drawing.Point(259, 235)
         Me.BtnSubmit.Name = "BtnSubmit"
-        Me.BtnSubmit.Size = New System.Drawing.Size(138, 35)
+        Me.BtnSubmit.Size = New System.Drawing.Size(121, 30)
         Me.BtnSubmit.TabIndex = 10
         Me.BtnSubmit.Text = "Simpan Perubahan"
         Me.BtnSubmit.UseVisualStyleBackColor = True
@@ -90,18 +92,38 @@ Partial Class UpdateJenisLocker
         'BtnClose
         '
         Me.BtnClose.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnClose.Location = New System.Drawing.Point(111, 243)
+        Me.BtnClose.Location = New System.Drawing.Point(386, 235)
         Me.BtnClose.Name = "BtnClose"
-        Me.BtnClose.Size = New System.Drawing.Size(138, 35)
+        Me.BtnClose.Size = New System.Drawing.Size(75, 30)
         Me.BtnClose.TabIndex = 18
         Me.BtnClose.Text = "Kembali"
         Me.BtnClose.UseVisualStyleBackColor = True
+        '
+        'TxtInfoKet
+        '
+        Me.TxtInfoKet.Font = New System.Drawing.Font("Calibri Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtInfoKet.Location = New System.Drawing.Point(171, 174)
+        Me.TxtInfoKet.Name = "TxtInfoKet"
+        Me.TxtInfoKet.Size = New System.Drawing.Size(290, 27)
+        Me.TxtInfoKet.TabIndex = 20
+        '
+        'LblInfoKet
+        '
+        Me.LblInfoKet.AutoSize = True
+        Me.LblInfoKet.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblInfoKet.Location = New System.Drawing.Point(25, 177)
+        Me.LblInfoKet.Name = "LblInfoKet"
+        Me.LblInfoKet.Size = New System.Drawing.Size(119, 19)
+        Me.LblInfoKet.TabIndex = 19
+        Me.LblInfoKet.Text = "Info Keterangan"
         '
         'UpdateJenisLocker
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(359, 324)
+        Me.ClientSize = New System.Drawing.Size(505, 295)
+        Me.Controls.Add(Me.TxtInfoKet)
+        Me.Controls.Add(Me.LblInfoKet)
         Me.Controls.Add(Me.BtnClose)
         Me.Controls.Add(Me.BtnSubmit)
         Me.Controls.Add(Me.TxtBiaya)
@@ -123,4 +145,6 @@ Partial Class UpdateJenisLocker
     Friend WithEvents TxtBiaya As TextBox
     Friend WithEvents BtnSubmit As Button
     Friend WithEvents BtnClose As Button
+    Friend WithEvents TxtInfoKet As TextBox
+    Friend WithEvents LblInfoKet As Label
 End Class

@@ -26,9 +26,11 @@ Partial Class HapusJenisLocker
         Me.BtnClose = New System.Windows.Forms.Button()
         Me.LblUkuran = New System.Windows.Forms.Label()
         Me.LblBiaya = New System.Windows.Forms.Label()
-        Me.ValueUkuran = New System.Windows.Forms.Label()
-        Me.ValueBiaya = New System.Windows.Forms.Label()
+        Me.LbValueUkuran = New System.Windows.Forms.Label()
+        Me.LbValueBiaya = New System.Windows.Forms.Label()
         Me.BtnDelete = New System.Windows.Forms.Button()
+        Me.LbValueInfoKet = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'LblHapusJenisLocker
@@ -44,7 +46,7 @@ Partial Class HapusJenisLocker
         'BtnClose
         '
         Me.BtnClose.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnClose.Location = New System.Drawing.Point(109, 249)
+        Me.BtnClose.Location = New System.Drawing.Point(281, 277)
         Me.BtnClose.Name = "BtnClose"
         Me.BtnClose.Size = New System.Drawing.Size(138, 35)
         Me.BtnClose.TabIndex = 19
@@ -71,44 +73,66 @@ Partial Class HapusJenisLocker
         Me.LblBiaya.Text = "Biaya      : "
         Me.LblBiaya.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'ValueUkuran
+        'LbValueUkuran
         '
-        Me.ValueUkuran.Font = New System.Drawing.Font("Calibri Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ValueUkuran.Location = New System.Drawing.Point(105, 85)
-        Me.ValueUkuran.Name = "ValueUkuran"
-        Me.ValueUkuran.Size = New System.Drawing.Size(242, 26)
-        Me.ValueUkuran.TabIndex = 22
-        Me.ValueUkuran.Text = "(Value Ukuran)"
-        Me.ValueUkuran.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LbValueUkuran.Font = New System.Drawing.Font("Calibri Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LbValueUkuran.Location = New System.Drawing.Point(177, 85)
+        Me.LbValueUkuran.Name = "LbValueUkuran"
+        Me.LbValueUkuran.Size = New System.Drawing.Size(242, 26)
+        Me.LbValueUkuran.TabIndex = 22
+        Me.LbValueUkuran.Text = "(Value Ukuran)"
+        Me.LbValueUkuran.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'ValueBiaya
+        'LbValueBiaya
         '
-        Me.ValueBiaya.Font = New System.Drawing.Font("Calibri Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ValueBiaya.Location = New System.Drawing.Point(105, 138)
-        Me.ValueBiaya.Name = "ValueBiaya"
-        Me.ValueBiaya.Size = New System.Drawing.Size(242, 26)
-        Me.ValueBiaya.TabIndex = 23
-        Me.ValueBiaya.Text = "(Value Biaya)"
-        Me.ValueBiaya.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LbValueBiaya.Font = New System.Drawing.Font("Calibri Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LbValueBiaya.Location = New System.Drawing.Point(177, 138)
+        Me.LbValueBiaya.Name = "LbValueBiaya"
+        Me.LbValueBiaya.Size = New System.Drawing.Size(242, 26)
+        Me.LbValueBiaya.TabIndex = 23
+        Me.LbValueBiaya.Text = "(Value Biaya)"
+        Me.LbValueBiaya.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'BtnDelete
         '
         Me.BtnDelete.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnDelete.Location = New System.Drawing.Point(109, 208)
+        Me.BtnDelete.Location = New System.Drawing.Point(137, 277)
         Me.BtnDelete.Name = "BtnDelete"
         Me.BtnDelete.Size = New System.Drawing.Size(138, 35)
         Me.BtnDelete.TabIndex = 24
         Me.BtnDelete.Text = "Hapus"
         Me.BtnDelete.UseVisualStyleBackColor = True
         '
+        'LbValueInfoKet
+        '
+        Me.LbValueInfoKet.Font = New System.Drawing.Font("Calibri Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LbValueInfoKet.Location = New System.Drawing.Point(177, 185)
+        Me.LbValueInfoKet.Name = "LbValueInfoKet"
+        Me.LbValueInfoKet.Size = New System.Drawing.Size(242, 26)
+        Me.LbValueInfoKet.TabIndex = 26
+        Me.LbValueInfoKet.Text = "(Value Info Keterangan)"
+        Me.LbValueInfoKet.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label2
+        '
+        Me.Label2.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(13, 185)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(158, 26)
+        Me.Label2.TabIndex = 25
+        Me.Label2.Text = "Info Keterangan :"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
         'HapusJenisLocker
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(359, 325)
+        Me.ClientSize = New System.Drawing.Size(441, 347)
+        Me.Controls.Add(Me.LbValueInfoKet)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.BtnDelete)
-        Me.Controls.Add(Me.ValueBiaya)
-        Me.Controls.Add(Me.ValueUkuran)
+        Me.Controls.Add(Me.LbValueBiaya)
+        Me.Controls.Add(Me.LbValueUkuran)
         Me.Controls.Add(Me.LblBiaya)
         Me.Controls.Add(Me.LblUkuran)
         Me.Controls.Add(Me.BtnClose)
@@ -123,7 +147,9 @@ Partial Class HapusJenisLocker
     Friend WithEvents BtnClose As Button
     Friend WithEvents LblUkuran As Label
     Friend WithEvents LblBiaya As Label
-    Friend WithEvents ValueUkuran As Label
-    Friend WithEvents ValueBiaya As Label
+    Friend WithEvents LbValueUkuran As Label
+    Friend WithEvents LbValueBiaya As Label
     Friend WithEvents BtnDelete As Button
+    Friend WithEvents LbValueInfoKet As Label
+    Friend WithEvents Label2 As Label
 End Class

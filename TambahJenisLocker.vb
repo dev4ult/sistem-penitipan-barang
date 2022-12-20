@@ -1,22 +1,28 @@
 ﻿Public Class TambahJenisLocker
 
+    Private locker_model As Locker_model
+
     Public Sub New()
 
         ' This call is required by the designer.
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
+        locker_model = New Locker_model
     End Sub
 
     Private Sub BtnAdd_Click(sender As Object, e As EventArgs) Handles BtnAdd.Click
-        FormJenisLocker.jenisLocker.UkuranJenisLockerProperty = TxtUkuran.Text
-        FormJenisLocker.jenisLocker.BiayaJenisLockerProperty = TxtBiaya.Text
+        Dim ukuran As String = TxtUkuran.Text
+        Dim biaya As Integer = Integer.Parse(TxtBiaya.Text)
+        Dim info_ket As String = TxtInfoKet.Text
 
-        FormJenisLocker.jenisLocker.AddDataJenisLocker(FormJenisLocker.jenisLocker.UkuranJenisLockerProperty,
-                                                       FormJenisLocker.jenisLocker.BiayaJenisLockerProperty)
+        MessageBox.Show(ukuran)
 
-        FormJenisLocker.Show()
-        Me.Close()
+        If locker_model.ValidateFormAddLockerType(ukuran, biaya, info_ket) Then
+            FormJenisLocker.ReloadDataTableDatabase()
+            FormJenisLocker.Show()
+            Me.Close()
+        End If
     End Sub
 
     Private Sub BtnClose_Click(sender As Object, e As EventArgs) Handles BtnClose.Click

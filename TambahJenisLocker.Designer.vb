@@ -29,12 +29,14 @@ Partial Class TambahJenisLocker
         Me.LblUkuran = New System.Windows.Forms.Label()
         Me.LblTambahJenisLocker = New System.Windows.Forms.Label()
         Me.BtnClose = New System.Windows.Forms.Button()
+        Me.TxtInfoKet = New System.Windows.Forms.TextBox()
+        Me.LblInfoKet = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'BtnAdd
         '
         Me.BtnAdd.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnAdd.Location = New System.Drawing.Point(111, 202)
+        Me.BtnAdd.Location = New System.Drawing.Point(115, 264)
         Me.BtnAdd.Name = "BtnAdd"
         Me.BtnAdd.Size = New System.Drawing.Size(138, 35)
         Me.BtnAdd.TabIndex = 16
@@ -44,7 +46,7 @@ Partial Class TambahJenisLocker
         'TxtBiaya
         '
         Me.TxtBiaya.Font = New System.Drawing.Font("Calibri Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtBiaya.Location = New System.Drawing.Point(90, 128)
+        Me.TxtBiaya.Location = New System.Drawing.Point(178, 131)
         Me.TxtBiaya.Name = "TxtBiaya"
         Me.TxtBiaya.Size = New System.Drawing.Size(233, 27)
         Me.TxtBiaya.TabIndex = 15
@@ -52,7 +54,7 @@ Partial Class TambahJenisLocker
         'TxtUkuran
         '
         Me.TxtUkuran.Font = New System.Drawing.Font("Calibri Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtUkuran.Location = New System.Drawing.Point(90, 81)
+        Me.TxtUkuran.Location = New System.Drawing.Point(178, 81)
         Me.TxtUkuran.Name = "TxtUkuran"
         Me.TxtUkuran.Size = New System.Drawing.Size(233, 27)
         Me.TxtUkuran.TabIndex = 14
@@ -90,18 +92,38 @@ Partial Class TambahJenisLocker
         'BtnClose
         '
         Me.BtnClose.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnClose.Location = New System.Drawing.Point(111, 243)
+        Me.BtnClose.Location = New System.Drawing.Point(115, 305)
         Me.BtnClose.Name = "BtnClose"
         Me.BtnClose.Size = New System.Drawing.Size(138, 35)
         Me.BtnClose.TabIndex = 17
         Me.BtnClose.Text = "Kembali"
         Me.BtnClose.UseVisualStyleBackColor = True
         '
+        'TxtInfoKet
+        '
+        Me.TxtInfoKet.Font = New System.Drawing.Font("Calibri Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtInfoKet.Location = New System.Drawing.Point(178, 179)
+        Me.TxtInfoKet.Name = "TxtInfoKet"
+        Me.TxtInfoKet.Size = New System.Drawing.Size(233, 27)
+        Me.TxtInfoKet.TabIndex = 18
+        '
+        'LblInfoKet
+        '
+        Me.LblInfoKet.AutoSize = True
+        Me.LblInfoKet.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblInfoKet.Location = New System.Drawing.Point(25, 182)
+        Me.LblInfoKet.Name = "LblInfoKet"
+        Me.LblInfoKet.Size = New System.Drawing.Size(119, 19)
+        Me.LblInfoKet.TabIndex = 19
+        Me.LblInfoKet.Text = "Info Keterangan"
+        '
         'TambahJenisLocker
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(359, 324)
+        Me.ClientSize = New System.Drawing.Size(495, 366)
+        Me.Controls.Add(Me.LblInfoKet)
+        Me.Controls.Add(Me.TxtInfoKet)
         Me.Controls.Add(Me.BtnClose)
         Me.Controls.Add(Me.BtnAdd)
         Me.Controls.Add(Me.TxtBiaya)
@@ -123,4 +145,6 @@ Partial Class TambahJenisLocker
     Friend WithEvents LblUkuran As Label
     Friend WithEvents LblTambahJenisLocker As Label
     Friend WithEvents BtnClose As Button
+    Friend WithEvents TxtInfoKet As TextBox
+    Friend WithEvents LblInfoKet As Label
 End Class
