@@ -30,16 +30,16 @@ Partial Class UpdateJenisLocker
         Me.BtnClose = New System.Windows.Forms.Button()
         Me.LblInfoKet = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TxtInfoKet = New System.Windows.Forms.TextBox()
+        Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.TxtBiaya = New System.Windows.Forms.TextBox()
+        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
-        Me.Panel2.SuspendLayout()
-        Me.Panel3.SuspendLayout()
         Me.Panel4.SuspendLayout()
+        Me.Panel3.SuspendLayout()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'LblUpdateJenisLocker
@@ -135,53 +135,34 @@ Partial Class UpdateJenisLocker
         Me.Panel1.Size = New System.Drawing.Size(410, 351)
         Me.Panel1.TabIndex = 21
         '
-        'Panel2
-        '
-        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel2.Controls.Add(Me.TxtUkuran)
-        Me.Panel2.Location = New System.Drawing.Point(20, 91)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(368, 35)
-        Me.Panel2.TabIndex = 7
-        '
-        'Panel3
-        '
-        Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel3.Controls.Add(Me.Label1)
-        Me.Panel3.Controls.Add(Me.TextBox1)
-        Me.Panel3.Location = New System.Drawing.Point(20, 158)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(368, 35)
-        Me.Panel3.TabIndex = 9
-        '
-        'TextBox1
-        '
-        Me.TextBox1.BackColor = System.Drawing.Color.White
-        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox1.Font = New System.Drawing.Font("Calibri Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(40, 7)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(317, 20)
-        Me.TextBox1.TabIndex = 8
-        '
         'Panel4
         '
         Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel4.Controls.Add(Me.TextBox2)
+        Me.Panel4.Controls.Add(Me.TxtInfoKet)
         Me.Panel4.Location = New System.Drawing.Point(20, 235)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(368, 35)
         Me.Panel4.TabIndex = 9
         '
-        'TextBox2
+        'TxtInfoKet
         '
-        Me.TextBox2.BackColor = System.Drawing.Color.White
-        Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox2.Font = New System.Drawing.Font("Calibri Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(14, 7)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(340, 20)
-        Me.TextBox2.TabIndex = 8
+        Me.TxtInfoKet.BackColor = System.Drawing.Color.White
+        Me.TxtInfoKet.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TxtInfoKet.Font = New System.Drawing.Font("Calibri Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtInfoKet.Location = New System.Drawing.Point(14, 7)
+        Me.TxtInfoKet.Name = "TxtInfoKet"
+        Me.TxtInfoKet.Size = New System.Drawing.Size(340, 20)
+        Me.TxtInfoKet.TabIndex = 8
+        '
+        'Panel3
+        '
+        Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel3.Controls.Add(Me.Label1)
+        Me.Panel3.Controls.Add(Me.TxtBiaya)
+        Me.Panel3.Location = New System.Drawing.Point(20, 158)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(368, 35)
+        Me.Panel3.TabIndex = 9
         '
         'Label1
         '
@@ -192,6 +173,25 @@ Partial Class UpdateJenisLocker
         Me.Label1.Size = New System.Drawing.Size(30, 19)
         Me.Label1.TabIndex = 9
         Me.Label1.Text = "Rp."
+        '
+        'TxtBiaya
+        '
+        Me.TxtBiaya.BackColor = System.Drawing.Color.White
+        Me.TxtBiaya.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TxtBiaya.Font = New System.Drawing.Font("Calibri Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtBiaya.Location = New System.Drawing.Point(40, 7)
+        Me.TxtBiaya.Name = "TxtBiaya"
+        Me.TxtBiaya.Size = New System.Drawing.Size(317, 20)
+        Me.TxtBiaya.TabIndex = 8
+        '
+        'Panel2
+        '
+        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel2.Controls.Add(Me.TxtUkuran)
+        Me.Panel2.Location = New System.Drawing.Point(20, 91)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(368, 35)
+        Me.Panel2.TabIndex = 7
         '
         'UpdateJenisLocker
         '
@@ -205,12 +205,12 @@ Partial Class UpdateJenisLocker
         Me.Text = "Update Jenis Loker"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        Me.Panel2.ResumeLayout(False)
-        Me.Panel2.PerformLayout()
-        Me.Panel3.ResumeLayout(False)
-        Me.Panel3.PerformLayout()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
+        Me.Panel3.ResumeLayout(False)
+        Me.Panel3.PerformLayout()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -225,8 +225,8 @@ Partial Class UpdateJenisLocker
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel4 As Panel
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TxtInfoKet As TextBox
     Friend WithEvents Panel3 As Panel
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents TxtBiaya As TextBox
     Friend WithEvents Label1 As Label
 End Class
