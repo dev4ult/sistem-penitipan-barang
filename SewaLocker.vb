@@ -113,7 +113,7 @@ Public Class SewaLocker
     End Sub
 
     Public Function validationOfFormFill()
-        Dim infoKesalahan As String
+        Dim infoKesalahan As String = ""
 
         If ukuran Is Nothing Then
             infoKesalahan = "Harap Isi Ukuran Locker"
