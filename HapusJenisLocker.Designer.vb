@@ -34,6 +34,8 @@ Partial Class HapusJenisLocker
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.LbValueKeterangan = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
@@ -120,63 +122,6 @@ Partial Class HapusJenisLocker
         'LbValueInfoKet
         '
         Me.LbValueInfoKet.Font = New System.Drawing.Font("Calibri Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LbValueInfoKet.Location = New System.Drawing.Point(126, 84)
-        Me.LbValueInfoKet.Name = "LbValueInfoKet"
-        Me.LbValueInfoKet.Size = New System.Drawing.Size(242, 26)
-        Me.LbValueInfoKet.TabIndex = 26
-        Me.LbValueInfoKet.Text = "XXXXX"
-        Me.LbValueInfoKet.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Label2
-        '
-        Me.Label2.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(18, 84)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(103, 26)
-        Me.Label2.TabIndex = 25
-        Me.Label2.Text = "Keterangan  :"
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Panel1
-        '
-        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel1.Controls.Add(Me.LblUkuran)
-        Me.Panel1.Controls.Add(Me.LbValueInfoKet)
-        Me.Panel1.Controls.Add(Me.LblBiaya)
-        Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Controls.Add(Me.LbValueBiaya)
-        Me.Panel1.Controls.Add(Me.LbValueUkuran)
-        Me.Panel1.Location = New System.Drawing.Point(17, 123)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(373, 134)
-        Me.Panel1.TabIndex = 27
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Calibri", 13.0!)
-        Me.Label1.Location = New System.Drawing.Point(13, 74)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(381, 22)
-        Me.Label1.TabIndex = 28
-        Me.Label1.Text = "Apakah anda yakin ingin menghapus jenis loker ini ?"
-        '
-        'Panel2
-        '
-        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel2.Controls.Add(Me.Panel1)
-        Me.Panel2.Controls.Add(Me.Label1)
-        Me.Panel2.Controls.Add(Me.LblHapusJenisLocker)
-        Me.Panel2.Controls.Add(Me.BtnDelete)
-        Me.Panel2.Controls.Add(Me.BtnClose)
-        Me.Panel2.Location = New System.Drawing.Point(34, 31)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(410, 326)
-        Me.Panel2.TabIndex = 29
-        '
-        'LbValueInfoKet
-        '
-        Me.LbValueInfoKet.Font = New System.Drawing.Font("Calibri Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LbValueInfoKet.Location = New System.Drawing.Point(140, 218)
         Me.LbValueInfoKet.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LbValueInfoKet.Name = "LbValueInfoKet"
@@ -195,6 +140,65 @@ Partial Class HapusJenisLocker
         Me.Label2.TabIndex = 25
         Me.Label2.Text = "Info Ket  : "
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Panel1
+        '
+        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.Label3)
+        Me.Panel1.Controls.Add(Me.LbValueKeterangan)
+        Me.Panel1.Controls.Add(Me.LblUkuran)
+        Me.Panel1.Controls.Add(Me.LbValueInfoKet)
+        Me.Panel1.Controls.Add(Me.LblBiaya)
+        Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.Controls.Add(Me.LbValueBiaya)
+        Me.Panel1.Controls.Add(Me.LbValueUkuran)
+        Me.Panel1.Location = New System.Drawing.Point(17, 123)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(373, 134)
+        Me.Panel1.TabIndex = 27
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Calibri", 13.0!)
+        Me.Label1.Location = New System.Drawing.Point(13, 74)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(485, 27)
+        Me.Label1.TabIndex = 28
+        Me.Label1.Text = "Apakah anda yakin ingin menghapus jenis loker ini ?"
+        '
+        'Panel2
+        '
+        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel2.Controls.Add(Me.Panel1)
+        Me.Panel2.Controls.Add(Me.Label1)
+        Me.Panel2.Controls.Add(Me.LblHapusJenisLocker)
+        Me.Panel2.Controls.Add(Me.BtnDelete)
+        Me.Panel2.Controls.Add(Me.BtnClose)
+        Me.Panel2.Location = New System.Drawing.Point(34, 31)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(410, 326)
+        Me.Panel2.TabIndex = 29
+        '
+        'LbValueKeterangan
+        '
+        Me.LbValueKeterangan.Font = New System.Drawing.Font("Calibri Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LbValueKeterangan.Location = New System.Drawing.Point(126, 88)
+        Me.LbValueKeterangan.Name = "LbValueKeterangan"
+        Me.LbValueKeterangan.Size = New System.Drawing.Size(242, 26)
+        Me.LbValueKeterangan.TabIndex = 27
+        Me.LbValueKeterangan.Text = "XXXXXX"
+        Me.LbValueKeterangan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label3
+        '
+        Me.Label3.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(18, 88)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(109, 26)
+        Me.Label3.TabIndex = 28
+        Me.Label3.Text = "Keterangan : "
+        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'HapusJenisLocker
         '
@@ -225,4 +229,6 @@ Partial Class HapusJenisLocker
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents Panel2 As Panel
+    Friend WithEvents Label3 As Label
+    Friend WithEvents LbValueKeterangan As Label
 End Class
