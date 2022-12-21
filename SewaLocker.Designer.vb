@@ -224,27 +224,27 @@ Partial Class SewaLocker
         Me.BtnYesSewa.BackColor = System.Drawing.Color.Black
         Me.BtnYesSewa.Cursor = System.Windows.Forms.Cursors.Arrow
         Me.BtnYesSewa.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnYesSewa.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnYesSewa.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnYesSewa.ForeColor = System.Drawing.Color.White
         Me.BtnYesSewa.Location = New System.Drawing.Point(368, 602)
         Me.BtnYesSewa.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnYesSewa.Name = "BtnYesSewa"
         Me.BtnYesSewa.Size = New System.Drawing.Size(87, 34)
         Me.BtnYesSewa.TabIndex = 31
-        Me.BtnYesSewa.Text = "Sewa"
+        Me.BtnYesSewa.Text = "SEWA"
         Me.BtnYesSewa.UseVisualStyleBackColor = False
         '
         'BtnNoSewa
         '
         Me.BtnNoSewa.Cursor = System.Windows.Forms.Cursors.Arrow
         Me.BtnNoSewa.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnNoSewa.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnNoSewa.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnNoSewa.Location = New System.Drawing.Point(462, 602)
         Me.BtnNoSewa.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnNoSewa.Name = "BtnNoSewa"
         Me.BtnNoSewa.Size = New System.Drawing.Size(87, 34)
         Me.BtnNoSewa.TabIndex = 32
-        Me.BtnNoSewa.Text = "Batal"
+        Me.BtnNoSewa.Text = "BATAL"
         Me.BtnNoSewa.UseVisualStyleBackColor = True
         '
         'LsbLockerTersedia
@@ -327,7 +327,7 @@ Partial Class SewaLocker
         '
         Me.Label19.AutoSize = True
         Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
-        Me.Label19.ForeColor = System.Drawing.Color.Navy
+        Me.Label19.ForeColor = System.Drawing.Color.Black
         Me.Label19.Location = New System.Drawing.Point(114, 91)
         Me.Label19.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label19.Name = "Label19"
@@ -351,6 +351,7 @@ Partial Class SewaLocker
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.Color.Black
         Me.Label11.Location = New System.Drawing.Point(124, 150)
         Me.Label11.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label11.Name = "Label11"
@@ -370,6 +371,7 @@ Partial Class SewaLocker
         '
         Me.LblKetUkuran.AutoSize = True
         Me.LblKetUkuran.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblKetUkuran.ForeColor = System.Drawing.Color.Black
         Me.LblKetUkuran.Location = New System.Drawing.Point(18, 58)
         Me.LblKetUkuran.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LblKetUkuran.Name = "LblKetUkuran"
