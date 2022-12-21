@@ -21,7 +21,7 @@ Public Class Signup
         LBFMError.Visible = True
     End Sub
 
-    Private Sub BTNSignUp_Click(sender As Object, e As EventArgs)
+    Private Sub BTNSignUp_Click(sender As Object, e As EventArgs) Handles BTNSignUp.Click
         username = TXTUsername.Text
         email = TXTEmail.Text
         password = TXTPassword.Text
@@ -30,7 +30,7 @@ Public Class Signup
         If username = "" Or email = "" Or password = "" Then
             SetFlashMessage("Input tidak boleh bersifat kosong")
         ElseIf user_model.ValidateSignUp(username, email, password, passwordConfirmation) Then
-            MessageBox.Show("Berhasil menambahkan user baru")
+            MessageBox.Show("Selamat! Anda berhasil Sign Up")
         End If
     End Sub
 

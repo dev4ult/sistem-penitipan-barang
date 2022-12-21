@@ -1,5 +1,7 @@
 ﻿Public Class RemoveRentData
     Private sewa_model As Sewa_model
+    Private locker_model As Locker_model
+
     Private tanggalSewa As Date
     Public Sub New()
 
@@ -8,13 +10,14 @@
 
         ' Add any initialization after the InitializeComponent() call.
         sewa_model = New Sewa_model()
+        locker_model = New Locker_model()
     End Sub
 
     Private Sub BtnRemoveLockerName_Click(sender As Object, e As EventArgs) Handles BtnRemoveLockerName.Click
-        sewa_model.GS_Status_Locker = "Kosong"
-        Dim status_locker As String = sewa_model.GS_Status_Locker()
-        If sewa_model.RemoveRentData(LblRemoveLockerName.Text, tanggalSewa) And sewa_model.UpdateStatusLocker(LblRemoveLockerName.Text, status_locker) Then
+        If sewa_model.RemoveRentData(LblRemoveLockerName.Text, tanggalSewa) And locker_model.UpdateLockerStatus(LblRemoveLockerName.Text, "Kosong") Then
             MsgBox("Berhasil dihapus", MsgBoxStyle.Information, "Sukses")
+            FormListDataPenyewaan.SetSelectedLocker = ""
+            FormListDataPenyewaan.ReloadRentData()
             Me.Close()
         Else
             MsgBox("Ada kesalahan", MsgBoxStyle.Critical, "Kesalahan")
@@ -22,8 +25,8 @@
     End Sub
 
     Private Sub BtnCancelRemove_Click(sender As Object, e As EventArgs) Handles BtnCancelRemove.Click
+        MainMenu.Show()
         Me.Close()
-        FormDataSewa.Show()
     End Sub
 
     'Getter dan Setter

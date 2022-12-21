@@ -1,9 +1,16 @@
 ﻿Public Class RentReturn
     Private sewa_model As Sewa_model
+    Private locker_model As Locker_model
+
     Private totalBiayadanDenda As Integer
-    Private selisihHariDenganTglKembaliAwal As Integer
-    Private tanggal_kembali_denda As Date
-    Private tanggal_kembali_awal As Date
+
+    Private tanggalSewa As DateTime
+    Private tanggalKembali As DateTime
+
+    Private rencanaPinjam As Integer
+    Private intvSewaToSekarang As Integer
+    Private selisihHariDenganRencanaPinjam As Integer
+
     Private biayaPerUkuran As Integer
 
     Public Sub New()
@@ -13,54 +20,42 @@
 
         ' Add any initialization after the InitializeComponent() call.
         sewa_model = New Sewa_model()
-        tanggal_kembali_denda = tanggal_kembali_awal
-
+        locker_model = New Locker_model()
     End Sub
 
-    Private Sub DTPTanggalKembali_TextChanged(sender As Object, e As EventArgs) Handles DTPTanggalKembali.TextChanged
-        tanggal_kembali_denda = DTPTanggalKembali.Value
-        selisihHariDenganTglKembaliAwal = Integer.Parse(DateDiff(DateInterval.Day, tanggal_kembali_awal, tanggal_kembali_denda).ToString())
-        MsgBox(selisihHariDenganTglKembaliAwal)
-        If tanggal_kembali_denda < Date.Parse(LblTanggalSewa.Text) Then
-            MsgBox("Tanggal kembali tidak kurang dari tanggal sewa", MsgBoxStyle.Critical, "Kesalahan")
-            DTPTanggalKembali.Select()
-        ElseIf selisihHariDenganTglKembaliAwal <= 0 And tanggal_kembali_denda > Date.Parse(LblTanggalSewa.Text) Then
+    Private Sub RentReturn_Activated(sender As Object, e As EventArgs) Handles Me.Activated
+        tanggalSewa = MainMenu.GetTanggalSewa()
+        tanggalKembali = MainMenu.GetTanggalPengembalian()
+
+        rencanaPinjam = (tanggalKembali - tanggalSewa).TotalDays
+        intvSewaToSekarang = (DateTime.Now.Date - tanggalSewa).TotalDays
+
+        selisihHariDenganRencanaPinjam = intvSewaToSekarang - rencanaPinjam
+
+        If selisihHariDenganRencanaPinjam <= 0 Then
             LblTelatHari.Text = 0
             LblDenda.Text = 0
-            LblTotaldanDenda.Text = totalBiayadanDenda + Integer.Parse(selisihHariDenganTglKembaliAwal) * biayaPerUkuran
-        ElseIf selisihHariDenganTglKembaliAwal > 0 Then
-            LblTelatHari.Text = selisihHariDenganTglKembaliAwal
-            LblDenda.Text = selisihHariDenganTglKembaliAwal * 10
+            LblTotaldanDenda.Text = 0
+        Else
+            LblTelatHari.Text = selisihHariDenganRencanaPinjam
+            LblDenda.Text = selisihHariDenganRencanaPinjam * 10
             LblTotaldanDenda.Text = totalBiayadanDenda + Integer.Parse(LblDenda.Text)
         End If
-
-
     End Sub
 
     Private Sub BtnYesKembali_Click(sender As Object, e As EventArgs) Handles BtnYesKembali.Click
-        Dim tanggalSewa As Date = Convert.ToDateTime(LblTanggalSewa.Text)
-        tanggal_kembali_denda = DTPTanggalKembali.Value
-        If sewa_model.UpdateRentDataAfterReturn(LblLockerName.Text, tanggalSewa.ToString("yyyy/MM/dd"), tanggal_kembali_denda.ToString("yyyy/MM/dd"), selisihHariDenganTglKembaliAwal, Integer.Parse(LblTotaldanDenda.Text)) Then
-            If sewa_model.UpdateStatusLocker(LblLockerName.Text, "Kosong") Then
-                'sewa_model.RemoveRentData(LblLockerName.Text)
+        If sewa_model.UpdateRentDataAfterReturn(LblLockerName.Text, tanggalSewa.ToString("yyyy/MM/dd"),
+                                                tanggalKembali.ToString("yyyy/MM/dd"), selisihHariDenganRencanaPinjam,
+                                                Integer.Parse(LblTotaldanDenda.Text)) Then
+            If locker_model.UpdateLockerStatus(LblLockerName.Text, "Kosong") Then
+                MainMenu.ReloadRentData()
                 MsgBox("Berhasil dikembalikan", MsgBoxStyle.Information, "Sukses")
                 Me.Close()
             End If
         End If
     End Sub
 
-
-
     'Getter Dan Setter
-    Public Property GSReturnDateBeforeChange() As Date
-        Get
-            Return tanggal_kembali_awal
-        End Get
-        Set(value As Date)
-            tanggal_kembali_awal = value
-        End Set
-    End Property
-
 
     Public Property GSTotalBiayaDanDenda() As Integer
         Get
@@ -81,7 +76,7 @@
     End Property
 
     Private Sub BtnCancelKembali_Click(sender As Object, e As EventArgs) Handles BtnCancelKembali.Click
+        MainMenu.Show()
         Me.Close()
-        FormDataSewa.Show()
     End Sub
 End Class

@@ -55,24 +55,44 @@ Public Class User_model
         Return stringBuilder.ToString()
     End Function
 
-    Public Function ValidateLogin(umail As String, password As String) As Boolean
-        db.Query("SELECT * FROM users WHERE 
+    Public Function GetUserId(umail As String) As Integer
+        db.Query("SELECT id FROM users WHERE username = @username OR email = @email")
+        db.Bind("username", "text", umail)
+        db.Bind("email", "text", umail)
+
+        Return db.Fetch()(0)(0)
+    End Function
+
+    Public Function GetUsername(id As Integer) As String
+        db.Query("SELECT username FROM users WHERE id = @id")
+        db.Bind("id", "number", id)
+
+        Return db.Fetch()(0)(0)
+    End Function
+
+    Public Function ValidateLogin(umail As String, password As String, table As String) As Boolean
+        db.Query("SELECT * FROM " & table & " WHERE 
                     username = @username OR 
-                    email = @email AND 
-                    password = @password")
+                    email = @email")
 
         db.Bind("username", "text", umail)
         db.Bind("email", "text", umail)
+
+        Dim nameDTB = db.Fetch()
+
+        db.Query("SELECT * FROM " & table & " WHERE password = @password")
         db.Bind("password", "text", EncryptPassword(password))
 
-        Dim tempDTB = db.Fetch()
+        Dim passDTB = db.Fetch()
 
-        If tempDTB.Rows.Count > 0 Then
+        If nameDTB.Rows.Count > 0 And passDTB.Rows.Count > 0 Then
             Return True
-        Else
+        ElseIf table = "users" Then
             Login.SetFlashMessage("Gagal! Username / email atau password salah")
-            Return False
+        Else
+            LoginAdmin.SetFlashMessage("Gagal! Username / email atau password salah")
         End If
+        Return False
     End Function
 
     Public Function ValidateSignUp(username As String, email As String, password As String, passwordConfirmation As String) As Boolean
@@ -104,5 +124,5 @@ Public Class User_model
             Return False
         End If
     End Function
-    
+
 End Class

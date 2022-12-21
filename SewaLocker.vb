@@ -1,7 +1,9 @@
 ﻿
 Public Class SewaLocker
     Private sewa_model As Sewa_model
+    Private locker_model As Locker_model
 
+    Private namaLoker As String
     Private ukuran As String
     Private lokasiLoker As String
     Private lamaSewa As Integer
@@ -18,6 +20,7 @@ Public Class SewaLocker
 
         ' Add any initialization after the InitializeComponent() call.
         sewa_model = New Sewa_model()
+        locker_model = New Locker_model()
 
         ReloadSizeList()
         panjangKarakter = LblJumlahKomentar.Text
@@ -25,8 +28,8 @@ Public Class SewaLocker
 
     Public Sub ReloadSizeList()
         CBUkuranLocker.Items.Clear()
-        For Each dJT In sewa_model.FetchAllLockerSize()
-            CBUkuranLocker.Items.Add(dJT)
+        For Each dJT In locker_model.FetchAllLockerTypes().Rows
+            CBUkuranLocker.Items.Add(dJT(0))
         Next
     End Sub
 
@@ -35,15 +38,15 @@ Public Class SewaLocker
         ukuran = CBUkuranLocker.SelectedItem()
         LblNamaLocker.Text = ""
 
-        LblKetUkuran.Text = "Ket : " & sewa_model.GetLockerDetail(ukuran)
+        LblKetUkuran.Text = "Ket : " & locker_model.GetLockerDetail(ukuran)
 
-        LblBiayaPerJam.Text = sewa_model.GetLockerCost(ukuran)
+        LblBiayaPerJam.Text = locker_model.GetLockerCost(ukuran)
 
         LblLamaSewa.Text = NUDLamaSewa.Value
-        totalBiaya = NUDLamaSewa.Value * sewa_model.GetLockerCost(ukuran)
+        totalBiaya = NUDLamaSewa.Value * locker_model.GetLockerCost(ukuran)
         LblTotalBiaya.Text = totalBiaya
 
-        For Each locker In sewa_model.GetAvailableLocker(ukuran)
+        For Each locker In locker_model.GetAvailableLocker(ukuran)
             LsbLockerTersedia.Items.Add(locker)
         Next
     End Sub
@@ -70,34 +73,26 @@ Public Class SewaLocker
 
     Private Sub BtnYesSewa_Click(sender As Object, e As EventArgs) Handles BtnYesSewa.Click
         keteranganIsiLocker = RTBKetUser.Text
-        'sewa_model.GS_Status_Locker = "Terisi"
-        'Dim statusLocker As String = sewa_model.GS_Status_Locker()
 
-        'Validasi Form Isiannya
-
-        If validationOfFormFill() IsNot Nothing Then
+        If Not validationOfFormFill() = "" Then
             MsgBox(validationOfFormFill(), MsgBoxStyle.Critical, "Kesalahan")
         Else
-
             If sewa_model.ValidateNewRentData(lokasiLoker, lamaSewa,
                                           totalBiaya, keteranganIsiLocker) Then
-                sewa_model.UpdateStatusLocker(lokasiLoker, "Terisi")
-                MessageBox.Show("Berhasil menambah data sewa")
+                locker_model.UpdateLockerStatus(lokasiLoker, "Terisi")
+                MainMenu.ReloadRentData()
             End If
             'Reset Isian Form
             resetFormFill()
         End If
-
-
     End Sub
 
     Private Sub NUDLamaSewa_ValueChanged(sender As Object, e As EventArgs) Handles NUDLamaSewa.ValueChanged
         lamaSewa = NUDLamaSewa.Value
         LblLamaSewa.Text = lamaSewa
-        totalBiaya = lamaSewa * sewa_model.GetLockerCost(ukuran)
+        totalBiaya = lamaSewa * locker_model.GetLockerCost(ukuran)
         LblTotalBiaya.Text = totalBiaya
     End Sub
-
 
     Private Sub resetFormFill()
         CBUkuranLocker.Text = "-- Pilih Ukuran --"
@@ -115,13 +110,13 @@ Public Class SewaLocker
     Public Function validationOfFormFill()
         Dim infoKesalahan As String = ""
 
-        If ukuran Is Nothing Then
+        If ukuran = "" Then
             infoKesalahan = "Harap Isi Ukuran Locker"
             CBUkuranLocker.Select()
         ElseIf lamaSewa = 0 Then
             infoKesalahan = "Harap Isi Jumlah Hari Sewa"
             NUDLamaSewa.Select()
-        ElseIf lokasiLoker Is Nothing Then
+        ElseIf lokasiLoker = "" Then
             infoKesalahan = "Harap Pilih Lokasi Lokernya yaa"
         ElseIf keteranganIsiLocker.Length = 0 Then
             infoKesalahan = "Harap Isi Dekripsi Barang Anda"
@@ -130,4 +125,13 @@ Public Class SewaLocker
 
         Return infoKesalahan
     End Function
+
+    Private Sub LsbLockerTersedia_SelectedIndexChanged(sender As Object, e As EventArgs) Handles LsbLockerTersedia.SelectedIndexChanged
+        namaLoker = LsbLockerTersedia.SelectedItem
+        LblNamaLoker.Text = namaLoker
+    End Sub
+
+    Private Sub BtnNoSewa_Click(sender As Object, e As EventArgs) Handles BtnNoSewa.Click
+        Me.Close()
+    End Sub
 End Class

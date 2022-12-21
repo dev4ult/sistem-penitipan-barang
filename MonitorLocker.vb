@@ -56,6 +56,7 @@
     End Sub
 
     Private Sub BTNKembali_Click(sender As Object, e As EventArgs) Handles BTNKembali.Click
+        AdminMenu.Show()
         Me.Close()
     End Sub
 End Class

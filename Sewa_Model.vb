@@ -1,94 +1,42 @@
 ﻿Public Class Sewa_model
-    Private stmt As String
-    Private result As New List(Of String)
+
     Private db As Database
-    Private statusLocker As String = "Terisi"
-    Private idLocker As Integer
+    Private stmt As String
+
+    Private lockerId As Integer
+
+    Private locker_model As Locker_model
+    Private user_model As User_model
 
     Public Sub New()
         db = New Database()
+        locker_model = New Locker_model()
+        user_model = New User_model()
     End Sub
-
-    Public Function FetchAllLockerSize() As List(Of String)
-        result.Clear()
-        db.Query("SELECT ukuran FROM jenis_ukuran")
-
-        For Each ukuran In db.Fetch().Rows
-            result.Add(ukuran(0))
-        Next
-
-        Return result
-    End Function
-
-    Public Function GetAvailableLocker(ukuran As String) As List(Of String)
-        result.Clear()
-        stmt = "SELECT locker.lokasi FROM locker JOIN jenis_ukuran 
-                ON locker.id_ukuran = jenis_ukuran.id 
-                WHERE jenis_ukuran.ukuran = @ukuran AND locker.status = 'Kosong'"
-        db.Query(stmt)
-        db.Bind("ukuran", "text", ukuran)
-
-        'Set untuk nama loker
-        For Each lokasi In db.Fetch().Rows
-            result.Add(lokasi(0))
-        Next
-        'Set untuk info ket ukuran locker
-
-        Return result
-    End Function
-
-    Public Function GetLockerDetail(ukuran As String) As String
-        stmt = "SELECT infoKet FROM jenis_ukuran WHERE ukuran = @ukuran"
-
-        db.Query(stmt)
-        db.Bind("ukuran", "text", ukuran)
-        Return db.Fetch().Rows(0)(0)
-    End Function
-
-    Public Function GetLockerCost(ukuran As String) As Integer
-        stmt = "SELECT biaya FROM jenis_ukuran WHERE ukuran = @ukuran"
-
-        db.Query(stmt)
-        db.Bind("ukuran", "text", ukuran)
-
-        Return db.Fetch().Rows(0)(0)
-    End Function
-
-    Public Function GetLockerId(lokasi As String) As Integer
-        stmt = "SELECT id FROM locker WHERE lokasi = @lokasi"
-
-        db.Query(stmt)
-        db.Bind("lokasi", "text", lokasi)
-
-        Return db.Fetch.Rows(0)(0)
-    End Function
 
     Public Function InsertNewRentHistory(lokasi As String, lamaSewa As Integer,
                                          totalBiaya As Integer, keterangan As String) As Integer
-        Try
-            idLocker = GetLockerId(lokasi)
-            stmt = "INSERT INTO 
-                penyewaan (id_locker, tanggal_sewa, bayar_sebelum_pinjam, 
-                           rencana_pinjam, kelebihan_pinjam, total_bayar, ketUser) 
-                VALUES (@id_locker, @tanggal_sewa, @bayar_sebelum_pinjam, 
-                        @rencana_pinjam, @kelebihan_pinjam, @total_bayar, @ket_User)"
 
+        lockerId = locker_model.GetLockerId(lokasi)
 
-            db.Query(stmt)
+        stmt = "INSERT INTO 
+                penyewaan (id_user, id_locker, tanggal_sewa, bayar_sebelum_pinjam, 
+                           rencana_pinjam, kelebihan_pinjam, total_bayar, ket_user) 
+                VALUES (@id_user, @id_locker, @tanggal_sewa, @bayar_sebelum_pinjam, 
+                        @rencana_pinjam, @kelebihan_pinjam, @total_bayar, @ket_user)"
 
-            db.Bind("id_locker", "number", idLocker)
-            db.Bind("tanggal_sewa", "date", DateTime.Now.ToString("yyyy/MM/dd"))
-            db.Bind("bayar_sebelum_pinjam", "number", totalBiaya)
-            db.Bind("rencana_pinjam", "number", lamaSewa)
-            db.Bind("kelebihan_pinjam", "number", 0)
-            db.Bind("total_bayar", "number", totalBiaya)
-            db.Bind("ket_User", "text", keterangan)
+        db.Query(stmt)
 
-            Return db.Execute()
-        Catch ex As Exception
-            MsgBox("Sorii Ga Boleh Pinjam Loker Yang sedang digunakan", MsgBoxStyle.Critical, "Kesalahan")
-            db.Fetch()
-        End Try
+        db.Bind("id_user", "number", MainMenu.GetUserId)
+        db.Bind("id_locker", "number", lockerId)
+        db.Bind("tanggal_sewa", "date", DateTime.Now.ToString("yyyy/MM/dd"))
+        db.Bind("bayar_sebelum_pinjam", "number", totalBiaya)
+        db.Bind("rencana_pinjam", "number", lamaSewa)
+        db.Bind("kelebihan_pinjam", "number", 0)
+        db.Bind("total_bayar", "number", totalBiaya)
+        db.Bind("ket_user", "text", keterangan)
+
+        Return db.Execute()
 
     End Function
 
@@ -113,20 +61,25 @@
         End If
     End Function
 
-    Public Function UpdateStatusLocker(lokasi As String, status As String) As Integer
-        idLocker = GetLockerId(lokasi)
-
-        stmt = "UPDATE locker SET status = @status
-                WHERE id=@idloker"
+    Public Function FetchAllRentData() As DataTable
+        stmt = "SELECT locker.lokasi as 'Nama Loker', users.username as 'Nama Penyewa',
+                tanggal_sewa as 'Tanggal Sewa', 
+                CASE WHEN tanggal_kembali IS NULL THEN 'Belum diambil' 
+                WHEN tanggal_kembali IS NOT NULL THEN tanggal_kembali
+                END AS 'Tanggal Kembali', 
+                bayar_sebelum_pinjam as 'Bayar Saat Sewa', 
+                rencana_pinjam as 'Jumlah Hari Sewa', 
+                kelebihan_pinjam as 'Telat Hari', 
+                total_bayar AS 'Total Bayar',
+                ket_user AS 'Keterangan Customer' 
+                FROM penyewaan JOIN locker ON penyewaan.id_locker = locker.id
+                JOIN users ON penyewaan.id_user = users.id"
         db.Query(stmt)
-        db.Bind("idloker", "number", idLocker)
-        db.Bind("status", "text", status)
 
-        Return db.Execute()
+        Return db.Fetch()
     End Function
 
-
-    Public Function GetAllRentData()
+    Public Function FetchAllRentDataByUserId(userId As Integer) As DataTable
         stmt = "SELECT locker.lokasi as 'Nama Loker', 
                 tanggal_sewa as 'Tanggal Sewa', 
                 CASE WHEN tanggal_kembali IS NULL THEN 'Belum diambil' 
@@ -136,27 +89,28 @@
                 rencana_pinjam as 'Jumlah Hari Sewa', 
                 kelebihan_pinjam as 'Telat Hari', 
                 total_bayar AS 'Total Bayar',
-                ketUser AS 'Keterangan Pengguna' 
+                ket_user AS 'Keterangan Customer' 
                 FROM penyewaan 
-                JOIN locker ON penyewaan.id_locker = locker.id;"
+                JOIN locker ON penyewaan.id_locker = locker.id 
+                WHERE penyewaan.tanggal_kembali IS NULL AND penyewaan.id_user = @id_user"
         db.Query(stmt)
+        db.Bind("id_user", "number", userId)
 
         Return db.Fetch()
     End Function
 
-
     Public Function RemoveRentData(lockerName As String, tglSewa As Date)
-        idLocker = GetLockerId(lockerName)
+        lockerId = locker_model.GetLockerId(lockerName)
         stmt = "DELETE FROM penyewaan 
                 WHERE id_locker = @locker and tanggal_sewa=@tglSewa"
         db.Query(stmt)
-        db.Bind("locker", "number", idLocker)
+        db.Bind("locker", "number", lockerId)
         db.Bind("tglSewa", "text", tglSewa.ToString("yyyy/MM/dd"))
         Return db.Execute()
     End Function
 
-    Public Function GetRentDataByLockerName(lockerName As String, tglSewa As Date)
-        idLocker = GetLockerId(lockerName)
+    Public Function GetRentDataByLockerName(lockerName As String, tglSewa As Date) As DataTable
+        lockerId = locker_model.GetLockerId(lockerName)
         stmt = "SELECT locker.lokasi, 
                 rencana_pinjam, 
                 DATE_FORMAT(tanggal_sewa, '%e %M %Y') as 'Tanggal Sewa',
@@ -169,13 +123,13 @@
                 JOIN jenis_ukuran ON locker.id_ukuran = jenis_ukuran.id
                 WHERE id_locker = @id_locker AND tanggal_sewa = @tglSewa"
         db.Query(stmt)
-        db.Bind("id_locker", "number", idLocker)
+        db.Bind("id_locker", "number", lockerId)
         db.Bind("tglSewa", "text", tglSewa.ToString("yyyy/MM/dd"))
         Return db.Fetch()
     End Function
 
     Public Function UpdateRentDataAfterReturn(lockerName As String, tglSewa As String, tglKembali As String, telat As Integer, total As Integer)
-        idLocker = GetLockerId(lockerName)
+        lockerId = locker_model.GetLockerId(lockerName)
         stmt = "UPDATE penyewaan SET 
                 tanggal_kembali = @tglKembali, 
                 kelebihan_pinjam = @telatHari, 
@@ -185,18 +139,8 @@
         db.Bind("tglKembali", "text", tglKembali)
         db.Bind("telatHari", "number", telat)
         db.Bind("totalBayar", "number", total)
-        db.Bind("idLoker", "number", idLocker)
+        db.Bind("idLoker", "number", lockerId)
         db.Bind("tglSewa", "date", tglSewa)
         Return db.Execute()
     End Function
-
-    'GETTER DAN SETTER
-    Public Property GS_Status_Locker() As String
-        Get
-            Return statusLocker
-        End Get
-        Set(value As String)
-            statusLocker = value
-        End Set
-    End Property
 End Class

@@ -11,6 +11,13 @@
         Return db.Fetch()
     End Function
 
+    Public Function GetLockerId(lokasi As String) As Integer
+        db.Query("SELECT id FROM locker WHERE lokasi = @lokasi")
+        db.Bind("lokasi", "text", lokasi)
+
+        Return db.Fetch()(0)(0)
+    End Function
+
     Private Function NextIndexLocation(lokasi As String) As Integer
         db.Query("SELECT lokasi FROM locker WHERE lokasi LIKE @lokasi")
         db.Bind("lokasi", "text", lokasi & "%")
@@ -68,6 +75,29 @@
         db.Bind("lokasi", "text", lokasi)
 
         Return db.Fetch()(0)(0)
+    End Function
+
+    Public Function GetLockerDetail(ukuran As String) As String
+        db.Query("SELECT info_ket FROM jenis_ukuran WHERE ukuran = @ukuran")
+        db.Bind("ukuran", "text", ukuran)
+
+        Return db.Fetch()(0)(0)
+    End Function
+
+    Public Function GetAvailableLocker(ukuran As String) As List(Of String)
+        Dim result As New List(Of String)
+
+        db.Query("SELECT locker.lokasi FROM locker JOIN jenis_ukuran 
+                ON locker.id_ukuran = jenis_ukuran.id 
+                WHERE jenis_ukuran.ukuran = @ukuran AND locker.status = 'Kosong'")
+        db.Bind("ukuran", "text", ukuran)
+
+        'Set untuk nama loker
+        For Each lokasi In db.Fetch().Rows
+            result.Add(lokasi(0))
+        Next
+
+        Return result
     End Function
 
     Public Function UpdateLockerStatus(lokasi As String, status As String) As Integer
