@@ -33,31 +33,34 @@ Partial Class FormDataSewa
         'DGV_DataSewa
         '
         Me.DGV_DataSewa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGV_DataSewa.Location = New System.Drawing.Point(12, 118)
+        Me.DGV_DataSewa.Location = New System.Drawing.Point(9, 96)
+        Me.DGV_DataSewa.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.DGV_DataSewa.Name = "DGV_DataSewa"
         Me.DGV_DataSewa.RowHeadersWidth = 51
         Me.DGV_DataSewa.RowTemplate.Height = 24
-        Me.DGV_DataSewa.Size = New System.Drawing.Size(1101, 187)
+        Me.DGV_DataSewa.Size = New System.Drawing.Size(826, 275)
         Me.DGV_DataSewa.TabIndex = 0
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!)
-        Me.Label1.Location = New System.Drawing.Point(12, 54)
+        Me.Label1.Location = New System.Drawing.Point(9, 44)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(246, 39)
+        Me.Label1.Size = New System.Drawing.Size(169, 31)
         Me.Label1.TabIndex = 1
-        Me.Label1.Text = "List Data Sewa"
+        Me.Label1.Text = "# Data Sewa"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'BtnTambahDataSewa
         '
         Me.BtnTambahDataSewa.Cursor = System.Windows.Forms.Cursors.Arrow
         Me.BtnTambahDataSewa.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.BtnTambahDataSewa.Location = New System.Drawing.Point(528, 478)
+        Me.BtnTambahDataSewa.Location = New System.Drawing.Point(399, 463)
+        Me.BtnTambahDataSewa.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.BtnTambahDataSewa.Name = "BtnTambahDataSewa"
-        Me.BtnTambahDataSewa.Size = New System.Drawing.Size(191, 55)
+        Me.BtnTambahDataSewa.Size = New System.Drawing.Size(143, 45)
         Me.BtnTambahDataSewa.TabIndex = 32
         Me.BtnTambahDataSewa.Text = "Tambah Data"
         Me.BtnTambahDataSewa.UseVisualStyleBackColor = True
@@ -66,9 +69,10 @@ Partial Class FormDataSewa
         '
         Me.BtnHapusDataSewa.Cursor = System.Windows.Forms.Cursors.Arrow
         Me.BtnHapusDataSewa.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.BtnHapusDataSewa.Location = New System.Drawing.Point(922, 478)
+        Me.BtnHapusDataSewa.Location = New System.Drawing.Point(693, 463)
+        Me.BtnHapusDataSewa.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.BtnHapusDataSewa.Name = "BtnHapusDataSewa"
-        Me.BtnHapusDataSewa.Size = New System.Drawing.Size(191, 55)
+        Me.BtnHapusDataSewa.Size = New System.Drawing.Size(143, 45)
         Me.BtnHapusDataSewa.TabIndex = 34
         Me.BtnHapusDataSewa.Text = "Hapus Data"
         Me.BtnHapusDataSewa.UseVisualStyleBackColor = True
@@ -77,23 +81,25 @@ Partial Class FormDataSewa
         '
         Me.BtnFormReturn.Cursor = System.Windows.Forms.Cursors.Arrow
         Me.BtnFormReturn.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.BtnFormReturn.Location = New System.Drawing.Point(725, 478)
+        Me.BtnFormReturn.Location = New System.Drawing.Point(546, 463)
+        Me.BtnFormReturn.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.BtnFormReturn.Name = "BtnFormReturn"
-        Me.BtnFormReturn.Size = New System.Drawing.Size(191, 55)
+        Me.BtnFormReturn.Size = New System.Drawing.Size(143, 45)
         Me.BtnFormReturn.TabIndex = 35
         Me.BtnFormReturn.Text = "Kembali Form"
         Me.BtnFormReturn.UseVisualStyleBackColor = True
         '
         'FormDataSewa
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1139, 545)
+        Me.ClientSize = New System.Drawing.Size(854, 532)
         Me.Controls.Add(Me.BtnFormReturn)
         Me.Controls.Add(Me.BtnHapusDataSewa)
         Me.Controls.Add(Me.BtnTambahDataSewa)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.DGV_DataSewa)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "FormDataSewa"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FormDataSewa"
