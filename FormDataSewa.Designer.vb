@@ -95,11 +95,11 @@ Partial Class FormDataSewa
         Me.Label1.BackColor = System.Drawing.Color.Black
         Me.Label1.Font = New System.Drawing.Font("Calibri", 20.0!, System.Drawing.FontStyle.Bold)
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(25, 17)
+        Me.Label1.Location = New System.Drawing.Point(0, 0)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Padding = New System.Windows.Forms.Padding(15, 0, 0, 0)
-        Me.Label1.Size = New System.Drawing.Size(826, 72)
+        Me.Label1.Size = New System.Drawing.Size(874, 72)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "DATA SEWA LOKER"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
