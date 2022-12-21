@@ -70,15 +70,9 @@ Public Class SewaLocker
 
     Private Sub BtnYesSewa_Click(sender As Object, e As EventArgs) Handles BtnYesSewa.Click
         keteranganIsiLocker = RTBKetUser.Text
-        'sewa_model.GS_Status_Locker = "Terisi"
-        'Dim statusLocker As String = sewa_model.GS_Status_Locker()
-
-        'Validasi Form Isiannya
-
         If validationOfFormFill() IsNot Nothing Then
             MsgBox(validationOfFormFill(), MsgBoxStyle.Critical, "Kesalahan")
         Else
-
             If sewa_model.ValidateNewRentData(lokasiLoker, lamaSewa,
                                           totalBiaya, keteranganIsiLocker) Then
                 sewa_model.UpdateStatusLocker(lokasiLoker, "Terisi")
@@ -87,8 +81,6 @@ Public Class SewaLocker
             'Reset Isian Form
             resetFormFill()
         End If
-
-
     End Sub
 
     Private Sub NUDLamaSewa_ValueChanged(sender As Object, e As EventArgs) Handles NUDLamaSewa.ValueChanged
@@ -113,7 +105,7 @@ Public Class SewaLocker
     End Sub
 
     Public Function validationOfFormFill()
-        Dim infoKesalahan As String = ""
+        Dim infoKesalahan As String
 
         If ukuran Is Nothing Then
             infoKesalahan = "Harap Isi Ukuran Locker"
@@ -130,4 +122,9 @@ Public Class SewaLocker
 
         Return infoKesalahan
     End Function
+
+    Private Sub BtnNoSewa_Click(sender As Object, e As EventArgs) Handles BtnNoSewa.Click
+        Me.Close()
+        FormDataSewa.Show()
+    End Sub
 End Class

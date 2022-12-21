@@ -77,7 +77,7 @@
             db.Query(stmt)
 
             db.Bind("id_locker", "number", idLocker)
-            db.Bind("tanggal_sewa", "date", DateTime.Now.ToString("yyyy/MM/dd"))
+            db.Bind("tanggal_sewa", "text", DateTime.Now.ToString("yyyy/MM/dd"))
             db.Bind("bayar_sebelum_pinjam", "number", totalBiaya)
             db.Bind("rencana_pinjam", "number", lamaSewa)
             db.Bind("kelebihan_pinjam", "number", 0)
@@ -93,19 +93,9 @@
     End Function
 
     Public Function ValidateNewRentData(lokasi As String, lamaSewa As Integer,
-                                         totalBiaya As String, keterangan As String) As Boolean
-        If lokasi = "" Then
-            MessageBox.Show("Pilih lokasi loker terlebih dahulu")
-            Return False
-        End If
-
-        If lamaSewa = 0 Then
-            MessageBox.Show("Tentukan berapa hari untuk menyewa loker")
-            Return False
-        End If
-
+                                         totalBiaya As Integer, keterangan As String) As Boolean
         If InsertNewRentHistory(lokasi, lamaSewa,
-                                totalBiaya, keterangan) Then
+                                totalBiaya, keterangan) > 0 Then
             Return True
         Else
             MsgBox("Terjadi kesalahan, silahkan input ulang", MsgBoxStyle.Critical, "Kesalahan")
@@ -130,7 +120,7 @@
         stmt = "SELECT locker.lokasi as 'Nama Loker', 
                 tanggal_sewa as 'Tanggal Sewa', 
                 CASE WHEN tanggal_kembali IS NULL THEN 'Belum diambil' 
-                WHEN tanggal_kembali IS NOT NULL THEN tanggal_kembali
+                WHEN tanggal_kembali IS NOT NULL THEN DATE_FORMAT(tanggal_kembali, '%e/%m/%Y')
                 END AS 'Tanggal Kembali', 
                 bayar_sebelum_pinjam as 'Bayar Saat Sewa', 
                 rencana_pinjam as 'Jumlah Hari Sewa', 

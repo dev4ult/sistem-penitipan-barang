@@ -31,9 +31,14 @@
     End Sub
 
     Private Sub BtnHapusDataSewa_Click(sender As Object, e As EventArgs) Handles BtnHapusDataSewa.Click
-        RemoveRentData.LblRemoveLockerName.Text = selectedLocker
-        RemoveRentData.SetTanggalSewa = selectedTanggalSewa
-        RemoveRentData.Show()
+        If selectedTanggalSewa IsNot Nothing And selectedLocker IsNot Nothing Then
+            RemoveRentData.LblRemoveLockerName.Text = selectedLocker
+            RemoveRentData.SetTanggalSewa = selectedTanggalSewa
+            RemoveRentData.Show()
+        Else
+            MsgBox("Tolong pilih data loker dengan benar", MsgBoxStyle.Critical, "Kesalahan")
+        End If
+
     End Sub
 
     Private Sub BtnTambahDataSewa_Click(sender As Object, e As EventArgs) Handles BtnTambahDataSewa.Click
@@ -41,25 +46,30 @@
     End Sub
 
     Private Sub BtnFormReturn_Click(sender As Object, e As EventArgs) Handles BtnFormReturn.Click
-        Dim dataLocker As DataTable = sewa_model.GetRentDataByLockerName(selectedLocker, selectedTanggalSewa)
-        'MsgBox(dataLocker.Rows(0)(0))
-        RentReturn.LblLockerName.Text = dataLocker.Rows(0)(0)
-        RentReturn.LblJmlHariPinjam.Text = dataLocker.Rows(0)(1)
-        RentReturn.LblTanggalSewa.Text = dataLocker.Rows(0)(2)
-        RentReturn.GSTotalBiayaDanDenda = dataLocker.Rows(0)(3)
-        RentReturn.LblTelatHari.Text = dataLocker.Rows(0)(4)
-        Dim denda As Integer = Integer.Parse(dataLocker.Rows(0)(4)) * 10
+        If selectedTanggalSewa Is Nothing And selectedLocker Is Nothing Then
+            MsgBox("Tolong pilih data loker dengan benar", MsgBoxStyle.Critical, "Kesalahan")
+        Else
+            Dim dataLocker As DataTable = sewa_model.GetRentDataByLockerName(selectedLocker, selectedTanggalSewa)
+            'MsgBox(dataLocker.Rows(0)(0))
+            RentReturn.LblLockerName.Text = dataLocker.Rows(0)(0)
+            RentReturn.LblJmlHariPinjam.Text = dataLocker.Rows(0)(1)
+            RentReturn.LblTanggalSewa.Text = dataLocker.Rows(0)(2)
+            RentReturn.GSTotalBiayaDanDenda = dataLocker.Rows(0)(3)
+            RentReturn.LblTelatHari.Text = dataLocker.Rows(0)(4)
+            Dim denda As Integer = Integer.Parse(dataLocker.Rows(0)(4)) * 10
 
-        If denda < 0 Then
-            denda = 0
-            RentReturn.LblTelatHari.Text = 0
+            If denda < 0 Then
+                denda = 0
+                RentReturn.LblTelatHari.Text = 0
+            End If
+
+            RentReturn.LblDenda.Text = denda
+            RentReturn.LblTotaldanDenda.Text = dataLocker.Rows(0)(6)
+            RentReturn.DTPTanggalKembali.Value = Date.Parse(dataLocker.Rows(0)(2)).AddDays(dataLocker.Rows(0)(1) + dataLocker.Rows(0)(4))
+            RentReturn.GSReturnDateBeforeChange = Date.Parse(dataLocker.Rows(0)(2)).AddDays(dataLocker.Rows(0)(1))
+            RentReturn.GSBiayaPerUkuran = dataLocker.Rows(0)(5)
+            RentReturn.Show()
         End If
 
-        RentReturn.LblDenda.Text = denda
-        RentReturn.LblTotaldanDenda.Text = dataLocker.Rows(0)(6)
-        RentReturn.DTPTanggalKembali.Value = Date.Parse(dataLocker.Rows(0)(2)).AddDays(dataLocker.Rows(0)(1) + dataLocker.Rows(0)(4))
-        RentReturn.GSReturnDateBeforeChange = Date.Parse(dataLocker.Rows(0)(2)).AddDays(dataLocker.Rows(0)(1))
-        RentReturn.GSBiayaPerUkuran = dataLocker.Rows(0)(5)
-        RentReturn.Show()
     End Sub
 End Class

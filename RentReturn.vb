@@ -20,7 +20,6 @@
     Private Sub DTPTanggalKembali_TextChanged(sender As Object, e As EventArgs) Handles DTPTanggalKembali.TextChanged
         tanggal_kembali_denda = DTPTanggalKembali.Value
         selisihHariDenganTglKembaliAwal = Integer.Parse(DateDiff(DateInterval.Day, tanggal_kembali_awal, tanggal_kembali_denda).ToString())
-        MsgBox(selisihHariDenganTglKembaliAwal)
         If tanggal_kembali_denda < Date.Parse(LblTanggalSewa.Text) Then
             MsgBox("Tanggal kembali tidak kurang dari tanggal sewa", MsgBoxStyle.Critical, "Kesalahan")
             DTPTanggalKembali.Select()
