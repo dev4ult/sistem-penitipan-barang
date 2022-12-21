@@ -1,5 +1,4 @@
-﻿Imports System.ComponentModel
-
+﻿
 Public Class Signup
     Private user_model As User_model
 
