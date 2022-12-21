@@ -327,7 +327,7 @@ Partial Class SewaLocker
         '
         Me.Label19.AutoSize = True
         Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
-        Me.Label19.ForeColor = System.Drawing.Color.Red
+        Me.Label19.ForeColor = System.Drawing.Color.Navy
         Me.Label19.Location = New System.Drawing.Point(114, 91)
         Me.Label19.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label19.Name = "Label19"
