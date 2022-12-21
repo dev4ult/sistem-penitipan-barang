@@ -44,7 +44,7 @@ Partial Class HapusJenisLocker
         '
         Me.LblHapusJenisLocker.BackColor = System.Drawing.Color.Black
         Me.LblHapusJenisLocker.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.LblHapusJenisLocker.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblHapusJenisLocker.Font = New System.Drawing.Font("Calibri", 15.0!, System.Drawing.FontStyle.Bold)
         Me.LblHapusJenisLocker.ForeColor = System.Drawing.Color.White
         Me.LblHapusJenisLocker.Location = New System.Drawing.Point(-1, 0)
         Me.LblHapusJenisLocker.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
@@ -61,7 +61,7 @@ Partial Class HapusJenisLocker
         Me.BtnClose.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnClose.ForeColor = System.Drawing.Color.Black
         Me.BtnClose.Location = New System.Drawing.Point(287, 227)
-        Me.BtnClose.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.BtnClose.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnClose.Name = "BtnClose"
         Me.BtnClose.Size = New System.Drawing.Size(68, 28)
         Me.BtnClose.TabIndex = 19
@@ -119,7 +119,7 @@ Partial Class HapusJenisLocker
         Me.BtnDelete.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnDelete.ForeColor = System.Drawing.Color.White
         Me.BtnDelete.Location = New System.Drawing.Point(205, 227)
-        Me.BtnDelete.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.BtnDelete.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnDelete.Name = "BtnDelete"
         Me.BtnDelete.Size = New System.Drawing.Size(69, 28)
         Me.BtnDelete.TabIndex = 24
@@ -158,7 +158,7 @@ Partial Class HapusJenisLocker
         Me.Panel1.Controls.Add(Me.LbValueBiaya)
         Me.Panel1.Controls.Add(Me.LbValueUkuran)
         Me.Panel1.Location = New System.Drawing.Point(13, 100)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(342, 109)
         Me.Panel1.TabIndex = 27
@@ -205,7 +205,7 @@ Partial Class HapusJenisLocker
         Me.Panel2.Controls.Add(Me.BtnDelete)
         Me.Panel2.Controls.Add(Me.BtnClose)
         Me.Panel2.Location = New System.Drawing.Point(26, 25)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(372, 272)
         Me.Panel2.TabIndex = 29
@@ -218,7 +218,7 @@ Partial Class HapusJenisLocker
         Me.ClientSize = New System.Drawing.Size(426, 327)
         Me.Controls.Add(Me.Panel2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "HapusJenisLocker"
         Me.Text = "Hapus Jenis Loker"
         Me.Panel1.ResumeLayout(False)

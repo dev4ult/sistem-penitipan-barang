@@ -356,6 +356,7 @@ Partial Class RentReturn
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(575, 565)
         Me.Controls.Add(Me.Panel1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "RentReturn"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
