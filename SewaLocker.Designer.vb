@@ -56,11 +56,11 @@ Partial Class SewaLocker
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Calibri", 20.0!)
+        Me.Label1.Font = New System.Drawing.Font("Calibri", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(19, 24)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(199, 33)
+        Me.Label1.Size = New System.Drawing.Size(208, 33)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Form Sewa Loker"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -69,7 +69,7 @@ Partial Class SewaLocker
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.Label3.Location = New System.Drawing.Point(669, 164)
+        Me.Label3.Location = New System.Drawing.Point(256, 173)
         Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(92, 20)
@@ -79,7 +79,7 @@ Partial Class SewaLocker
         'CBUkuranLocker
         '
         Me.CBUkuranLocker.FormattingEnabled = True
-        Me.CBUkuranLocker.Location = New System.Drawing.Point(511, 113)
+        Me.CBUkuranLocker.Location = New System.Drawing.Point(98, 122)
         Me.CBUkuranLocker.Margin = New System.Windows.Forms.Padding(2)
         Me.CBUkuranLocker.Name = "CBUkuranLocker"
         Me.CBUkuranLocker.Size = New System.Drawing.Size(133, 21)
@@ -90,7 +90,7 @@ Partial Class SewaLocker
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.Label5.Location = New System.Drawing.Point(507, 83)
+        Me.Label5.Location = New System.Drawing.Point(94, 92)
         Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(61, 20)
@@ -101,7 +101,7 @@ Partial Class SewaLocker
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.Label2.Location = New System.Drawing.Point(507, 164)
+        Me.Label2.Location = New System.Drawing.Point(94, 173)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(103, 20)
@@ -112,7 +112,7 @@ Partial Class SewaLocker
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.Label4.Location = New System.Drawing.Point(742, 115)
+        Me.Label4.Location = New System.Drawing.Point(329, 124)
         Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(34, 17)
@@ -123,7 +123,7 @@ Partial Class SewaLocker
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.Label6.Location = New System.Drawing.Point(669, 83)
+        Me.Label6.Location = New System.Drawing.Point(256, 92)
         Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(93, 20)
@@ -135,7 +135,7 @@ Partial Class SewaLocker
         Me.Label7.AutoSize = True
         Me.Label7.BackColor = System.Drawing.Color.Bisque
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.Label7.Location = New System.Drawing.Point(686, 311)
+        Me.Label7.Location = New System.Drawing.Point(273, 320)
         Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(92, 20)
@@ -146,7 +146,7 @@ Partial Class SewaLocker
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.Label8.Location = New System.Drawing.Point(686, 331)
+        Me.Label8.Location = New System.Drawing.Point(273, 340)
         Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(70, 17)
@@ -157,7 +157,7 @@ Partial Class SewaLocker
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.Label9.Location = New System.Drawing.Point(776, 321)
+        Me.Label9.Location = New System.Drawing.Point(363, 330)
         Me.Label9.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(34, 20)
@@ -168,7 +168,7 @@ Partial Class SewaLocker
         '
         Me.LblBiayaPerJam.AutoSize = True
         Me.LblBiayaPerJam.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.LblBiayaPerJam.Location = New System.Drawing.Point(802, 321)
+        Me.LblBiayaPerJam.Location = New System.Drawing.Point(389, 330)
         Me.LblBiayaPerJam.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LblBiayaPerJam.Name = "LblBiayaPerJam"
         Me.LblBiayaPerJam.Size = New System.Drawing.Size(18, 20)
@@ -180,7 +180,7 @@ Partial Class SewaLocker
         Me.Label10.AutoSize = True
         Me.Label10.BackColor = System.Drawing.Color.Bisque
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.Label10.Location = New System.Drawing.Point(686, 365)
+        Me.Label10.Location = New System.Drawing.Point(273, 374)
         Me.Label10.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(87, 20)
@@ -191,7 +191,7 @@ Partial Class SewaLocker
         '
         Me.LblTotalBiaya.AutoSize = True
         Me.LblTotalBiaya.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.LblTotalBiaya.Location = New System.Drawing.Point(802, 365)
+        Me.LblTotalBiaya.Location = New System.Drawing.Point(389, 374)
         Me.LblTotalBiaya.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LblTotalBiaya.Name = "LblTotalBiaya"
         Me.LblTotalBiaya.Size = New System.Drawing.Size(18, 20)
@@ -202,7 +202,7 @@ Partial Class SewaLocker
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.Label13.Location = New System.Drawing.Point(776, 365)
+        Me.Label13.Location = New System.Drawing.Point(363, 374)
         Me.Label13.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(34, 20)
@@ -236,7 +236,7 @@ Partial Class SewaLocker
         'LsbLockerTersedia
         '
         Me.LsbLockerTersedia.FormattingEnabled = True
-        Me.LsbLockerTersedia.Location = New System.Drawing.Point(512, 191)
+        Me.LsbLockerTersedia.Location = New System.Drawing.Point(99, 200)
         Me.LsbLockerTersedia.Margin = New System.Windows.Forms.Padding(2)
         Me.LsbLockerTersedia.Name = "LsbLockerTersedia"
         Me.LsbLockerTersedia.Size = New System.Drawing.Size(102, 82)
@@ -247,7 +247,7 @@ Partial Class SewaLocker
         Me.LblNamaLocker.AutoSize = True
         Me.LblNamaLocker.BackColor = System.Drawing.SystemColors.Control
         Me.LblNamaLocker.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.LblNamaLocker.Location = New System.Drawing.Point(626, 311)
+        Me.LblNamaLocker.Location = New System.Drawing.Point(213, 320)
         Me.LblNamaLocker.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LblNamaLocker.Name = "LblNamaLocker"
         Me.LblNamaLocker.Size = New System.Drawing.Size(0, 20)
@@ -258,7 +258,7 @@ Partial Class SewaLocker
         Me.Label16.AutoSize = True
         Me.Label16.BackColor = System.Drawing.Color.Bisque
         Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.Label16.Location = New System.Drawing.Point(524, 311)
+        Me.Label16.Location = New System.Drawing.Point(111, 320)
         Me.Label16.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(95, 20)
@@ -269,7 +269,7 @@ Partial Class SewaLocker
         '
         Me.LblLamaSewa.AutoSize = True
         Me.LblLamaSewa.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.LblLamaSewa.Location = New System.Drawing.Point(626, 365)
+        Me.LblLamaSewa.Location = New System.Drawing.Point(213, 374)
         Me.LblLamaSewa.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LblLamaSewa.Name = "LblLamaSewa"
         Me.LblLamaSewa.Size = New System.Drawing.Size(18, 20)
@@ -281,7 +281,7 @@ Partial Class SewaLocker
         Me.Label17.AutoSize = True
         Me.Label17.BackColor = System.Drawing.Color.Bisque
         Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.Label17.Location = New System.Drawing.Point(524, 365)
+        Me.Label17.Location = New System.Drawing.Point(111, 374)
         Me.Label17.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(93, 20)
@@ -292,7 +292,7 @@ Partial Class SewaLocker
         '
         Me.Label18.AutoSize = True
         Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.Label18.Location = New System.Drawing.Point(525, 386)
+        Me.Label18.Location = New System.Drawing.Point(112, 395)
         Me.Label18.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(70, 17)
@@ -301,7 +301,7 @@ Partial Class SewaLocker
         '
         'RTBKetUser
         '
-        Me.RTBKetUser.Location = New System.Drawing.Point(675, 197)
+        Me.RTBKetUser.Location = New System.Drawing.Point(262, 206)
         Me.RTBKetUser.Margin = New System.Windows.Forms.Padding(2)
         Me.RTBKetUser.Name = "RTBKetUser"
         Me.RTBKetUser.Size = New System.Drawing.Size(129, 55)
@@ -312,7 +312,7 @@ Partial Class SewaLocker
         '
         Me.Label19.AutoSize = True
         Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
-        Me.Label19.Location = New System.Drawing.Point(675, 254)
+        Me.Label19.Location = New System.Drawing.Point(262, 263)
         Me.Label19.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(118, 13)
@@ -324,7 +324,7 @@ Partial Class SewaLocker
         Me.LblJumlahKomentar.AutoSize = True
         Me.LblJumlahKomentar.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.LblJumlahKomentar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.LblJumlahKomentar.Location = New System.Drawing.Point(807, 229)
+        Me.LblJumlahKomentar.Location = New System.Drawing.Point(394, 238)
         Me.LblJumlahKomentar.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LblJumlahKomentar.Name = "LblJumlahKomentar"
         Me.LblJumlahKomentar.Size = New System.Drawing.Size(27, 20)
@@ -335,7 +335,7 @@ Partial Class SewaLocker
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.Label11.Location = New System.Drawing.Point(687, 386)
+        Me.Label11.Location = New System.Drawing.Point(274, 395)
         Me.Label11.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(101, 17)
@@ -344,7 +344,7 @@ Partial Class SewaLocker
         '
         'NUDLamaSewa
         '
-        Me.NUDLamaSewa.Location = New System.Drawing.Point(671, 113)
+        Me.NUDLamaSewa.Location = New System.Drawing.Point(258, 122)
         Me.NUDLamaSewa.Margin = New System.Windows.Forms.Padding(2)
         Me.NUDLamaSewa.Name = "NUDLamaSewa"
         Me.NUDLamaSewa.Size = New System.Drawing.Size(67, 20)
@@ -354,7 +354,7 @@ Partial Class SewaLocker
         '
         Me.LblKetUkuran.AutoSize = True
         Me.LblKetUkuran.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
-        Me.LblKetUkuran.Location = New System.Drawing.Point(509, 135)
+        Me.LblKetUkuran.Location = New System.Drawing.Point(96, 144)
         Me.LblKetUkuran.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LblKetUkuran.Name = "LblKetUkuran"
         Me.LblKetUkuran.Size = New System.Drawing.Size(26, 13)
@@ -365,7 +365,7 @@ Partial Class SewaLocker
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(984, 574)
+        Me.ClientSize = New System.Drawing.Size(552, 574)
         Me.Controls.Add(Me.LblKetUkuran)
         Me.Controls.Add(Me.NUDLamaSewa)
         Me.Controls.Add(Me.Label11)
@@ -397,7 +397,7 @@ Partial Class SewaLocker
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "SewaLocker"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Sewa Loker"
+        Me.Text = "Form Sewa Loker"
         CType(Me.NUDLamaSewa, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
