@@ -32,10 +32,10 @@ Partial Class HapusJenisLocker
         Me.LbValueInfoKet = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.LbValueKeterangan = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.LbValueKeterangan = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
@@ -44,7 +44,7 @@ Partial Class HapusJenisLocker
         '
         Me.LblHapusJenisLocker.BackColor = System.Drawing.Color.Black
         Me.LblHapusJenisLocker.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.LblHapusJenisLocker.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblHapusJenisLocker.Font = New System.Drawing.Font("Calibri", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblHapusJenisLocker.ForeColor = System.Drawing.Color.White
         Me.LblHapusJenisLocker.Location = New System.Drawing.Point(-1, 0)
         Me.LblHapusJenisLocker.Name = "LblHapusJenisLocker"
@@ -157,6 +157,26 @@ Partial Class HapusJenisLocker
         Me.Panel1.Size = New System.Drawing.Size(373, 134)
         Me.Panel1.TabIndex = 27
         '
+        'Label3
+        '
+        Me.Label3.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(18, 88)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(109, 26)
+        Me.Label3.TabIndex = 28
+        Me.Label3.Text = "Keterangan : "
+        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'LbValueKeterangan
+        '
+        Me.LbValueKeterangan.Font = New System.Drawing.Font("Calibri Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LbValueKeterangan.Location = New System.Drawing.Point(126, 88)
+        Me.LbValueKeterangan.Name = "LbValueKeterangan"
+        Me.LbValueKeterangan.Size = New System.Drawing.Size(242, 26)
+        Me.LbValueKeterangan.TabIndex = 27
+        Me.LbValueKeterangan.Text = "XXXXXX"
+        Me.LbValueKeterangan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -179,26 +199,6 @@ Partial Class HapusJenisLocker
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(410, 326)
         Me.Panel2.TabIndex = 29
-        '
-        'LbValueKeterangan
-        '
-        Me.LbValueKeterangan.Font = New System.Drawing.Font("Calibri Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LbValueKeterangan.Location = New System.Drawing.Point(126, 88)
-        Me.LbValueKeterangan.Name = "LbValueKeterangan"
-        Me.LbValueKeterangan.Size = New System.Drawing.Size(242, 26)
-        Me.LbValueKeterangan.TabIndex = 27
-        Me.LbValueKeterangan.Text = "XXXXXX"
-        Me.LbValueKeterangan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Label3
-        '
-        Me.Label3.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(18, 88)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(109, 26)
-        Me.Label3.TabIndex = 28
-        Me.Label3.Text = "Keterangan : "
-        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'HapusJenisLocker
         '

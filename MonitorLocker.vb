@@ -24,11 +24,19 @@
         End Set
     End Property
 
-    Private Sub btntambahlocker_Click(sender As Object, e As EventArgs) Handles btntambahlocker.Click
+    Private Sub BTNTambahLoker_Click(sender As Object, e As EventArgs) Handles BTNTambahLoker.Click
         TambahLocker.Show()
     End Sub
 
-    Private Sub btnhapuslocker_Click(sender As Object, e As EventArgs) Handles btnhapuslocker.Click
+    Private Sub BTNUbahStatus_Click(sender As Object, e As EventArgs) Handles BTNUbahStatus.Click
+        If selectedLocker = "" Then
+            MessageBox.Show("Pilih locker terlebih dahulu")
+        Else
+            UpdateStatusLocker.Show()
+        End If
+    End Sub
+
+    Private Sub BTNHapusLoker_Click(sender As Object, e As EventArgs) Handles BTNHapusLoker.Click
         If selectedLocker = "" Then
             MessageBox.Show("Pilih locker terlebih dahulu")
         Else
@@ -47,23 +55,7 @@
         End If
     End Sub
 
-    Private Sub btnupdatestatus_Click(sender As Object, e As EventArgs) Handles btnupdatestatus.Click
-        If selectedLocker = "" Then
-            MessageBox.Show("Pilih locker terlebih dahulu")
-        Else
-            UpdateStatusLocker.Show()
-        End If
-    End Sub
-
-    Private Sub MonitorLocker_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
-
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
-
-    End Sub
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub BTNKembali_Click(sender As Object, e As EventArgs) Handles BTNKembali.Click
         Me.Close()
     End Sub
 End Class
