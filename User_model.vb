@@ -10,15 +10,7 @@ Public Class User_model
         db = New Database()
     End Sub
 
-    Public Function GetAllUserAsDataTable() As DataTable
-        db.Query("SELECT * FROM users")
-
-        Dim list_user As New DataTable
-        list_user.Load(db.Fetch())
-
-        Return list_user
-    End Function
-    Public Function InsertNewUser(username As String, email As String, password As String) As Integer
+    Private Function InsertNewUser(username As String, email As String, password As String) As Integer
         db.Query("INSERT INTO users VALUES ('',@username, @email, @password)")
 
         db.Bind("username", "text", username)
@@ -28,7 +20,7 @@ Public Class User_model
         Return db.Execute()
     End Function
 
-    Public Function IsEmail(email As String) As Boolean
+    Private Function IsEmail(email As String) As Boolean
         Try
             Dim address = New MailAddress(email)
             Return True
@@ -37,7 +29,7 @@ Public Class User_model
         End Try
     End Function
 
-    Public Function IsNameOrEmailExist(ByVal username As String, ByVal email As String) As Boolean
+    Private Function IsNameOrEmailExist(username As String, email As String) As Boolean
         db.Query("SELECT * FROM users WHERE username = @username OR email = @email")
 
         db.Bind("username", "text", username)
@@ -51,7 +43,7 @@ Public Class User_model
         End If
     End Function
 
-    Public Function EncryptPassword(password As String) As String
+    Private Function EncryptPassword(password As String) As String
         Dim bytes = New SHA256Managed().ComputeHash(UTF8.GetBytes(password))
 
         Dim stringBuilder As New StringBuilder()
@@ -63,25 +55,44 @@ Public Class User_model
         Return stringBuilder.ToString()
     End Function
 
+    Public Function GetUserId(umail As String) As Integer
+        db.Query("SELECT id FROM users WHERE username = @username OR email = @email")
+        db.Bind("username", "text", umail)
+        db.Bind("email", "text", umail)
 
-    Public Function ValidateLogin(umail As String, password As String) As Boolean
-        db.Query("SELECT * FROM users WHERE 
+        Return db.Fetch()(0)(0)
+    End Function
+
+    Public Function GetUsername(id As Integer) As String
+        db.Query("SELECT username FROM users WHERE id = @id")
+        db.Bind("id", "number", id)
+
+        Return db.Fetch()(0)(0)
+    End Function
+
+    Public Function ValidateLogin(umail As String, password As String, table As String) As Boolean
+        db.Query("SELECT * FROM " & table & " WHERE 
                     username = @username OR 
-                    email = @email AND 
-                    password = @password")
+                    email = @email")
 
         db.Bind("username", "text", umail)
         db.Bind("email", "text", umail)
+
+        Dim nameDTB = db.Fetch()
+
+        db.Query("SELECT * FROM " & table & " WHERE password = @password")
         db.Bind("password", "text", EncryptPassword(password))
 
-        Dim tempDTB = db.Fetch()
+        Dim passDTB = db.Fetch()
 
-        If tempDTB.Rows.Count > 0 Then
+        If nameDTB.Rows.Count > 0 And passDTB.Rows.Count > 0 Then
             Return True
-        Else
+        ElseIf table = "users" Then
             Login.SetFlashMessage("Gagal! Username / email atau password salah")
-            Return False
+        Else
+            LoginAdmin.SetFlashMessage("Gagal! Username / email atau password salah")
         End If
+        Return False
     End Function
 
     Public Function ValidateSignUp(username As String, email As String, password As String, passwordConfirmation As String) As Boolean
@@ -89,6 +100,11 @@ Public Class User_model
         'Cek jika konfirmasi password tidak sama
         If Not password = passwordConfirmation Then
             Signup.SetFlashMessage("Gagal! Password konfirmasi tidak sama")
+            Return False
+        End If
+
+        If Not IsEmail(email) Then
+            Signup.SetFlashMessage("Gagal! Email tidak valid")
             Return False
         End If
 
@@ -107,6 +123,6 @@ Public Class User_model
             Signup.SetFlashMessage("Gagal! Telah terjadi kesalahan, Silahkan registrasi ulang")
             Return False
         End If
-
     End Function
+
 End Class

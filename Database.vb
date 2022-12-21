@@ -1,4 +1,6 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports System.Data.SqlClient
+Imports MySql.Data.MySqlClient
+
 
 Public Class Database
     Private conn As New MySqlConnection
@@ -13,7 +15,7 @@ Public Class Database
                                  database=vb_sistem_penitipan"
     End Sub
 
-    Public Sub Open()
+    Private Sub Open()
         cmd.Connection = conn
         conn.Open()
     End Sub
@@ -32,7 +34,7 @@ Public Class Database
         cmd.Parameters.AddWithValue("@" & name, value)
     End Sub
 
-    Public Sub PrepareStmt()
+    Private Sub PrepareStmt()
         If queryString.Contains("@") Then
             cmd.Prepare()
         End If
@@ -61,9 +63,10 @@ Public Class Database
 
         dataReader.Close()
         cmd.Parameters.Clear()
-        conn.Close()
 
+        conn.Close()
         Return dataTable
+
     End Function
 
 End Class

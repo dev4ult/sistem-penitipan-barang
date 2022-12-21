@@ -111,17 +111,29 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Database.vb" />
-    <Compile Include="SewaLocker.Designer.vb">
-      <DependentUpon>SewaLocker.vb</DependentUpon>
+    <Compile Include="AdminMenu.Designer.vb">
+      <DependentUpon>AdminMenu.vb</DependentUpon>
     </Compile>
-    <Compile Include="SewaLocker.vb">
+    <Compile Include="AdminMenu.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="JenisLocker.Designer.vb">
-      <DependentUpon>JenisLocker.vb</DependentUpon>
+    <Compile Include="Database.vb" />
+    <Compile Include="FormListDataPenyewaan.Designer.vb">
+      <DependentUpon>FormListDataPenyewaan.vb</DependentUpon>
     </Compile>
-    <Compile Include="JenisLocker.vb">
+    <Compile Include="FormListDataPenyewaan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginAdmin.Designer.vb">
+      <DependentUpon>LoginAdmin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LoginAdmin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenu.Designer.vb">
+      <DependentUpon>MainMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.Designer.vb">
@@ -130,6 +142,50 @@
     <Compile Include="Login.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="RemoveRentData.Designer.vb">
+      <DependentUpon>RemoveRentData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveRentData.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RentReturn.Designer.vb">
+      <DependentUpon>RentReturn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RentReturn.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SewaLocker.Designer.vb">
+      <DependentUpon>SewaLocker.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SewaLocker.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HapusLocker.Designer.vb">
+      <DependentUpon>HapusLocker.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HapusLocker.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MonitorLocker.Designer.vb">
+      <DependentUpon>MonitorLocker.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MonitorLocker.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HapusJenisLocker.Designer.vb">
+      <DependentUpon>HapusJenisLocker.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HapusJenisLocker.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormJenisLocker.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormJenisLocker.Designer.vb">
+      <DependentUpon>FormJenisLocker.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Locker_Model.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -146,24 +202,70 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Signup.Designer.vb">
-      <DependentUpon>Signup.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Signup.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Sewa_model.vb" />
-    <Compile Include="User_model.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="SewaLocker.resx">
-      <DependentUpon>SewaLocker.vb</DependentUpon>
+    <EmbeddedResource Include="AdminMenu.resx">
+      <DependentUpon>AdminMenu.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="JenisLocker.resx">
-      <DependentUpon>JenisLocker.vb</DependentUpon>
+    <EmbeddedResource Include="FormListDataPenyewaan.resx">
+      <DependentUpon>FormListDataPenyewaan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginAdmin.resx">
+      <DependentUpon>LoginAdmin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RemoveRentData.resx">
+      <DependentUpon>RemoveRentData.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RentReturn.resx">
+      <DependentUpon>RentReturn.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SewaLocker.resx">
+      <DependentUpon>SewaLocker.vb</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="TambahLocker.Designer.vb">
+      <DependentUpon>TambahLocker.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TambahLocker.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateStatusLocker.Designer.vb">
+      <DependentUpon>UpdateStatusLocker.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateStatusLocker.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TambahJenisLocker.Designer.vb">
+      <DependentUpon>TambahJenisLocker.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TambahJenisLocker.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateJenisLocker.Designer.vb">
+      <DependentUpon>UpdateJenisLocker.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateJenisLocker.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="HapusLocker.resx">
+      <DependentUpon>HapusLocker.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormJenisLocker.resx">
+      <DependentUpon>FormJenisLocker.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HapusJenisLocker.resx">
+      <DependentUpon>HapusJenisLocker.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MonitorLocker.resx">
+      <DependentUpon>MonitorLocker.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -173,6 +275,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Signup.resx">
       <DependentUpon>Signup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TambahLocker.resx">
+      <DependentUpon>TambahLocker.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateStatusLocker.resx">
+      <DependentUpon>UpdateStatusLocker.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TambahJenisLocker.resx">
+      <DependentUpon>TambahJenisLocker.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateJenisLocker.resx">
+      <DependentUpon>UpdateJenisLocker.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -187,6 +301,10 @@
     </None>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="vb_sistem_penitipan.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

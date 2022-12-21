@@ -1,6 +1,5 @@
-﻿Public Class Login
+﻿Public Class LoginAdmin
     Private user_model As User_model
-    Private userId As Integer
 
     Public Sub New()
 
@@ -11,15 +10,14 @@
         user_model = New User_model()
     End Sub
 
-    Public ReadOnly Property GetUserId() As Integer
-        Get
-            Return userId
-        End Get
-    End Property
-
     Public Sub SetFlashMessage(msg As String)
         LBFMError.Text = msg
         LBFMError.Visible = True
+    End Sub
+
+    Private Sub LinkLBCustomer_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLBCustomer.LinkClicked
+        Login.Show()
+        Me.Close()
     End Sub
 
     Private Sub BTNLogin_Click(sender As Object, e As EventArgs) Handles BTNLogin.Click
@@ -29,22 +27,12 @@
         If umail = "" Or password = "" Then
             SetFlashMessage("Input tidak boleh bersifat kosong")
         Else
-            If user_model.ValidateLogin(umail, password, "users") Then
-                userId = user_model.GetUserId(umail)
-                MainMenu.Show()
+            If user_model.ValidateLogin(umail, password, "admins") Then
+                AdminMenu.Show()
                 Me.Close()
             End If
         End If
-    End Sub
 
-    Private Sub LinkLBSignup_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLBSignup.LinkClicked
-        Signup.Show()
-        Me.Close()
-    End Sub
-
-    Private Sub LinkLBAdmin_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLBAdmin.LinkClicked
-        LoginAdmin.show()
-        Me.Close()
     End Sub
 
 End Class

@@ -40,7 +40,7 @@ Partial Class Signup
         Me.TXTPassword = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.BTNLogin = New System.Windows.Forms.Button()
+        Me.BTNSignUp = New System.Windows.Forms.Button()
         Me.PanelUmail = New System.Windows.Forms.Panel()
         Me.TXTUsername = New System.Windows.Forms.TextBox()
         Me.Panel2.SuspendLayout()
@@ -89,7 +89,7 @@ Partial Class Signup
         Me.Panel2.Controls.Add(Me.Panel1)
         Me.Panel2.Controls.Add(Me.Label1)
         Me.Panel2.Controls.Add(Me.Label2)
-        Me.Panel2.Controls.Add(Me.BTNLogin)
+        Me.Panel2.Controls.Add(Me.BTNSignUp)
         Me.Panel2.Controls.Add(Me.PanelUmail)
         Me.Panel2.Location = New System.Drawing.Point(59, 138)
         Me.Panel2.Name = "Panel2"
@@ -271,24 +271,24 @@ Partial Class Signup
         Me.Label2.TabIndex = 6
         Me.Label2.Text = "Password"
         '
-        'BTNLogin
+        'BTNSignUp
         '
-        Me.BTNLogin.BackColor = System.Drawing.Color.Black
-        Me.BTNLogin.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BTNLogin.FlatAppearance.BorderColor = System.Drawing.Color.Black
-        Me.BTNLogin.FlatAppearance.BorderSize = 0
-        Me.BTNLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black
-        Me.BTNLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black
-        Me.BTNLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.BTNLogin.Font = New System.Drawing.Font("Inter", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTNLogin.ForeColor = System.Drawing.Color.White
-        Me.BTNLogin.Location = New System.Drawing.Point(24, 272)
-        Me.BTNLogin.Margin = New System.Windows.Forms.Padding(0)
-        Me.BTNLogin.Name = "BTNLogin"
-        Me.BTNLogin.Size = New System.Drawing.Size(642, 43)
-        Me.BTNLogin.TabIndex = 2
-        Me.BTNLogin.Text = "SIGNUP"
-        Me.BTNLogin.UseVisualStyleBackColor = False
+        Me.BTNSignUp.BackColor = System.Drawing.Color.Black
+        Me.BTNSignUp.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BTNSignUp.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.BTNSignUp.FlatAppearance.BorderSize = 0
+        Me.BTNSignUp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black
+        Me.BTNSignUp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black
+        Me.BTNSignUp.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.BTNSignUp.Font = New System.Drawing.Font("Inter", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTNSignUp.ForeColor = System.Drawing.Color.White
+        Me.BTNSignUp.Location = New System.Drawing.Point(24, 272)
+        Me.BTNSignUp.Margin = New System.Windows.Forms.Padding(0)
+        Me.BTNSignUp.Name = "BTNSignUp"
+        Me.BTNSignUp.Size = New System.Drawing.Size(642, 43)
+        Me.BTNSignUp.TabIndex = 2
+        Me.BTNSignUp.Text = "SIGNUP"
+        Me.BTNSignUp.UseVisualStyleBackColor = False
         '
         'PanelUmail
         '
@@ -355,7 +355,7 @@ Partial Class Signup
     Friend WithEvents TXTPassword As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents BTNLogin As Button
+    Friend WithEvents BTNSignUp As Button
     Friend WithEvents PanelUmail As Panel
     Friend WithEvents TXTUsername As TextBox
     Friend WithEvents Label8 As Label
