@@ -44,11 +44,13 @@ Partial Class LoginAdmin
         'LinkLBCustomer
         '
         Me.LinkLBCustomer.AutoSize = True
-        Me.LinkLBCustomer.Font = New System.Drawing.Font("Inter", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LinkLBCustomer.BackColor = System.Drawing.Color.Transparent
+        Me.LinkLBCustomer.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LinkLBCustomer.LinkColor = System.Drawing.Color.RoyalBlue
-        Me.LinkLBCustomer.Location = New System.Drawing.Point(125, 535)
+        Me.LinkLBCustomer.Location = New System.Drawing.Point(97, 435)
+        Me.LinkLBCustomer.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LinkLBCustomer.Name = "LinkLBCustomer"
-        Me.LinkLBCustomer.Size = New System.Drawing.Size(79, 19)
+        Me.LinkLBCustomer.Size = New System.Drawing.Size(60, 15)
         Me.LinkLBCustomer.TabIndex = 18
         Me.LinkLBCustomer.TabStop = True
         Me.LinkLBCustomer.Text = "Customer"
@@ -56,30 +58,33 @@ Partial Class LoginAdmin
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Inter", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(186, 110)
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(140, 89)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(290, 24)
+        Me.Label6.Size = New System.Drawing.Size(220, 20)
         Me.Label6.TabIndex = 16
         Me.Label6.Text = "Silahkan Login sebagai admin"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Inter", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(20, 535)
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(15, 435)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(107, 19)
+        Me.Label7.Size = New System.Drawing.Size(85, 15)
         Me.Label7.TabIndex = 17
         Me.Label7.Text = "Login sebagai"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Inter", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(208, 46)
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(156, 37)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(235, 49)
+        Me.Label5.Size = New System.Drawing.Size(197, 37)
         Me.Label5.TabIndex = 15
         Me.Label5.Text = "DIGILOKER"
         '
@@ -97,20 +102,22 @@ Partial Class LoginAdmin
         Me.Panel3.Controls.Add(Me.Label11)
         Me.Panel3.Controls.Add(Me.BTNLogin)
         Me.Panel3.Controls.Add(Me.Panel5)
-        Me.Panel3.Location = New System.Drawing.Point(142, 154)
+        Me.Panel3.Location = New System.Drawing.Point(106, 125)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Padding = New System.Windows.Forms.Padding(18)
-        Me.Panel3.Size = New System.Drawing.Size(377, 335)
+        Me.Panel3.Padding = New System.Windows.Forms.Padding(14, 15, 14, 15)
+        Me.Panel3.Size = New System.Drawing.Size(283, 273)
         Me.Panel3.TabIndex = 19
         '
         'LBFMError
         '
         Me.LBFMError.AutoSize = True
-        Me.LBFMError.Font = New System.Drawing.Font("Inter", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LBFMError.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBFMError.ForeColor = System.Drawing.Color.Red
-        Me.LBFMError.Location = New System.Drawing.Point(19, 247)
+        Me.LBFMError.Location = New System.Drawing.Point(14, 201)
+        Me.LBFMError.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LBFMError.Name = "LBFMError"
-        Me.LBFMError.Size = New System.Drawing.Size(291, 16)
+        Me.LBFMError.Size = New System.Drawing.Size(226, 13)
         Me.LBFMError.TabIndex = 11
         Me.LBFMError.Text = "Gagal! Username / Email atau Password salah"
         Me.LBFMError.Visible = False
@@ -118,10 +125,11 @@ Partial Class LoginAdmin
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Inter", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(93, 18)
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(70, 15)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(187, 34)
+        Me.Label9.Size = New System.Drawing.Size(145, 26)
         Me.Label9.TabIndex = 10
         Me.Label9.Text = "Admin Login"
         '
@@ -134,41 +142,43 @@ Partial Class LoginAdmin
         Me.Panel4.BackColor = System.Drawing.Color.White
         Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel4.Controls.Add(Me.TXTPassword)
-        Me.Panel4.Location = New System.Drawing.Point(18, 188)
+        Me.Panel4.Location = New System.Drawing.Point(14, 153)
+        Me.Panel4.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Padding = New System.Windows.Forms.Padding(5)
-        Me.Panel4.Size = New System.Drawing.Size(343, 45)
+        Me.Panel4.Padding = New System.Windows.Forms.Padding(4)
+        Me.Panel4.Size = New System.Drawing.Size(258, 37)
         Me.Panel4.TabIndex = 7
         '
         'TXTPassword
         '
         Me.TXTPassword.BackColor = System.Drawing.Color.White
         Me.TXTPassword.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TXTPassword.Font = New System.Drawing.Font("Inter", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTPassword.Location = New System.Drawing.Point(9, 9)
-        Me.TXTPassword.Margin = New System.Windows.Forms.Padding(4)
+        Me.TXTPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXTPassword.Location = New System.Drawing.Point(7, 7)
         Me.TXTPassword.Name = "TXTPassword"
         Me.TXTPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(88)
-        Me.TXTPassword.Size = New System.Drawing.Size(311, 25)
+        Me.TXTPassword.Size = New System.Drawing.Size(233, 19)
         Me.TXTPassword.TabIndex = 0
         '
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Inter", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(15, 86)
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(11, 70)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(133, 19)
+        Me.Label10.Size = New System.Drawing.Size(106, 15)
         Me.Label10.TabIndex = 3
         Me.Label10.Text = "Username / Email"
         '
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Inter", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(14, 166)
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(10, 135)
+        Me.Label11.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(79, 19)
+        Me.Label11.Size = New System.Drawing.Size(61, 15)
         Me.Label11.TabIndex = 6
         Me.Label11.Text = "Password"
         '
@@ -181,12 +191,12 @@ Partial Class LoginAdmin
         Me.BTNLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black
         Me.BTNLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black
         Me.BTNLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.BTNLogin.Font = New System.Drawing.Font("Inter", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTNLogin.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BTNLogin.ForeColor = System.Drawing.Color.White
-        Me.BTNLogin.Location = New System.Drawing.Point(18, 272)
+        Me.BTNLogin.Location = New System.Drawing.Point(14, 221)
         Me.BTNLogin.Margin = New System.Windows.Forms.Padding(0)
         Me.BTNLogin.Name = "BTNLogin"
-        Me.BTNLogin.Size = New System.Drawing.Size(343, 43)
+        Me.BTNLogin.Size = New System.Drawing.Size(257, 35)
         Me.BTNLogin.TabIndex = 2
         Me.BTNLogin.Text = "LOGIN"
         Me.BTNLogin.UseVisualStyleBackColor = False
@@ -200,35 +210,37 @@ Partial Class LoginAdmin
         Me.Panel5.BackColor = System.Drawing.Color.White
         Me.Panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel5.Controls.Add(Me.TXTUmail)
-        Me.Panel5.Location = New System.Drawing.Point(18, 108)
+        Me.Panel5.Location = New System.Drawing.Point(14, 88)
+        Me.Panel5.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Padding = New System.Windows.Forms.Padding(5)
-        Me.Panel5.Size = New System.Drawing.Size(343, 45)
+        Me.Panel5.Padding = New System.Windows.Forms.Padding(4)
+        Me.Panel5.Size = New System.Drawing.Size(258, 37)
         Me.Panel5.TabIndex = 5
         '
         'TXTUmail
         '
         Me.TXTUmail.BackColor = System.Drawing.Color.White
         Me.TXTUmail.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TXTUmail.Font = New System.Drawing.Font("Inter", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTUmail.Location = New System.Drawing.Point(9, 9)
-        Me.TXTUmail.Margin = New System.Windows.Forms.Padding(4)
+        Me.TXTUmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXTUmail.Location = New System.Drawing.Point(7, 7)
         Me.TXTUmail.Name = "TXTUmail"
-        Me.TXTUmail.Size = New System.Drawing.Size(311, 25)
+        Me.TXTUmail.Size = New System.Drawing.Size(233, 19)
         Me.TXTUmail.TabIndex = 0
         '
         'LoginAdmin
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(661, 584)
+        Me.ClientSize = New System.Drawing.Size(496, 474)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.LinkLBCustomer)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label5)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "LoginAdmin"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "LoginAdmin"
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()

@@ -45,17 +45,9 @@
 
     Public Function InsertNewLocker(ukuran As String, lokasi As String) As Integer
         Dim locationId = NextIndexLocation(lokasi)
+        Dim id_ukuran As Integer = GetLockerTypeId(ukuran)
+
         db.Query("INSERT INTO locker(id_ukuran, lokasi) VALUES (@id_ukuran, @lokasi)")
-
-        Dim id_ukuran As Integer
-
-        If ukuran = "Small" Then
-            id_ukuran = 1
-        ElseIf ukuran = "Medium" Then
-            id_ukuran = 2
-        ElseIf ukuran = "Large" Then
-            id_ukuran = 3
-        End If
 
         db.Bind("id_ukuran", "number", id_ukuran)
         db.Bind("lokasi", "text", lokasi & "-" & locationId)

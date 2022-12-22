@@ -1,5 +1,5 @@
 ﻿Public Class RentReturn
-    Private sewa_model As Sewa_model
+    Private sewa_model As Rent_model
     Private locker_model As Locker_model
 
     Private totalBiayadanDenda As Integer
@@ -19,7 +19,7 @@
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-        sewa_model = New Sewa_model()
+        sewa_model = New Rent_model()
         locker_model = New Locker_model()
     End Sub
 

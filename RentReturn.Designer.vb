@@ -57,7 +57,7 @@ Partial Class RentReturn
         Me.Label1.Location = New System.Drawing.Point(0, 0)
         Me.Label1.Margin = New System.Windows.Forms.Padding(0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(680, 71)
+        Me.Label1.Size = New System.Drawing.Size(510, 58)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "FORM PENGEMBALIAN BARANG"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -65,9 +65,10 @@ Partial Class RentReturn
         'Label2
         '
         Me.Label2.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(27, 106)
+        Me.Label2.Location = New System.Drawing.Point(20, 86)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(271, 30)
+        Me.Label2.Size = New System.Drawing.Size(203, 24)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Nama Loker"
         '
@@ -75,9 +76,10 @@ Partial Class RentReturn
         '
         Me.LblLockerName.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblLockerName.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.LblLockerName.Location = New System.Drawing.Point(319, 107)
+        Me.LblLockerName.Location = New System.Drawing.Point(239, 87)
+        Me.LblLockerName.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LblLockerName.Name = "LblLockerName"
-        Me.LblLockerName.Size = New System.Drawing.Size(305, 30)
+        Me.LblLockerName.Size = New System.Drawing.Size(229, 24)
         Me.LblLockerName.TabIndex = 3
         Me.LblLockerName.Text = "XXXXX"
         Me.LblLockerName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -85,9 +87,10 @@ Partial Class RentReturn
         'LblTanggalSewa
         '
         Me.LblTanggalSewa.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblTanggalSewa.Location = New System.Drawing.Point(319, 214)
+        Me.LblTanggalSewa.Location = New System.Drawing.Point(239, 174)
+        Me.LblTanggalSewa.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LblTanggalSewa.Name = "LblTanggalSewa"
-        Me.LblTanggalSewa.Size = New System.Drawing.Size(309, 30)
+        Me.LblTanggalSewa.Size = New System.Drawing.Size(232, 24)
         Me.LblTanggalSewa.TabIndex = 5
         Me.LblTanggalSewa.Text = "XXXXX"
         Me.LblTanggalSewa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -95,18 +98,20 @@ Partial Class RentReturn
         'Label5
         '
         Me.Label5.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(28, 213)
+        Me.Label5.Location = New System.Drawing.Point(21, 173)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(269, 28)
+        Me.Label5.Size = New System.Drawing.Size(202, 23)
         Me.Label5.TabIndex = 4
         Me.Label5.Text = "Tanggal Sewa"
         '
         'LblJmlHariPinjam
         '
         Me.LblJmlHariPinjam.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblJmlHariPinjam.Location = New System.Drawing.Point(319, 160)
+        Me.LblJmlHariPinjam.Location = New System.Drawing.Point(239, 130)
+        Me.LblJmlHariPinjam.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LblJmlHariPinjam.Name = "LblJmlHariPinjam"
-        Me.LblJmlHariPinjam.Size = New System.Drawing.Size(309, 30)
+        Me.LblJmlHariPinjam.Size = New System.Drawing.Size(232, 24)
         Me.LblJmlHariPinjam.TabIndex = 7
         Me.LblJmlHariPinjam.Text = "XXXXX"
         Me.LblJmlHariPinjam.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -114,18 +119,20 @@ Partial Class RentReturn
         'Label7
         '
         Me.Label7.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(27, 159)
+        Me.Label7.Location = New System.Drawing.Point(20, 129)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(271, 27)
+        Me.Label7.Size = New System.Drawing.Size(203, 22)
         Me.Label7.TabIndex = 6
         Me.Label7.Text = "Rencana Pinjam"
         '
         'Label3
         '
         Me.Label3.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(28, 318)
+        Me.Label3.Location = New System.Drawing.Point(21, 258)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(271, 32)
+        Me.Label3.Size = New System.Drawing.Size(203, 26)
         Me.Label3.TabIndex = 8
         Me.Label3.Text = "Tanggal Pengembalian"
         '
@@ -134,9 +141,10 @@ Partial Class RentReturn
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Black
-        Me.Label4.Location = New System.Drawing.Point(28, 374)
+        Me.Label4.Location = New System.Drawing.Point(21, 304)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(269, 31)
+        Me.Label4.Size = New System.Drawing.Size(202, 25)
         Me.Label4.TabIndex = 10
         Me.Label4.Text = "Denda"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -148,20 +156,22 @@ Partial Class RentReturn
         Me.Label6.ForeColor = System.Drawing.Color.White
         Me.Label6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Label6.Location = New System.Drawing.Point(0, -1)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Padding = New System.Windows.Forms.Padding(4, 0, 0, 0)
-        Me.Label6.Size = New System.Drawing.Size(264, 45)
+        Me.Label6.Padding = New System.Windows.Forms.Padding(3, 0, 0, 0)
+        Me.Label6.Size = New System.Drawing.Size(198, 37)
         Me.Label6.TabIndex = 11
-        Me.Label6.Text = "Total Biaya"
+        Me.Label6.Text = "Total Biaya Denda"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'LblTotaldanDenda
         '
         Me.LblTotaldanDenda.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblTotaldanDenda.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.LblTotaldanDenda.Location = New System.Drawing.Point(336, 0)
+        Me.LblTotaldanDenda.Location = New System.Drawing.Point(252, 0)
+        Me.LblTotaldanDenda.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LblTotaldanDenda.Name = "LblTotaldanDenda"
-        Me.LblTotaldanDenda.Size = New System.Drawing.Size(200, 42)
+        Me.LblTotaldanDenda.Size = New System.Drawing.Size(150, 34)
         Me.LblTotaldanDenda.TabIndex = 13
         Me.LblTotaldanDenda.Text = "XXXXX"
         Me.LblTotaldanDenda.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -169,27 +179,27 @@ Partial Class RentReturn
         'BtnYesKembali
         '
         Me.BtnYesKembali.BackColor = System.Drawing.Color.Black
-        Me.BtnYesKembali.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.BtnYesKembali.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnYesKembali.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnYesKembali.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnYesKembali.ForeColor = System.Drawing.Color.White
-        Me.BtnYesKembali.Location = New System.Drawing.Point(340, 593)
-        Me.BtnYesKembali.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.BtnYesKembali.Location = New System.Drawing.Point(255, 482)
+        Me.BtnYesKembali.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnYesKembali.Name = "BtnYesKembali"
-        Me.BtnYesKembali.Size = New System.Drawing.Size(144, 44)
+        Me.BtnYesKembali.Size = New System.Drawing.Size(108, 36)
         Me.BtnYesKembali.TabIndex = 32
         Me.BtnYesKembali.Text = "YA"
         Me.BtnYesKembali.UseVisualStyleBackColor = False
         '
         'BtnCancelKembali
         '
-        Me.BtnCancelKembali.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.BtnCancelKembali.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnCancelKembali.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnCancelKembali.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnCancelKembali.Location = New System.Drawing.Point(506, 593)
-        Me.BtnCancelKembali.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.BtnCancelKembali.Location = New System.Drawing.Point(380, 482)
+        Me.BtnCancelKembali.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnCancelKembali.Name = "BtnCancelKembali"
-        Me.BtnCancelKembali.Size = New System.Drawing.Size(144, 44)
+        Me.BtnCancelKembali.Size = New System.Drawing.Size(108, 36)
         Me.BtnCancelKembali.TabIndex = 33
         Me.BtnCancelKembali.Text = "BATAL"
         Me.BtnCancelKembali.UseVisualStyleBackColor = True
@@ -197,9 +207,10 @@ Partial Class RentReturn
         'Label8
         '
         Me.Label8.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(284, -1)
+        Me.Label8.Location = New System.Drawing.Point(213, -1)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(47, 42)
+        Me.Label8.Size = New System.Drawing.Size(35, 34)
         Me.Label8.TabIndex = 34
         Me.Label8.Text = "Rp."
         Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -207,9 +218,10 @@ Partial Class RentReturn
         'Label9
         '
         Me.Label9.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(319, 370)
+        Me.Label9.Location = New System.Drawing.Point(239, 301)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(39, 34)
+        Me.Label9.Size = New System.Drawing.Size(29, 28)
         Me.Label9.TabIndex = 36
         Me.Label9.Text = "Rp."
         Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -218,9 +230,10 @@ Partial Class RentReturn
         '
         Me.LblDenda.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblDenda.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.LblDenda.Location = New System.Drawing.Point(364, 374)
+        Me.LblDenda.Location = New System.Drawing.Point(273, 304)
+        Me.LblDenda.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LblDenda.Name = "LblDenda"
-        Me.LblDenda.Size = New System.Drawing.Size(272, 30)
+        Me.LblDenda.Size = New System.Drawing.Size(204, 24)
         Me.LblDenda.TabIndex = 35
         Me.LblDenda.Text = "XXXXX"
         Me.LblDenda.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -228,9 +241,10 @@ Partial Class RentReturn
         'LblTelatHari
         '
         Me.LblTelatHari.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblTelatHari.Location = New System.Drawing.Point(327, 415)
+        Me.LblTelatHari.Location = New System.Drawing.Point(245, 337)
+        Me.LblTelatHari.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LblTelatHari.Name = "LblTelatHari"
-        Me.LblTelatHari.Size = New System.Drawing.Size(19, 20)
+        Me.LblTelatHari.Size = New System.Drawing.Size(14, 16)
         Me.LblTelatHari.TabIndex = 37
         Me.LblTelatHari.Text = "0"
         Me.LblTelatHari.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -238,9 +252,10 @@ Partial Class RentReturn
         'Label11
         '
         Me.Label11.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(352, 414)
+        Me.Label11.Location = New System.Drawing.Point(264, 336)
+        Me.Label11.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(112, 23)
+        Me.Label11.Size = New System.Drawing.Size(84, 19)
         Me.Label11.TabIndex = 38
         Me.Label11.Text = "Hari x 10"
         Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -267,18 +282,18 @@ Partial Class RentReturn
         Me.Panel1.Controls.Add(Me.Label5)
         Me.Panel1.Controls.Add(Me.Label7)
         Me.Panel1.Controls.Add(Me.Label3)
-        Me.Panel1.Location = New System.Drawing.Point(45, 42)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel1.Location = New System.Drawing.Point(34, 34)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(679, 681)
+        Me.Panel1.Size = New System.Drawing.Size(510, 554)
         Me.Panel1.TabIndex = 39
         '
         'LblTglMaksPengembalian
         '
         Me.LblTglMaksPengembalian.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblTglMaksPengembalian.Location = New System.Drawing.Point(319, 268)
+        Me.LblTglMaksPengembalian.Location = New System.Drawing.Point(239, 218)
+        Me.LblTglMaksPengembalian.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LblTglMaksPengembalian.Name = "LblTglMaksPengembalian"
-        Me.LblTglMaksPengembalian.Size = New System.Drawing.Size(309, 30)
+        Me.LblTglMaksPengembalian.Size = New System.Drawing.Size(232, 24)
         Me.LblTglMaksPengembalian.TabIndex = 45
         Me.LblTglMaksPengembalian.Text = "XXXXX"
         Me.LblTglMaksPengembalian.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -286,9 +301,10 @@ Partial Class RentReturn
         'LBTanggalPengembalian
         '
         Me.LBTanggalPengembalian.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LBTanggalPengembalian.Location = New System.Drawing.Point(319, 320)
+        Me.LBTanggalPengembalian.Location = New System.Drawing.Point(239, 260)
+        Me.LBTanggalPengembalian.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LBTanggalPengembalian.Name = "LBTanggalPengembalian"
-        Me.LBTanggalPengembalian.Size = New System.Drawing.Size(309, 30)
+        Me.LBTanggalPengembalian.Size = New System.Drawing.Size(232, 24)
         Me.LBTanggalPengembalian.TabIndex = 6
         Me.LBTanggalPengembalian.Text = "XXXXX"
         Me.LBTanggalPengembalian.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -296,9 +312,10 @@ Partial Class RentReturn
         'Label10
         '
         Me.Label10.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(28, 266)
+        Me.Label10.Location = New System.Drawing.Point(21, 216)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(271, 32)
+        Me.Label10.Size = New System.Drawing.Size(203, 26)
         Me.Label10.TabIndex = 43
         Me.Label10.Text = "Tgl Maks Pengembalian"
         '
@@ -308,21 +325,20 @@ Partial Class RentReturn
         Me.Panel8.Controls.Add(Me.Label6)
         Me.Panel8.Controls.Add(Me.LblTotaldanDenda)
         Me.Panel8.Controls.Add(Me.Label8)
-        Me.Panel8.Location = New System.Drawing.Point(33, 497)
-        Me.Panel8.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel8.Location = New System.Drawing.Point(25, 404)
         Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(617, 45)
+        Me.Panel8.Size = New System.Drawing.Size(463, 37)
         Me.Panel8.TabIndex = 42
         '
         'RentReturn
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(767, 757)
+        Me.ClientSize = New System.Drawing.Size(575, 609)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
-        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "RentReturn"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form Pengembalian Barang"

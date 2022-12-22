@@ -1,4 +1,4 @@
-﻿Public Class Sewa_model
+﻿Public Class Rent_model
 
     Private db As Database
     Private stmt As String
@@ -62,7 +62,9 @@
     End Function
 
     Public Function FetchAllRentData() As DataTable
-        stmt = "SELECT locker.lokasi as 'Nama Loker', users.username as 'Nama Penyewa',
+        stmt = "SELECT penyewaan.id as 'ID', 
+                locker.lokasi as 'Nama Loker', 
+                users.username as 'Nama Penyewa',
                 tanggal_sewa as 'Tanggal Sewa', 
                 CASE WHEN tanggal_kembali IS NULL THEN 'Belum diambil' 
                 WHEN tanggal_kembali IS NOT NULL THEN tanggal_kembali
@@ -99,13 +101,14 @@
         Return db.Fetch()
     End Function
 
-    Public Function RemoveRentData(lockerName As String, tglSewa As Date)
-        lockerId = locker_model.GetLockerId(lockerName)
+    Public Function RemoveRentData(id As Integer)
+        'lockerId = locker_model.GetLockerId(lockerName)
         stmt = "DELETE FROM penyewaan 
-                WHERE id_locker = @locker and tanggal_sewa=@tglSewa"
+                WHERE id = @id"
         db.Query(stmt)
-        db.Bind("locker", "number", lockerId)
-        db.Bind("tglSewa", "text", tglSewa.ToString("yyyy/MM/dd"))
+        db.Bind("id", "number", id)
+        'db.Bind("locker", "number", lockerId)
+        'db.Bind("tglSewa", "text", tglSewa.ToString("yyyy/MM/dd"))
         Return db.Execute()
     End Function
 

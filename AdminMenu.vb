@@ -13,4 +13,9 @@
         FormListDataPenyewaan.show()
         Me.Close()
     End Sub
+
+    Private Sub BTNLogout_Click(sender As Object, e As EventArgs) Handles BTNLogout.Click
+        LoginAdmin.Show()
+        Me.Close()
+    End Sub
 End Class
