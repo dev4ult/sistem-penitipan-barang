@@ -27,7 +27,7 @@ Partial Class FormJenisLocker
         Me.BtnUpdate = New System.Windows.Forms.Button()
         Me.BtnDelete = New System.Windows.Forms.Button()
         Me.LblJenisLocker = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.BTNKembali = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         CType(Me.DataKoleksiJenisLocker, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -44,11 +44,13 @@ Partial Class FormJenisLocker
         Me.DataKoleksiJenisLocker.Location = New System.Drawing.Point(22, 77)
         Me.DataKoleksiJenisLocker.Name = "DataKoleksiJenisLocker"
         Me.DataKoleksiJenisLocker.ReadOnly = True
+        Me.DataKoleksiJenisLocker.RowHeadersWidth = 51
         Me.DataKoleksiJenisLocker.Size = New System.Drawing.Size(344, 417)
         Me.DataKoleksiJenisLocker.TabIndex = 0
         '
         'BtnCreate
         '
+        Me.BtnCreate.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnCreate.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
         Me.BtnCreate.Location = New System.Drawing.Point(20, 33)
@@ -60,6 +62,7 @@ Partial Class FormJenisLocker
         '
         'BtnUpdate
         '
+        Me.BtnUpdate.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnUpdate.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
         Me.BtnUpdate.Location = New System.Drawing.Point(20, 72)
@@ -71,6 +74,7 @@ Partial Class FormJenisLocker
         '
         'BtnDelete
         '
+        Me.BtnDelete.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnDelete.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
         Me.BtnDelete.Location = New System.Drawing.Point(20, 111)
@@ -93,18 +97,19 @@ Partial Class FormJenisLocker
         Me.LblJenisLocker.Text = "#  JENIS LOKER"
         Me.LblJenisLocker.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Button1
+        'BTNKembali
         '
-        Me.Button1.BackColor = System.Drawing.Color.Black
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(402, 261)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(142, 33)
-        Me.Button1.TabIndex = 5
-        Me.Button1.Text = "KEMBALI"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.BTNKembali.BackColor = System.Drawing.Color.Black
+        Me.BTNKembali.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BTNKembali.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BTNKembali.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.BTNKembali.ForeColor = System.Drawing.Color.White
+        Me.BTNKembali.Location = New System.Drawing.Point(402, 261)
+        Me.BTNKembali.Name = "BTNKembali"
+        Me.BTNKembali.Size = New System.Drawing.Size(142, 33)
+        Me.BTNKembali.TabIndex = 5
+        Me.BTNKembali.Text = "KEMBALI"
+        Me.BTNKembali.UseVisualStyleBackColor = False
         '
         'GroupBox1
         '
@@ -124,12 +129,12 @@ Partial Class FormJenisLocker
         '
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel1.Controls.Add(Me.DataKoleksiJenisLocker)
-        Me.Panel1.Controls.Add(Me.Button1)
+        Me.Panel1.Controls.Add(Me.BTNKembali)
         Me.Panel1.Controls.Add(Me.GroupBox1)
         Me.Panel1.Controls.Add(Me.LblJenisLocker)
         Me.Panel1.Location = New System.Drawing.Point(29, 25)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(588, 513)
+        Me.Panel1.Size = New System.Drawing.Size(572, 513)
         Me.Panel1.TabIndex = 7
         '
         'FormJenisLocker
@@ -141,6 +146,7 @@ Partial Class FormJenisLocker
         Me.Controls.Add(Me.Panel1)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "FormJenisLocker"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Data Jenis Loker"
         CType(Me.DataKoleksiJenisLocker, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
@@ -154,7 +160,7 @@ Partial Class FormJenisLocker
     Friend WithEvents BtnUpdate As Button
     Friend WithEvents BtnDelete As Button
     Friend WithEvents LblJenisLocker As Label
-    Friend WithEvents Button1 As Button
+    Friend WithEvents BTNKembali As Button
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Panel1 As Panel
 End Class

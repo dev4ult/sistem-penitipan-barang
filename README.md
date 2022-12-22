@@ -50,7 +50,7 @@ Project UAS Visual Basic Semester 3
 
 ### Use Case Diagram :
 
-<img src="./img/UCD.jpg" alt="Use Case Diagram">
+<img src="./img/UCD.png" alt="Use Case Diagram">
 
 <hr>
 

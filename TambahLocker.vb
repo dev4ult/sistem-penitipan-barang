@@ -15,6 +15,8 @@ Public Class TambahLocker
         locker_model = New Locker_model()
         ukuran = ""
         lokasi = ""
+
+        ReloadSizeList()
     End Sub
 
     Private Sub btntambah_Click(sender As Object, e As EventArgs) Handles btntambah.Click
@@ -37,4 +39,14 @@ Public Class TambahLocker
         lokasi = CBLokasi.SelectedItem
     End Sub
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.Close()
+    End Sub
+
+    Public Sub ReloadSizeList()
+        CBukuran.Items.Clear()
+        For Each dJT In locker_model.FetchAllLockerTypes().Rows
+            CBukuran.Items.Add(dJT(0))
+        Next
+    End Sub
 End Class

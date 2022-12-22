@@ -54,23 +54,19 @@ Public Class Database
     End Function
 
     Public Function Fetch() As DataTable
+        Dim dataTable As New DataTable
 
-        Try
-            Dim dataTable As New DataTable
+        PrepareStmt()
 
-            PrepareStmt()
+        dataReader = cmd.ExecuteReader()
+        dataTable.Load(dataReader)
 
-            dataReader = cmd.ExecuteReader()
-            DataTable.Load(dataReader)
+        dataReader.Close()
+        cmd.Parameters.Clear()
 
-            dataReader.Close()
-            cmd.Parameters.Clear()
+        conn.Close()
+        Return dataTable
 
-            conn.Close()
-            Return dataTable
-        Catch ex As Exception
-            conn.Close()
-        End Try
     End Function
 
 End Class

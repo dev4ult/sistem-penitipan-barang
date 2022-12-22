@@ -54,6 +54,8 @@ Partial Class SewaLocker
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.LblNamaLoker = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
         CType(Me.NUDLamaSewa, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -88,6 +90,7 @@ Partial Class SewaLocker
         '
         'CBUkuranLocker
         '
+        Me.CBUkuranLocker.Cursor = System.Windows.Forms.Cursors.Hand
         Me.CBUkuranLocker.FormattingEnabled = True
         Me.CBUkuranLocker.Location = New System.Drawing.Point(20, 35)
         Me.CBUkuranLocker.Margin = New System.Windows.Forms.Padding(2)
@@ -222,11 +225,11 @@ Partial Class SewaLocker
         'BtnYesSewa
         '
         Me.BtnYesSewa.BackColor = System.Drawing.Color.Black
-        Me.BtnYesSewa.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.BtnYesSewa.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnYesSewa.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnYesSewa.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnYesSewa.ForeColor = System.Drawing.Color.White
-        Me.BtnYesSewa.Location = New System.Drawing.Point(368, 602)
+        Me.BtnYesSewa.Location = New System.Drawing.Point(368, 587)
         Me.BtnYesSewa.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnYesSewa.Name = "BtnYesSewa"
         Me.BtnYesSewa.Size = New System.Drawing.Size(87, 34)
@@ -236,10 +239,10 @@ Partial Class SewaLocker
         '
         'BtnNoSewa
         '
-        Me.BtnNoSewa.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.BtnNoSewa.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnNoSewa.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnNoSewa.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnNoSewa.Location = New System.Drawing.Point(462, 602)
+        Me.BtnNoSewa.Location = New System.Drawing.Point(462, 587)
         Me.BtnNoSewa.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnNoSewa.Name = "BtnNoSewa"
         Me.BtnNoSewa.Size = New System.Drawing.Size(87, 34)
@@ -249,6 +252,7 @@ Partial Class SewaLocker
         '
         'LsbLockerTersedia
         '
+        Me.LsbLockerTersedia.Cursor = System.Windows.Forms.Cursors.Hand
         Me.LsbLockerTersedia.FormattingEnabled = True
         Me.LsbLockerTersedia.Location = New System.Drawing.Point(20, 110)
         Me.LsbLockerTersedia.Margin = New System.Windows.Forms.Padding(2)
@@ -309,13 +313,14 @@ Partial Class SewaLocker
         Me.Label18.Location = New System.Drawing.Point(285, 51)
         Me.Label18.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(46, 19)
+        Me.Label18.Size = New System.Drawing.Size(40, 19)
         Me.Label18.TabIndex = 39
-        Me.Label18.Text = "/Hari."
+        Me.Label18.Text = "Hari."
         '
         'RTBKetUser
         '
         Me.RTBKetUser.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.RTBKetUser.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RTBKetUser.Location = New System.Drawing.Point(8, 8)
         Me.RTBKetUser.Margin = New System.Windows.Forms.Padding(2)
         Me.RTBKetUser.Name = "RTBKetUser"
@@ -387,7 +392,7 @@ Partial Class SewaLocker
         Me.Panel1.Controls.Add(Me.CBUkuranLocker)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.LsbLockerTersedia)
-        Me.Panel1.Location = New System.Drawing.Point(25, 99)
+        Me.Panel1.Location = New System.Drawing.Point(25, 88)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(204, 299)
         Me.Panel1.TabIndex = 47
@@ -403,7 +408,7 @@ Partial Class SewaLocker
         Me.Panel2.Controls.Add(Me.LblJumlahKomentar)
         Me.Panel2.Controls.Add(Me.Label4)
         Me.Panel2.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel2.Location = New System.Drawing.Point(235, 99)
+        Me.Panel2.Location = New System.Drawing.Point(235, 88)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(314, 299)
         Me.Panel2.TabIndex = 46
@@ -420,6 +425,7 @@ Partial Class SewaLocker
         'Panel4
         '
         Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel4.Controls.Add(Me.LblNamaLoker)
         Me.Panel4.Controls.Add(Me.Label16)
         Me.Panel4.Controls.Add(Me.Label17)
         Me.Panel4.Controls.Add(Me.Label7)
@@ -432,17 +438,40 @@ Partial Class SewaLocker
         Me.Panel4.Controls.Add(Me.LblBiayaPerJam)
         Me.Panel4.Controls.Add(Me.Label13)
         Me.Panel4.Controls.Add(Me.LblTotalBiaya)
-        Me.Panel4.Location = New System.Drawing.Point(25, 404)
+        Me.Panel4.Location = New System.Drawing.Point(25, 392)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(524, 179)
         Me.Panel4.TabIndex = 48
+        '
+        'LblNamaLoker
+        '
+        Me.LblNamaLoker.AutoSize = True
+        Me.LblNamaLoker.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblNamaLoker.Location = New System.Drawing.Point(123, 15)
+        Me.LblNamaLoker.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.LblNamaLoker.Name = "LblNamaLoker"
+        Me.LblNamaLoker.Size = New System.Drawing.Size(85, 19)
+        Me.LblNamaLoker.TabIndex = 44
+        Me.LblNamaLoker.Text = "Nama Loker"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Calibri", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(24, 584)
+        Me.Label12.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(135, 33)
+        Me.Label12.TabIndex = 45
+        Me.Label12.Text = "DIGILOKER"
         '
         'SewaLocker
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(573, 658)
+        Me.ClientSize = New System.Drawing.Size(573, 631)
+        Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
@@ -500,4 +529,6 @@ Partial Class SewaLocker
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Panel4 As Panel
+    Friend WithEvents LblNamaLoker As Label
+    Friend WithEvents Label12 As Label
 End Class
