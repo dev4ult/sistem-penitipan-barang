@@ -118,10 +118,10 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Database.vb" />
-    <Compile Include="FormListDataPenyewaan.Designer.vb">
-      <DependentUpon>FormListDataPenyewaan.vb</DependentUpon>
+    <Compile Include="RentListForm.Designer.vb">
+      <DependentUpon>RentListForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="FormListDataPenyewaan.vb">
+    <Compile Include="RentListForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LoginAdmin.Designer.vb">
@@ -154,16 +154,16 @@
     <Compile Include="RentReturn.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SewaLocker.Designer.vb">
-      <DependentUpon>SewaLocker.vb</DependentUpon>
+    <Compile Include="RentLocker.Designer.vb">
+      <DependentUpon>RentLocker.vb</DependentUpon>
     </Compile>
-    <Compile Include="SewaLocker.vb">
+    <Compile Include="RentLocker.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HapusLocker.Designer.vb">
-      <DependentUpon>HapusLocker.vb</DependentUpon>
+    <Compile Include="DeleteLocker.Designer.vb">
+      <DependentUpon>DeleteLocker.vb</DependentUpon>
     </Compile>
-    <Compile Include="HapusLocker.vb">
+    <Compile Include="DeleteLocker.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MonitorLocker.Designer.vb">
@@ -178,11 +178,11 @@
     <Compile Include="HapusJenisLocker.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormJenisLocker.vb">
+    <Compile Include="LockerTypeForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormJenisLocker.Designer.vb">
-      <DependentUpon>FormJenisLocker.vb</DependentUpon>
+    <Compile Include="LockerTypeForm.Designer.vb">
+      <DependentUpon>LockerTypeForm.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Locker_Model.vb" />
@@ -209,8 +209,8 @@
     <EmbeddedResource Include="AdminMenu.resx">
       <DependentUpon>AdminMenu.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormListDataPenyewaan.resx">
-      <DependentUpon>FormListDataPenyewaan.vb</DependentUpon>
+    <EmbeddedResource Include="RentListForm.resx">
+      <DependentUpon>RentListForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginAdmin.resx">
       <DependentUpon>LoginAdmin.vb</DependentUpon>
@@ -227,8 +227,8 @@
     <EmbeddedResource Include="RentReturn.resx">
       <DependentUpon>RentReturn.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SewaLocker.resx">
-      <DependentUpon>SewaLocker.vb</DependentUpon>
+    <EmbeddedResource Include="RentLocker.resx">
+      <DependentUpon>RentLocker.vb</DependentUpon>
     </EmbeddedResource>
     <Compile Include="Signup.Designer.vb">
       <DependentUpon>Signup.vb</DependentUpon>
@@ -236,37 +236,37 @@
     <Compile Include="Signup.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TambahLocker.Designer.vb">
-      <DependentUpon>TambahLocker.vb</DependentUpon>
+    <Compile Include="AddLocker.Designer.vb">
+      <DependentUpon>AddLocker.vb</DependentUpon>
     </Compile>
-    <Compile Include="TambahLocker.vb">
+    <Compile Include="AddLocker.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UpdateStatusLocker.Designer.vb">
-      <DependentUpon>UpdateStatusLocker.vb</DependentUpon>
+    <Compile Include="UpdateLockerStatus.Designer.vb">
+      <DependentUpon>UpdateLockerStatus.vb</DependentUpon>
     </Compile>
-    <Compile Include="UpdateStatusLocker.vb">
+    <Compile Include="UpdateLockerStatus.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TambahJenisLocker.Designer.vb">
-      <DependentUpon>TambahJenisLocker.vb</DependentUpon>
+    <Compile Include="AddLockerType.Designer.vb">
+      <DependentUpon>AddLockerType.vb</DependentUpon>
     </Compile>
-    <Compile Include="TambahJenisLocker.vb">
+    <Compile Include="AddLockerType.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UpdateJenisLocker.Designer.vb">
-      <DependentUpon>UpdateJenisLocker.vb</DependentUpon>
+    <Compile Include="UpdateLockerType.Designer.vb">
+      <DependentUpon>UpdateLockerType.vb</DependentUpon>
     </Compile>
-    <Compile Include="UpdateJenisLocker.vb">
+    <Compile Include="UpdateLockerType.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="HapusLocker.resx">
-      <DependentUpon>HapusLocker.vb</DependentUpon>
+    <EmbeddedResource Include="DeleteLocker.resx">
+      <DependentUpon>DeleteLocker.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormJenisLocker.resx">
-      <DependentUpon>FormJenisLocker.vb</DependentUpon>
+    <EmbeddedResource Include="LockerTypeForm.resx">
+      <DependentUpon>LockerTypeForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HapusJenisLocker.resx">
       <DependentUpon>HapusJenisLocker.vb</DependentUpon>
@@ -283,17 +283,17 @@
     <EmbeddedResource Include="Signup.resx">
       <DependentUpon>Signup.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TambahLocker.resx">
-      <DependentUpon>TambahLocker.vb</DependentUpon>
+    <EmbeddedResource Include="AddLocker.resx">
+      <DependentUpon>AddLocker.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UpdateStatusLocker.resx">
-      <DependentUpon>UpdateStatusLocker.vb</DependentUpon>
+    <EmbeddedResource Include="UpdateLockerStatus.resx">
+      <DependentUpon>UpdateLockerStatus.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TambahJenisLocker.resx">
-      <DependentUpon>TambahJenisLocker.vb</DependentUpon>
+    <EmbeddedResource Include="AddLockerType.resx">
+      <DependentUpon>AddLockerType.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UpdateJenisLocker.resx">
-      <DependentUpon>UpdateJenisLocker.vb</DependentUpon>
+    <EmbeddedResource Include="UpdateLockerType.resx">
+      <DependentUpon>UpdateLockerType.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
