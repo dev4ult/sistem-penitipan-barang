@@ -44,9 +44,10 @@ Partial Class LoginAdmin
         'LinkLBCustomer
         '
         Me.LinkLBCustomer.AutoSize = True
+        Me.LinkLBCustomer.BackColor = System.Drawing.Color.Transparent
         Me.LinkLBCustomer.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LinkLBCustomer.LinkColor = System.Drawing.Color.RoyalBlue
-        Me.LinkLBCustomer.Location = New System.Drawing.Point(103, 435)
+        Me.LinkLBCustomer.Location = New System.Drawing.Point(97, 435)
         Me.LinkLBCustomer.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LinkLBCustomer.Name = "LinkLBCustomer"
         Me.LinkLBCustomer.Size = New System.Drawing.Size(60, 15)

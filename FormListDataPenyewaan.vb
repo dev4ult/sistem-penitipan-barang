@@ -4,7 +4,7 @@ Public Class FormListDataPenyewaan
 
     Private selectedLocker As String
     Private selectedTanggalSewa As Date
-    Private sewa_model As Sewa_model
+    Private sewa_model As Rent_model
     Private selectedIdPenyewaan As Integer
 
     Public Sub New()
@@ -13,7 +13,7 @@ Public Class FormListDataPenyewaan
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-        sewa_model = New Sewa_model()
+        sewa_model = New Rent_model()
 
         ReloadRentData()
     End Sub

@@ -82,6 +82,7 @@ Partial Class MonitorLocker
         'BTNKembali
         '
         Me.BTNKembali.BackColor = System.Drawing.Color.Black
+        Me.BTNKembali.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BTNKembali.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BTNKembali.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
         Me.BTNKembali.ForeColor = System.Drawing.Color.White
@@ -108,6 +109,7 @@ Partial Class MonitorLocker
         '
         'BTNTambahLoker
         '
+        Me.BTNTambahLoker.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BTNTambahLoker.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BTNTambahLoker.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
         Me.BTNTambahLoker.Location = New System.Drawing.Point(20, 33)
@@ -119,6 +121,7 @@ Partial Class MonitorLocker
         '
         'BTNUbahStatus
         '
+        Me.BTNUbahStatus.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BTNUbahStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BTNUbahStatus.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
         Me.BTNUbahStatus.Location = New System.Drawing.Point(20, 72)
@@ -130,6 +133,7 @@ Partial Class MonitorLocker
         '
         'BTNHapusLoker
         '
+        Me.BTNHapusLoker.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BTNHapusLoker.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BTNHapusLoker.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
         Me.BTNHapusLoker.Location = New System.Drawing.Point(20, 111)

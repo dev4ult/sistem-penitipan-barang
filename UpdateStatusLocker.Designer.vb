@@ -41,9 +41,9 @@ Partial Class UpdateStatusLocker
         Me.GBstatus.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GBstatus.ForeColor = System.Drawing.Color.Black
         Me.GBstatus.Location = New System.Drawing.Point(16, 50)
-        Me.GBstatus.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GBstatus.Margin = New System.Windows.Forms.Padding(2)
         Me.GBstatus.Name = "GBstatus"
-        Me.GBstatus.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GBstatus.Padding = New System.Windows.Forms.Padding(2)
         Me.GBstatus.Size = New System.Drawing.Size(291, 97)
         Me.GBstatus.TabIndex = 1
         Me.GBstatus.TabStop = False
@@ -52,6 +52,7 @@ Partial Class UpdateStatusLocker
         'RBKosong
         '
         Me.RBKosong.AutoSize = True
+        Me.RBKosong.Cursor = System.Windows.Forms.Cursors.Hand
         Me.RBKosong.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RBKosong.ForeColor = System.Drawing.Color.Black
         Me.RBKosong.Location = New System.Drawing.Point(12, 59)
@@ -65,6 +66,7 @@ Partial Class UpdateStatusLocker
         'RBTerisi
         '
         Me.RBTerisi.AutoSize = True
+        Me.RBTerisi.Cursor = System.Windows.Forms.Cursors.Hand
         Me.RBTerisi.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RBTerisi.ForeColor = System.Drawing.Color.Black
         Me.RBTerisi.Location = New System.Drawing.Point(12, 28)
@@ -78,6 +80,7 @@ Partial Class UpdateStatusLocker
         'BTNSimpan
         '
         Me.BTNSimpan.BackColor = System.Drawing.Color.White
+        Me.BTNSimpan.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BTNSimpan.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BTNSimpan.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BTNSimpan.ForeColor = System.Drawing.Color.Black
@@ -96,7 +99,7 @@ Partial Class UpdateStatusLocker
         Me.Panel2.Controls.Add(Me.Button1)
         Me.Panel2.Controls.Add(Me.GBstatus)
         Me.Panel2.Location = New System.Drawing.Point(22, 10)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(326, 211)
         Me.Panel2.TabIndex = 14
@@ -117,6 +120,7 @@ Partial Class UpdateStatusLocker
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.Black
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.SystemColors.HighlightText
@@ -135,7 +139,7 @@ Partial Class UpdateStatusLocker
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(370, 247)
         Me.Controls.Add(Me.Panel2)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "UpdateStatusLocker"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "UpdateStatusLocker"

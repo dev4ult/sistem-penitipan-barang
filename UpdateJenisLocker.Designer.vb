@@ -137,6 +137,7 @@ Partial Class UpdateJenisLocker
         Me.Panel1.Controls.Add(Me.LblInfoKet)
         Me.Panel1.Controls.Add(Me.LblUkuran)
         Me.Panel1.Controls.Add(Me.LblBiaya)
+        Me.Panel1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Panel1.Location = New System.Drawing.Point(16, 18)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
@@ -179,7 +180,7 @@ Partial Class UpdateJenisLocker
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Calibri", 12.0!)
-        Me.Label1.Location = New System.Drawing.Point(3, 4)
+        Me.Label1.Location = New System.Drawing.Point(3, 2)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(30, 19)
@@ -191,10 +192,10 @@ Partial Class UpdateJenisLocker
         Me.TxtBiaya.BackColor = System.Drawing.Color.White
         Me.TxtBiaya.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtBiaya.Font = New System.Drawing.Font("Calibri Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtBiaya.Location = New System.Drawing.Point(30, 3)
+        Me.TxtBiaya.Location = New System.Drawing.Point(37, 3)
         Me.TxtBiaya.Margin = New System.Windows.Forms.Padding(2)
         Me.TxtBiaya.Name = "TxtBiaya"
-        Me.TxtBiaya.Size = New System.Drawing.Size(238, 20)
+        Me.TxtBiaya.Size = New System.Drawing.Size(231, 20)
         Me.TxtBiaya.TabIndex = 8
         '
         'Panel2

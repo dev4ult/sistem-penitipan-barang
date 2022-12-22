@@ -50,6 +50,7 @@ Partial Class FormJenisLocker
         '
         'BtnCreate
         '
+        Me.BtnCreate.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnCreate.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
         Me.BtnCreate.Location = New System.Drawing.Point(20, 33)
@@ -61,6 +62,7 @@ Partial Class FormJenisLocker
         '
         'BtnUpdate
         '
+        Me.BtnUpdate.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnUpdate.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
         Me.BtnUpdate.Location = New System.Drawing.Point(20, 72)
@@ -72,6 +74,7 @@ Partial Class FormJenisLocker
         '
         'BtnDelete
         '
+        Me.BtnDelete.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnDelete.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
         Me.BtnDelete.Location = New System.Drawing.Point(20, 111)
@@ -97,6 +100,7 @@ Partial Class FormJenisLocker
         'BTNKembali
         '
         Me.BTNKembali.BackColor = System.Drawing.Color.Black
+        Me.BTNKembali.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BTNKembali.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BTNKembali.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
         Me.BTNKembali.ForeColor = System.Drawing.Color.White
@@ -140,7 +144,7 @@ Partial Class FormJenisLocker
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(642, 565)
         Me.Controls.Add(Me.Panel1)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "FormJenisLocker"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Data Jenis Loker"

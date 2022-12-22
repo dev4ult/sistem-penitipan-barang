@@ -1,7 +1,7 @@
 ﻿
 
 Public Class MainMenu
-    Private sewa_model As Sewa_model
+    Private sewa_model As Rent_model
     Private user_model As User_model
 
     Private selectedLocker As String
@@ -16,7 +16,7 @@ Public Class MainMenu
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-        sewa_model = New Sewa_model()
+        sewa_model = New Rent_model()
         user_model = New User_model()
 
         userId = Login.GetUserId()

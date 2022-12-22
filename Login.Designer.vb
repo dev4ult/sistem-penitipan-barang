@@ -47,10 +47,10 @@ Partial Class Login
         '
         Me.TXTUmail.BackColor = System.Drawing.Color.White
         Me.TXTUmail.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TXTUmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXTUmail.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TXTUmail.Location = New System.Drawing.Point(7, 7)
         Me.TXTUmail.Name = "TXTUmail"
-        Me.TXTUmail.Size = New System.Drawing.Size(232, 19)
+        Me.TXTUmail.Size = New System.Drawing.Size(232, 20)
         Me.TXTUmail.TabIndex = 0
         '
         'BTNLogin
@@ -119,11 +119,11 @@ Partial Class Login
         '
         Me.TXTPassword.BackColor = System.Drawing.Color.White
         Me.TXTPassword.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TXTPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXTPassword.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TXTPassword.Location = New System.Drawing.Point(7, 7)
         Me.TXTPassword.Name = "TXTPassword"
         Me.TXTPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(88)
-        Me.TXTPassword.Size = New System.Drawing.Size(232, 19)
+        Me.TXTPassword.Size = New System.Drawing.Size(232, 20)
         Me.TXTPassword.TabIndex = 0
         '
         'Label2
@@ -233,9 +233,10 @@ Partial Class Login
         'LinkLBAdmin
         '
         Me.LinkLBAdmin.AutoSize = True
+        Me.LinkLBAdmin.BackColor = System.Drawing.Color.Transparent
         Me.LinkLBAdmin.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LinkLBAdmin.LinkColor = System.Drawing.Color.RoyalBlue
-        Me.LinkLBAdmin.Location = New System.Drawing.Point(101, 423)
+        Me.LinkLBAdmin.Location = New System.Drawing.Point(94, 423)
         Me.LinkLBAdmin.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LinkLBAdmin.Name = "LinkLBAdmin"
         Me.LinkLBAdmin.Size = New System.Drawing.Size(42, 15)

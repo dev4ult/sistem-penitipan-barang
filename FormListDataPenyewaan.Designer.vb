@@ -63,7 +63,7 @@ Partial Class FormListDataPenyewaan
         Me.DGV_DataSewa.BackgroundColor = System.Drawing.Color.White
         Me.DGV_DataSewa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGV_DataSewa.Location = New System.Drawing.Point(25, 107)
-        Me.DGV_DataSewa.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.DGV_DataSewa.Margin = New System.Windows.Forms.Padding(2)
         Me.DGV_DataSewa.Name = "DGV_DataSewa"
         Me.DGV_DataSewa.ReadOnly = True
         Me.DGV_DataSewa.RowHeadersWidth = 51
@@ -74,12 +74,12 @@ Partial Class FormListDataPenyewaan
         'BTNKembali
         '
         Me.BTNKembali.BackColor = System.Drawing.Color.Black
-        Me.BTNKembali.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.BTNKembali.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BTNKembali.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BTNKembali.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BTNKembali.ForeColor = System.Drawing.Color.White
         Me.BTNKembali.Location = New System.Drawing.Point(25, 15)
-        Me.BTNKembali.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.BTNKembali.Margin = New System.Windows.Forms.Padding(2)
         Me.BTNKembali.Name = "BTNKembali"
         Me.BTNKembali.Size = New System.Drawing.Size(108, 36)
         Me.BTNKembali.TabIndex = 35
@@ -103,12 +103,12 @@ Partial Class FormListDataPenyewaan
         'BTNHapusSewa
         '
         Me.BTNHapusSewa.BackColor = System.Drawing.Color.Black
-        Me.BTNHapusSewa.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.BTNHapusSewa.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BTNHapusSewa.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BTNHapusSewa.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold)
         Me.BTNHapusSewa.ForeColor = System.Drawing.Color.White
         Me.BTNHapusSewa.Location = New System.Drawing.Point(25, 478)
-        Me.BTNHapusSewa.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.BTNHapusSewa.Margin = New System.Windows.Forms.Padding(2)
         Me.BTNHapusSewa.Name = "BTNHapusSewa"
         Me.BTNHapusSewa.Size = New System.Drawing.Size(117, 36)
         Me.BTNHapusSewa.TabIndex = 32
@@ -122,10 +122,10 @@ Partial Class FormListDataPenyewaan
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(913, 609)
         Me.Controls.Add(Me.Panel1)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "FormListDataPenyewaan"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "FormListDataPenyewaan"
+        Me.Text = "Data Sewa Loker"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.DGV_DataSewa, System.ComponentModel.ISupportInitialize).EndInit()

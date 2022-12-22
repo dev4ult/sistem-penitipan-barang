@@ -57,7 +57,6 @@ Partial Class TambahLocker
         Me.CBukuran.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.CBukuran.FormattingEnabled = True
         Me.CBukuran.IntegralHeight = False
-        Me.CBukuran.Items.AddRange(New Object() {"Small", "Medium", "Large"})
         Me.CBukuran.Location = New System.Drawing.Point(8, 6)
         Me.CBukuran.Name = "CBukuran"
         Me.CBukuran.Size = New System.Drawing.Size(295, 21)
@@ -86,7 +85,7 @@ Partial Class TambahLocker
         Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel3.Controls.Add(Me.CBukuran)
         Me.Panel3.Location = New System.Drawing.Point(19, 87)
-        Me.Panel3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(310, 34)
         Me.Panel3.TabIndex = 14
@@ -96,7 +95,7 @@ Partial Class TambahLocker
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel1.Controls.Add(Me.CBLokasi)
         Me.Panel1.Location = New System.Drawing.Point(19, 152)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(310, 34)
         Me.Panel1.TabIndex = 13
@@ -114,6 +113,7 @@ Partial Class TambahLocker
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.White
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.Black
@@ -127,6 +127,7 @@ Partial Class TambahLocker
         'btntambah
         '
         Me.btntambah.BackColor = System.Drawing.Color.Black
+        Me.btntambah.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btntambah.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btntambah.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btntambah.ForeColor = System.Drawing.Color.White

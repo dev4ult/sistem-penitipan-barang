@@ -58,11 +58,12 @@ Partial Class RemoveRentData
         'BtnRemoveLockerName
         '
         Me.BtnRemoveLockerName.BackColor = System.Drawing.Color.Black
+        Me.BtnRemoveLockerName.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnRemoveLockerName.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnRemoveLockerName.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnRemoveLockerName.ForeColor = System.Drawing.Color.White
         Me.BtnRemoveLockerName.Location = New System.Drawing.Point(74, 199)
-        Me.BtnRemoveLockerName.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.BtnRemoveLockerName.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnRemoveLockerName.Name = "BtnRemoveLockerName"
         Me.BtnRemoveLockerName.Size = New System.Drawing.Size(108, 36)
         Me.BtnRemoveLockerName.TabIndex = 2
@@ -71,10 +72,11 @@ Partial Class RemoveRentData
         '
         'BtnCancelRemove
         '
+        Me.BtnCancelRemove.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnCancelRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnCancelRemove.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnCancelRemove.Location = New System.Drawing.Point(202, 199)
-        Me.BtnCancelRemove.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.BtnCancelRemove.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnCancelRemove.Name = "BtnCancelRemove"
         Me.BtnCancelRemove.Size = New System.Drawing.Size(108, 36)
         Me.BtnCancelRemove.TabIndex = 3
@@ -114,7 +116,7 @@ Partial Class RemoveRentData
         Me.ClientSize = New System.Drawing.Size(436, 310)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "RemoveRentData"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Hapus Data Sewa"

@@ -40,13 +40,13 @@ Partial Class MainMenu
         Me.DGV_DataSewa.AllowUserToDeleteRows = False
         Me.DGV_DataSewa.BackgroundColor = System.Drawing.Color.White
         Me.DGV_DataSewa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGV_DataSewa.Location = New System.Drawing.Point(33, 132)
-        Me.DGV_DataSewa.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.DGV_DataSewa.Location = New System.Drawing.Point(25, 107)
+        Me.DGV_DataSewa.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.DGV_DataSewa.Name = "DGV_DataSewa"
         Me.DGV_DataSewa.ReadOnly = True
         Me.DGV_DataSewa.RowHeadersWidth = 51
         Me.DGV_DataSewa.RowTemplate.Height = 24
-        Me.DGV_DataSewa.Size = New System.Drawing.Size(1101, 425)
+        Me.DGV_DataSewa.Size = New System.Drawing.Size(826, 345)
         Me.DGV_DataSewa.TabIndex = 0
         '
         'BtnTambahDataSewa
@@ -56,10 +56,10 @@ Partial Class MainMenu
         Me.BtnTambahDataSewa.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnTambahDataSewa.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold)
         Me.BtnTambahDataSewa.ForeColor = System.Drawing.Color.White
-        Me.BtnTambahDataSewa.Location = New System.Drawing.Point(33, 588)
-        Me.BtnTambahDataSewa.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.BtnTambahDataSewa.Location = New System.Drawing.Point(25, 478)
+        Me.BtnTambahDataSewa.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.BtnTambahDataSewa.Name = "BtnTambahDataSewa"
-        Me.BtnTambahDataSewa.Size = New System.Drawing.Size(156, 44)
+        Me.BtnTambahDataSewa.Size = New System.Drawing.Size(117, 36)
         Me.BtnTambahDataSewa.TabIndex = 32
         Me.BtnTambahDataSewa.Text = "SEWA LOKER"
         Me.BtnTambahDataSewa.UseVisualStyleBackColor = False
@@ -71,10 +71,10 @@ Partial Class MainMenu
         Me.BtnFormReturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnFormReturn.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold)
         Me.BtnFormReturn.ForeColor = System.Drawing.Color.Black
-        Me.BtnFormReturn.Location = New System.Drawing.Point(216, 588)
-        Me.BtnFormReturn.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.BtnFormReturn.Location = New System.Drawing.Point(162, 478)
+        Me.BtnFormReturn.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.BtnFormReturn.Name = "BtnFormReturn"
-        Me.BtnFormReturn.Size = New System.Drawing.Size(185, 44)
+        Me.BtnFormReturn.Size = New System.Drawing.Size(139, 36)
         Me.BtnFormReturn.TabIndex = 34
         Me.BtnFormReturn.Text = "AMBIL BARANG"
         Me.BtnFormReturn.UseVisualStyleBackColor = False
@@ -82,14 +82,14 @@ Partial Class MainMenu
         'BTNLogout
         '
         Me.BTNLogout.BackColor = System.Drawing.Color.Black
-        Me.BTNLogout.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.BTNLogout.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BTNLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BTNLogout.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BTNLogout.ForeColor = System.Drawing.Color.White
-        Me.BTNLogout.Location = New System.Drawing.Point(33, 18)
-        Me.BTNLogout.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.BTNLogout.Location = New System.Drawing.Point(25, 15)
+        Me.BTNLogout.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.BTNLogout.Name = "BTNLogout"
-        Me.BTNLogout.Size = New System.Drawing.Size(144, 44)
+        Me.BTNLogout.Size = New System.Drawing.Size(108, 36)
         Me.BTNLogout.TabIndex = 35
         Me.BTNLogout.Text = "LOGOUT"
         Me.BTNLogout.UseVisualStyleBackColor = False
@@ -99,10 +99,11 @@ Partial Class MainMenu
         Me.Label1.BackColor = System.Drawing.Color.Black
         Me.Label1.Font = New System.Drawing.Font("Calibri", 20.0!, System.Drawing.FontStyle.Bold)
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(886, 18)
+        Me.Label1.Location = New System.Drawing.Point(664, 15)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Padding = New System.Windows.Forms.Padding(0, 0, 20, 0)
-        Me.Label1.Size = New System.Drawing.Size(248, 89)
+        Me.Label1.Padding = New System.Windows.Forms.Padding(0, 0, 15, 0)
+        Me.Label1.Size = New System.Drawing.Size(186, 72)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "MAIN MENU"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -117,19 +118,19 @@ Partial Class MainMenu
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.BtnFormReturn)
         Me.Panel1.Controls.Add(Me.BtnTambahDataSewa)
-        Me.Panel1.Location = New System.Drawing.Point(37, 34)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel1.Location = New System.Drawing.Point(28, 28)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1166, 658)
+        Me.Panel1.Size = New System.Drawing.Size(875, 535)
         Me.Panel1.TabIndex = 36
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Calibri", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(964, 591)
+        Me.Label2.Location = New System.Drawing.Point(723, 480)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(165, 40)
+        Me.Label2.Size = New System.Drawing.Size(135, 33)
         Me.Label2.TabIndex = 37
         Me.Label2.Text = "DIGILOKER"
         '
@@ -137,20 +138,21 @@ Partial Class MainMenu
         '
         Me.LBUsername.AutoSize = True
         Me.LBUsername.Font = New System.Drawing.Font("Calibri", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LBUsername.Location = New System.Drawing.Point(27, 72)
+        Me.LBUsername.Location = New System.Drawing.Point(20, 58)
+        Me.LBUsername.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LBUsername.Name = "LBUsername"
-        Me.LBUsername.Size = New System.Drawing.Size(134, 35)
+        Me.LBUsername.Size = New System.Drawing.Size(106, 27)
         Me.LBUsername.TabIndex = 36
         Me.LBUsername.Text = "Username"
         '
         'MainMenu
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1244, 725)
+        Me.ClientSize = New System.Drawing.Size(933, 589)
         Me.Controls.Add(Me.Panel1)
-        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "MainMenu"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FormDataSewa"

@@ -90,9 +90,10 @@ Partial Class SewaLocker
         '
         'CBUkuranLocker
         '
+        Me.CBUkuranLocker.Cursor = System.Windows.Forms.Cursors.Hand
         Me.CBUkuranLocker.FormattingEnabled = True
         Me.CBUkuranLocker.Location = New System.Drawing.Point(20, 35)
-        Me.CBUkuranLocker.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.CBUkuranLocker.Margin = New System.Windows.Forms.Padding(2)
         Me.CBUkuranLocker.Name = "CBUkuranLocker"
         Me.CBUkuranLocker.Size = New System.Drawing.Size(163, 21)
         Me.CBUkuranLocker.TabIndex = 6
@@ -224,12 +225,12 @@ Partial Class SewaLocker
         'BtnYesSewa
         '
         Me.BtnYesSewa.BackColor = System.Drawing.Color.Black
-        Me.BtnYesSewa.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.BtnYesSewa.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnYesSewa.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnYesSewa.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnYesSewa.ForeColor = System.Drawing.Color.White
         Me.BtnYesSewa.Location = New System.Drawing.Point(368, 587)
-        Me.BtnYesSewa.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.BtnYesSewa.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnYesSewa.Name = "BtnYesSewa"
         Me.BtnYesSewa.Size = New System.Drawing.Size(87, 34)
         Me.BtnYesSewa.TabIndex = 31
@@ -238,11 +239,11 @@ Partial Class SewaLocker
         '
         'BtnNoSewa
         '
-        Me.BtnNoSewa.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.BtnNoSewa.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnNoSewa.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnNoSewa.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnNoSewa.Location = New System.Drawing.Point(462, 587)
-        Me.BtnNoSewa.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.BtnNoSewa.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnNoSewa.Name = "BtnNoSewa"
         Me.BtnNoSewa.Size = New System.Drawing.Size(87, 34)
         Me.BtnNoSewa.TabIndex = 32
@@ -251,9 +252,10 @@ Partial Class SewaLocker
         '
         'LsbLockerTersedia
         '
+        Me.LsbLockerTersedia.Cursor = System.Windows.Forms.Cursors.Hand
         Me.LsbLockerTersedia.FormattingEnabled = True
         Me.LsbLockerTersedia.Location = New System.Drawing.Point(20, 110)
-        Me.LsbLockerTersedia.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.LsbLockerTersedia.Margin = New System.Windows.Forms.Padding(2)
         Me.LsbLockerTersedia.Name = "LsbLockerTersedia"
         Me.LsbLockerTersedia.Size = New System.Drawing.Size(162, 173)
         Me.LsbLockerTersedia.TabIndex = 33
@@ -320,7 +322,7 @@ Partial Class SewaLocker
         Me.RTBKetUser.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.RTBKetUser.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RTBKetUser.Location = New System.Drawing.Point(8, 8)
-        Me.RTBKetUser.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.RTBKetUser.Margin = New System.Windows.Forms.Padding(2)
         Me.RTBKetUser.Name = "RTBKetUser"
         Me.RTBKetUser.Size = New System.Drawing.Size(228, 148)
         Me.RTBKetUser.TabIndex = 40
@@ -365,7 +367,7 @@ Partial Class SewaLocker
         'NUDLamaSewa
         '
         Me.NUDLamaSewa.Location = New System.Drawing.Point(26, 37)
-        Me.NUDLamaSewa.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.NUDLamaSewa.Margin = New System.Windows.Forms.Padding(2)
         Me.NUDLamaSewa.Name = "NUDLamaSewa"
         Me.NUDLamaSewa.Size = New System.Drawing.Size(193, 21)
         Me.NUDLamaSewa.TabIndex = 44
@@ -478,7 +480,7 @@ Partial Class SewaLocker
         Me.Controls.Add(Me.BtnYesSewa)
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "SewaLocker"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form Sewa Loker"
