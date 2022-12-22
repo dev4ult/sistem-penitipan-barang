@@ -64,7 +64,7 @@ Partial Class HapusLocker
         Me.BTNHapus.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BTNHapus.ForeColor = System.Drawing.SystemColors.HighlightText
         Me.BTNHapus.Location = New System.Drawing.Point(65, 162)
-        Me.BTNHapus.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.BTNHapus.Margin = New System.Windows.Forms.Padding(2)
         Me.BTNHapus.Name = "BTNHapus"
         Me.BTNHapus.Size = New System.Drawing.Size(108, 36)
         Me.BTNHapus.TabIndex = 2
@@ -78,7 +78,7 @@ Partial Class HapusLocker
         Me.BTNKembali.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BTNKembali.ForeColor = System.Drawing.Color.Black
         Me.BTNKembali.Location = New System.Drawing.Point(190, 162)
-        Me.BTNKembali.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.BTNKembali.Margin = New System.Windows.Forms.Padding(2)
         Me.BTNKembali.Name = "BTNKembali"
         Me.BTNKembali.Size = New System.Drawing.Size(108, 36)
         Me.BTNKembali.TabIndex = 3
@@ -106,7 +106,7 @@ Partial Class HapusLocker
         Me.Panel2.Controls.Add(Me.Label1)
         Me.Panel2.Controls.Add(Me.LBNamaLoker)
         Me.Panel2.Location = New System.Drawing.Point(9, 20)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(377, 238)
         Me.Panel2.TabIndex = 13
@@ -142,8 +142,9 @@ Partial Class HapusLocker
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(397, 269)
         Me.Controls.Add(Me.Panel2)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "HapusLocker"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "HapusLocker"
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()

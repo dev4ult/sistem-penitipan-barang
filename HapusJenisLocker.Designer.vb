@@ -220,6 +220,7 @@ Partial Class HapusJenisLocker
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "HapusJenisLocker"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Hapus Jenis Loker"
         Me.Panel1.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)

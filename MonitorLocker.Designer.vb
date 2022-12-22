@@ -37,15 +37,19 @@ Partial Class MonitorLocker
         '
         'DataGridLocker
         '
+        Me.DataGridLocker.AllowUserToAddRows = False
+        Me.DataGridLocker.AllowUserToDeleteRows = False
         Me.DataGridLocker.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridLocker.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DataGridLocker.BackgroundColor = System.Drawing.SystemColors.Window
         Me.DataGridLocker.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridLocker.GridColor = System.Drawing.SystemColors.ButtonFace
-        Me.DataGridLocker.Location = New System.Drawing.Point(22, 95)
+        Me.DataGridLocker.Location = New System.Drawing.Point(16, 77)
+        Me.DataGridLocker.Margin = New System.Windows.Forms.Padding(2)
         Me.DataGridLocker.Name = "DataGridLocker"
+        Me.DataGridLocker.ReadOnly = True
         Me.DataGridLocker.RowHeadersWidth = 51
-        Me.DataGridLocker.Size = New System.Drawing.Size(353, 406)
+        Me.DataGridLocker.Size = New System.Drawing.Size(265, 330)
         Me.DataGridLocker.TabIndex = 0
         '
         'Label1
@@ -53,10 +57,11 @@ Partial Class MonitorLocker
         Me.Label1.BackColor = System.Drawing.Color.Black
         Me.Label1.Font = New System.Drawing.Font("Calibri", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(22, 15)
+        Me.Label1.Location = New System.Drawing.Point(16, 12)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Padding = New System.Windows.Forms.Padding(15, 0, 0, 0)
-        Me.Label1.Size = New System.Drawing.Size(571, 58)
+        Me.Label1.Padding = New System.Windows.Forms.Padding(11, 0, 0, 0)
+        Me.Label1.Size = New System.Drawing.Size(428, 47)
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "# LIST LOKER"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -68,9 +73,10 @@ Partial Class MonitorLocker
         Me.Panel2.Controls.Add(Me.GroupBox2)
         Me.Panel2.Controls.Add(Me.Label1)
         Me.Panel2.Controls.Add(Me.DataGridLocker)
-        Me.Panel2.Location = New System.Drawing.Point(22, 21)
+        Me.Panel2.Location = New System.Drawing.Point(16, 17)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(622, 538)
+        Me.Panel2.Size = New System.Drawing.Size(467, 438)
         Me.Panel2.TabIndex = 6
         '
         'BTNKembali
@@ -79,10 +85,9 @@ Partial Class MonitorLocker
         Me.BTNKembali.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BTNKembali.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
         Me.BTNKembali.ForeColor = System.Drawing.Color.White
-        Me.BTNKembali.Location = New System.Drawing.Point(404, 318)
-        Me.BTNKembali.Margin = New System.Windows.Forms.Padding(4)
+        Me.BTNKembali.Location = New System.Drawing.Point(303, 258)
         Me.BTNKembali.Name = "BTNKembali"
-        Me.BTNKembali.Size = New System.Drawing.Size(189, 41)
+        Me.BTNKembali.Size = New System.Drawing.Size(142, 33)
         Me.BTNKembali.TabIndex = 8
         Me.BTNKembali.Text = "KEMBALI"
         Me.BTNKembali.UseVisualStyleBackColor = False
@@ -94,11 +99,9 @@ Partial Class MonitorLocker
         Me.GroupBox2.Controls.Add(Me.BTNHapusLoker)
         Me.GroupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.GroupBox2.Font = New System.Drawing.Font("Calibri", 9.0!)
-        Me.GroupBox2.Location = New System.Drawing.Point(404, 95)
-        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4)
+        Me.GroupBox2.Location = New System.Drawing.Point(303, 77)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBox2.Size = New System.Drawing.Size(189, 206)
+        Me.GroupBox2.Size = New System.Drawing.Size(142, 167)
         Me.GroupBox2.TabIndex = 7
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "MENU"
@@ -107,10 +110,9 @@ Partial Class MonitorLocker
         '
         Me.BTNTambahLoker.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BTNTambahLoker.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.BTNTambahLoker.Location = New System.Drawing.Point(27, 41)
-        Me.BTNTambahLoker.Margin = New System.Windows.Forms.Padding(4)
+        Me.BTNTambahLoker.Location = New System.Drawing.Point(20, 33)
         Me.BTNTambahLoker.Name = "BTNTambahLoker"
-        Me.BTNTambahLoker.Size = New System.Drawing.Size(129, 41)
+        Me.BTNTambahLoker.Size = New System.Drawing.Size(97, 33)
         Me.BTNTambahLoker.TabIndex = 1
         Me.BTNTambahLoker.Text = "TAMBAH"
         Me.BTNTambahLoker.UseVisualStyleBackColor = True
@@ -119,10 +121,9 @@ Partial Class MonitorLocker
         '
         Me.BTNUbahStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BTNUbahStatus.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.BTNUbahStatus.Location = New System.Drawing.Point(27, 89)
-        Me.BTNUbahStatus.Margin = New System.Windows.Forms.Padding(4)
+        Me.BTNUbahStatus.Location = New System.Drawing.Point(20, 72)
         Me.BTNUbahStatus.Name = "BTNUbahStatus"
-        Me.BTNUbahStatus.Size = New System.Drawing.Size(129, 41)
+        Me.BTNUbahStatus.Size = New System.Drawing.Size(97, 33)
         Me.BTNUbahStatus.TabIndex = 2
         Me.BTNUbahStatus.Text = "UBAH STATUS"
         Me.BTNUbahStatus.UseVisualStyleBackColor = True
@@ -131,22 +132,23 @@ Partial Class MonitorLocker
         '
         Me.BTNHapusLoker.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BTNHapusLoker.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.BTNHapusLoker.Location = New System.Drawing.Point(27, 137)
-        Me.BTNHapusLoker.Margin = New System.Windows.Forms.Padding(4)
+        Me.BTNHapusLoker.Location = New System.Drawing.Point(20, 111)
         Me.BTNHapusLoker.Name = "BTNHapusLoker"
-        Me.BTNHapusLoker.Size = New System.Drawing.Size(129, 41)
+        Me.BTNHapusLoker.Size = New System.Drawing.Size(97, 33)
         Me.BTNHapusLoker.TabIndex = 3
         Me.BTNHapusLoker.Text = "HAPUS"
         Me.BTNHapusLoker.UseVisualStyleBackColor = True
         '
         'MonitorLocker
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(671, 571)
+        Me.ClientSize = New System.Drawing.Size(503, 464)
         Me.Controls.Add(Me.Panel2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "MonitorLocker"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "MonitorLocker"
         CType(Me.DataGridLocker, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)

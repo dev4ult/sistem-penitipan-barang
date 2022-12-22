@@ -33,14 +33,14 @@ Partial Class RemoveRentData
         '
         'Label1
         '
-        Me.Label1.Font = New System.Drawing.Font("Calibri", 12.0!)
+        Me.Label1.Font = New System.Drawing.Font("Calibri", 14.0!)
         Me.Label1.ForeColor = System.Drawing.Color.Black
         Me.Label1.Location = New System.Drawing.Point(18, 54)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(353, 46)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Apakah Yakin Menghapus Data Ini ?"
+        Me.Label1.Text = "Hapus data penyewaan di loker ini ?"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'LblRemoveLockerName

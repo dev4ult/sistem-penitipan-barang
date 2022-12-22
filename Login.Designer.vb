@@ -93,9 +93,9 @@ Partial Class Login
         Me.PanelUmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PanelUmail.Controls.Add(Me.TXTUmail)
         Me.PanelUmail.Location = New System.Drawing.Point(14, 88)
-        Me.PanelUmail.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PanelUmail.Margin = New System.Windows.Forms.Padding(2)
         Me.PanelUmail.Name = "PanelUmail"
-        Me.PanelUmail.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PanelUmail.Padding = New System.Windows.Forms.Padding(4)
         Me.PanelUmail.Size = New System.Drawing.Size(256, 37)
         Me.PanelUmail.TabIndex = 5
         '
@@ -109,9 +109,9 @@ Partial Class Login
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel1.Controls.Add(Me.TXTPassword)
         Me.Panel1.Location = New System.Drawing.Point(14, 153)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel1.Padding = New System.Windows.Forms.Padding(4)
         Me.Panel1.Size = New System.Drawing.Size(256, 37)
         Me.Panel1.TabIndex = 7
         '
@@ -154,7 +154,7 @@ Partial Class Login
         Me.Panel2.Controls.Add(Me.BTNLogin)
         Me.Panel2.Controls.Add(Me.PanelUmail)
         Me.Panel2.Location = New System.Drawing.Point(121, 115)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Padding = New System.Windows.Forms.Padding(14, 15, 14, 15)
         Me.Panel2.Size = New System.Drawing.Size(283, 288)
@@ -270,6 +270,7 @@ Partial Class Login
         Me.MinimizeBox = False
         Me.Name = "Login"
         Me.Padding = New System.Windows.Forms.Padding(26, 28, 26, 28)
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Login"
         Me.PanelUmail.ResumeLayout(False)
         Me.PanelUmail.PerformLayout()

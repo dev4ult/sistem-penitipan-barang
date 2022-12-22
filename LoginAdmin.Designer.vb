@@ -102,7 +102,7 @@ Partial Class LoginAdmin
         Me.Panel3.Controls.Add(Me.BTNLogin)
         Me.Panel3.Controls.Add(Me.Panel5)
         Me.Panel3.Location = New System.Drawing.Point(106, 125)
-        Me.Panel3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Padding = New System.Windows.Forms.Padding(14, 15, 14, 15)
         Me.Panel3.Size = New System.Drawing.Size(283, 273)
@@ -142,9 +142,9 @@ Partial Class LoginAdmin
         Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel4.Controls.Add(Me.TXTPassword)
         Me.Panel4.Location = New System.Drawing.Point(14, 153)
-        Me.Panel4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel4.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel4.Padding = New System.Windows.Forms.Padding(4)
         Me.Panel4.Size = New System.Drawing.Size(258, 37)
         Me.Panel4.TabIndex = 7
         '
@@ -210,9 +210,9 @@ Partial Class LoginAdmin
         Me.Panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel5.Controls.Add(Me.TXTUmail)
         Me.Panel5.Location = New System.Drawing.Point(14, 88)
-        Me.Panel5.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel5.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel5.Padding = New System.Windows.Forms.Padding(4)
         Me.Panel5.Size = New System.Drawing.Size(258, 37)
         Me.Panel5.TabIndex = 5
         '
@@ -237,8 +237,9 @@ Partial Class LoginAdmin
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label5)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "LoginAdmin"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "LoginAdmin"
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()

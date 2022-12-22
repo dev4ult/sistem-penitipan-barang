@@ -94,7 +94,7 @@ Partial Class Signup
         Me.Panel2.Controls.Add(Me.BTNSignUp)
         Me.Panel2.Controls.Add(Me.PanelUmail)
         Me.Panel2.Location = New System.Drawing.Point(44, 112)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Padding = New System.Windows.Forms.Padding(14, 15, 14, 15)
         Me.Panel2.Size = New System.Drawing.Size(517, 288)
@@ -121,9 +121,9 @@ Partial Class Signup
         Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel4.Controls.Add(Me.TXTPasswordConfirmation)
         Me.Panel4.Location = New System.Drawing.Point(268, 152)
-        Me.Panel4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel4.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel4.Padding = New System.Windows.Forms.Padding(4)
         Me.Panel4.Size = New System.Drawing.Size(232, 37)
         Me.Panel4.TabIndex = 16
         '
@@ -170,9 +170,9 @@ Partial Class Signup
         Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel3.Controls.Add(Me.TXTEmail)
         Me.Panel3.Location = New System.Drawing.Point(268, 88)
-        Me.Panel3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel3.Padding = New System.Windows.Forms.Padding(4)
         Me.Panel3.Size = New System.Drawing.Size(232, 37)
         Me.Panel3.TabIndex = 6
         '
@@ -244,9 +244,9 @@ Partial Class Signup
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel1.Controls.Add(Me.TXTPassword)
         Me.Panel1.Location = New System.Drawing.Point(19, 152)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel1.Padding = New System.Windows.Forms.Padding(4)
         Me.Panel1.Size = New System.Drawing.Size(231, 37)
         Me.Panel1.TabIndex = 7
         '
@@ -312,9 +312,9 @@ Partial Class Signup
         Me.PanelUmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PanelUmail.Controls.Add(Me.TXTUsername)
         Me.PanelUmail.Location = New System.Drawing.Point(18, 88)
-        Me.PanelUmail.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PanelUmail.Margin = New System.Windows.Forms.Padding(2)
         Me.PanelUmail.Name = "PanelUmail"
-        Me.PanelUmail.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PanelUmail.Padding = New System.Windows.Forms.Padding(4)
         Me.PanelUmail.Size = New System.Drawing.Size(231, 37)
         Me.PanelUmail.TabIndex = 5
         '
@@ -338,10 +338,11 @@ Partial Class Signup
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Panel2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "Signup"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Signup"
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()

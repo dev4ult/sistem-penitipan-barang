@@ -41,10 +41,9 @@ Partial Class AdminMenu
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.BTNMonitorJenisLoker)
         Me.Panel1.Controls.Add(Me.BTNFormMonitorLoker)
-        Me.Panel1.Location = New System.Drawing.Point(24, 35)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel1.Location = New System.Drawing.Point(18, 28)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1166, 658)
+        Me.Panel1.Size = New System.Drawing.Size(875, 535)
         Me.Panel1.TabIndex = 37
         '
         'BTNDataPenyewaan
@@ -54,10 +53,10 @@ Partial Class AdminMenu
         Me.BTNDataPenyewaan.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BTNDataPenyewaan.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BTNDataPenyewaan.ForeColor = System.Drawing.Color.Black
-        Me.BTNDataPenyewaan.Location = New System.Drawing.Point(31, 359)
-        Me.BTNDataPenyewaan.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.BTNDataPenyewaan.Location = New System.Drawing.Point(23, 292)
+        Me.BTNDataPenyewaan.Margin = New System.Windows.Forms.Padding(2)
         Me.BTNDataPenyewaan.Name = "BTNDataPenyewaan"
-        Me.BTNDataPenyewaan.Size = New System.Drawing.Size(664, 149)
+        Me.BTNDataPenyewaan.Size = New System.Drawing.Size(498, 121)
         Me.BTNDataPenyewaan.TabIndex = 38
         Me.BTNDataPenyewaan.Text = "DATA PENYEWAAN"
         Me.BTNDataPenyewaan.UseVisualStyleBackColor = False
@@ -66,9 +65,10 @@ Partial Class AdminMenu
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Calibri", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(964, 591)
+        Me.Label2.Location = New System.Drawing.Point(723, 480)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(165, 40)
+        Me.Label2.Size = New System.Drawing.Size(135, 33)
         Me.Label2.TabIndex = 37
         Me.Label2.Text = "DIGILOKER"
         '
@@ -79,10 +79,10 @@ Partial Class AdminMenu
         Me.BTNLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BTNLogout.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BTNLogout.ForeColor = System.Drawing.Color.White
-        Me.BTNLogout.Location = New System.Drawing.Point(40, 587)
-        Me.BTNLogout.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.BTNLogout.Location = New System.Drawing.Point(30, 477)
+        Me.BTNLogout.Margin = New System.Windows.Forms.Padding(2)
         Me.BTNLogout.Name = "BTNLogout"
-        Me.BTNLogout.Size = New System.Drawing.Size(144, 44)
+        Me.BTNLogout.Size = New System.Drawing.Size(108, 36)
         Me.BTNLogout.TabIndex = 35
         Me.BTNLogout.Text = "LOGOUT"
         Me.BTNLogout.UseVisualStyleBackColor = False
@@ -92,10 +92,11 @@ Partial Class AdminMenu
         Me.Label1.BackColor = System.Drawing.Color.Black
         Me.Label1.Font = New System.Drawing.Font("Calibri", 20.0!, System.Drawing.FontStyle.Bold)
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(33, 18)
+        Me.Label1.Location = New System.Drawing.Point(25, 15)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
-        Me.Label1.Size = New System.Drawing.Size(1096, 89)
+        Me.Label1.Padding = New System.Windows.Forms.Padding(15, 0, 0, 0)
+        Me.Label1.Size = New System.Drawing.Size(822, 72)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "# ADMIN MENU"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -107,10 +108,10 @@ Partial Class AdminMenu
         Me.BTNMonitorJenisLoker.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BTNMonitorJenisLoker.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BTNMonitorJenisLoker.ForeColor = System.Drawing.Color.Black
-        Me.BTNMonitorJenisLoker.Location = New System.Drawing.Point(381, 176)
-        Me.BTNMonitorJenisLoker.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.BTNMonitorJenisLoker.Location = New System.Drawing.Point(286, 143)
+        Me.BTNMonitorJenisLoker.Margin = New System.Windows.Forms.Padding(2)
         Me.BTNMonitorJenisLoker.Name = "BTNMonitorJenisLoker"
-        Me.BTNMonitorJenisLoker.Size = New System.Drawing.Size(314, 149)
+        Me.BTNMonitorJenisLoker.Size = New System.Drawing.Size(236, 121)
         Me.BTNMonitorJenisLoker.TabIndex = 34
         Me.BTNMonitorJenisLoker.Text = "JENIS LOKER"
         Me.BTNMonitorJenisLoker.UseVisualStyleBackColor = False
@@ -122,22 +123,24 @@ Partial Class AdminMenu
         Me.BTNFormMonitorLoker.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BTNFormMonitorLoker.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BTNFormMonitorLoker.ForeColor = System.Drawing.Color.White
-        Me.BTNFormMonitorLoker.Location = New System.Drawing.Point(31, 176)
-        Me.BTNFormMonitorLoker.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.BTNFormMonitorLoker.Location = New System.Drawing.Point(23, 143)
+        Me.BTNFormMonitorLoker.Margin = New System.Windows.Forms.Padding(2)
         Me.BTNFormMonitorLoker.Name = "BTNFormMonitorLoker"
-        Me.BTNFormMonitorLoker.Size = New System.Drawing.Size(314, 149)
+        Me.BTNFormMonitorLoker.Size = New System.Drawing.Size(236, 121)
         Me.BTNFormMonitorLoker.TabIndex = 32
         Me.BTNFormMonitorLoker.Text = "MONITOR LOKER"
         Me.BTNFormMonitorLoker.UseVisualStyleBackColor = False
         '
         'AdminMenu
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1212, 726)
+        Me.ClientSize = New System.Drawing.Size(909, 590)
         Me.Controls.Add(Me.Panel1)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "AdminMenu"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "AdminMenu"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()

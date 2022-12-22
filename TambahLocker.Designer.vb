@@ -46,9 +46,8 @@ Partial Class TambahLocker
         Me.Label1.Font = New System.Drawing.Font("Calibri", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Label1.Location = New System.Drawing.Point(0, 0)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(463, 56)
+        Me.Label1.Size = New System.Drawing.Size(347, 46)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "TAMBAH LOKER"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -59,10 +58,9 @@ Partial Class TambahLocker
         Me.CBukuran.FormattingEnabled = True
         Me.CBukuran.IntegralHeight = False
         Me.CBukuran.Items.AddRange(New Object() {"Small", "Medium", "Large"})
-        Me.CBukuran.Location = New System.Drawing.Point(10, 8)
-        Me.CBukuran.Margin = New System.Windows.Forms.Padding(4)
+        Me.CBukuran.Location = New System.Drawing.Point(8, 6)
         Me.CBukuran.Name = "CBukuran"
-        Me.CBukuran.Size = New System.Drawing.Size(392, 24)
+        Me.CBukuran.Size = New System.Drawing.Size(295, 21)
         Me.CBukuran.TabIndex = 1
         '
         'Panel2
@@ -78,28 +76,29 @@ Partial Class TambahLocker
         Me.Panel2.Controls.Add(Me.Label5)
         Me.Panel2.Controls.Add(Me.Label4)
         Me.Panel2.Controls.Add(Me.Label2)
-        Me.Panel2.Location = New System.Drawing.Point(28, 15)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel2.Location = New System.Drawing.Point(21, 12)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(463, 376)
+        Me.Panel2.Size = New System.Drawing.Size(348, 306)
         Me.Panel2.TabIndex = 4
         '
         'Panel3
         '
         Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel3.Controls.Add(Me.CBukuran)
-        Me.Panel3.Location = New System.Drawing.Point(25, 107)
+        Me.Panel3.Location = New System.Drawing.Point(19, 87)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(413, 41)
+        Me.Panel3.Size = New System.Drawing.Size(310, 34)
         Me.Panel3.TabIndex = 14
         '
         'Panel1
         '
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel1.Controls.Add(Me.CBLokasi)
-        Me.Panel1.Location = New System.Drawing.Point(25, 187)
+        Me.Panel1.Location = New System.Drawing.Point(19, 152)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(413, 41)
+        Me.Panel1.Size = New System.Drawing.Size(310, 34)
         Me.Panel1.TabIndex = 13
         '
         'CBLokasi
@@ -107,10 +106,9 @@ Partial Class TambahLocker
         Me.CBLokasi.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.CBLokasi.FormattingEnabled = True
         Me.CBLokasi.Items.AddRange(New Object() {"A", "B", "C", "D"})
-        Me.CBLokasi.Location = New System.Drawing.Point(11, 8)
-        Me.CBLokasi.Margin = New System.Windows.Forms.Padding(4)
+        Me.CBLokasi.Location = New System.Drawing.Point(8, 6)
         Me.CBLokasi.Name = "CBLokasi"
-        Me.CBLokasi.Size = New System.Drawing.Size(392, 24)
+        Me.CBLokasi.Size = New System.Drawing.Size(295, 21)
         Me.CBLokasi.TabIndex = 3
         '
         'Button1
@@ -119,10 +117,9 @@ Partial Class TambahLocker
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.Black
-        Me.Button1.Location = New System.Drawing.Point(294, 302)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button1.Location = New System.Drawing.Point(220, 245)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(144, 44)
+        Me.Button1.Size = New System.Drawing.Size(108, 36)
         Me.Button1.TabIndex = 12
         Me.Button1.Text = "BATAL"
         Me.Button1.UseVisualStyleBackColor = False
@@ -133,10 +130,9 @@ Partial Class TambahLocker
         Me.btntambah.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btntambah.Font = New System.Drawing.Font("Calibri", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btntambah.ForeColor = System.Drawing.Color.White
-        Me.btntambah.Location = New System.Drawing.Point(131, 302)
-        Me.btntambah.Margin = New System.Windows.Forms.Padding(4)
+        Me.btntambah.Location = New System.Drawing.Point(98, 245)
         Me.btntambah.Name = "btntambah"
-        Me.btntambah.Size = New System.Drawing.Size(144, 44)
+        Me.btntambah.Size = New System.Drawing.Size(108, 36)
         Me.btntambah.TabIndex = 5
         Me.btntambah.Text = "TAMBAH"
         Me.btntambah.UseVisualStyleBackColor = False
@@ -146,10 +142,9 @@ Partial Class TambahLocker
         Me.lblharga.AutoSize = True
         Me.lblharga.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblharga.ForeColor = System.Drawing.Color.Black
-        Me.lblharga.Location = New System.Drawing.Point(197, 246)
-        Me.lblharga.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblharga.Location = New System.Drawing.Point(148, 200)
         Me.lblharga.Name = "lblharga"
-        Me.lblharga.Size = New System.Drawing.Size(45, 24)
+        Me.lblharga.Size = New System.Drawing.Size(37, 19)
         Me.lblharga.TabIndex = 10
         Me.lblharga.Text = "RP.0"
         '
@@ -158,10 +153,9 @@ Partial Class TambahLocker
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Black
-        Me.Label5.Location = New System.Drawing.Point(21, 246)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Location = New System.Drawing.Point(16, 200)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(168, 24)
+        Me.Label5.Size = New System.Drawing.Size(138, 19)
         Me.Label5.TabIndex = 9
         Me.Label5.Text = "Biaya Sewa Perjam"
         '
@@ -171,10 +165,9 @@ Partial Class TambahLocker
         Me.Label4.BackColor = System.Drawing.Color.White
         Me.Label4.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Black
-        Me.Label4.Location = New System.Drawing.Point(21, 160)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Location = New System.Drawing.Point(16, 130)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(61, 24)
+        Me.Label4.Size = New System.Drawing.Size(50, 19)
         Me.Label4.TabIndex = 8
         Me.Label4.Text = "Lokasi"
         '
@@ -184,22 +177,21 @@ Partial Class TambahLocker
         Me.Label2.BackColor = System.Drawing.Color.White
         Me.Label2.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(21, 80)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(16, 65)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(71, 24)
+        Me.Label2.Size = New System.Drawing.Size(55, 19)
         Me.Label2.TabIndex = 6
         Me.Label2.Text = "Ukuran"
         '
         'TambahLocker
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(519, 416)
+        Me.ClientSize = New System.Drawing.Size(389, 338)
         Me.Controls.Add(Me.Panel2)
-        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "TambahLocker"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "TambahLocker"
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()

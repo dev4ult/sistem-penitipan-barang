@@ -83,7 +83,7 @@ Partial Class UpdateJenisLocker
         Me.TxtUkuran.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtUkuran.Font = New System.Drawing.Font("Calibri Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtUkuran.Location = New System.Drawing.Point(10, 4)
-        Me.TxtUkuran.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TxtUkuran.Margin = New System.Windows.Forms.Padding(2)
         Me.TxtUkuran.Name = "TxtUkuran"
         Me.TxtUkuran.Size = New System.Drawing.Size(255, 20)
         Me.TxtUkuran.TabIndex = 8
@@ -95,7 +95,7 @@ Partial Class UpdateJenisLocker
         Me.BtnSubmit.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
         Me.BtnSubmit.ForeColor = System.Drawing.Color.White
         Me.BtnSubmit.Location = New System.Drawing.Point(155, 269)
-        Me.BtnSubmit.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.BtnSubmit.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnSubmit.Name = "BtnSubmit"
         Me.BtnSubmit.Size = New System.Drawing.Size(66, 28)
         Me.BtnSubmit.TabIndex = 10
@@ -107,7 +107,7 @@ Partial Class UpdateJenisLocker
         Me.BtnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnClose.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
         Me.BtnClose.Location = New System.Drawing.Point(236, 269)
-        Me.BtnClose.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.BtnClose.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnClose.Name = "BtnClose"
         Me.BtnClose.Size = New System.Drawing.Size(66, 28)
         Me.BtnClose.TabIndex = 18
@@ -138,7 +138,7 @@ Partial Class UpdateJenisLocker
         Me.Panel1.Controls.Add(Me.LblUkuran)
         Me.Panel1.Controls.Add(Me.LblBiaya)
         Me.Panel1.Location = New System.Drawing.Point(16, 18)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(337, 315)
         Me.Panel1.TabIndex = 21
@@ -148,7 +148,7 @@ Partial Class UpdateJenisLocker
         Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel4.Controls.Add(Me.TxtInfoKet)
         Me.Panel4.Location = New System.Drawing.Point(26, 198)
-        Me.Panel4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel4.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(276, 29)
         Me.Panel4.TabIndex = 9
@@ -159,7 +159,7 @@ Partial Class UpdateJenisLocker
         Me.TxtInfoKet.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtInfoKet.Font = New System.Drawing.Font("Calibri Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtInfoKet.Location = New System.Drawing.Point(10, 3)
-        Me.TxtInfoKet.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TxtInfoKet.Margin = New System.Windows.Forms.Padding(2)
         Me.TxtInfoKet.Name = "TxtInfoKet"
         Me.TxtInfoKet.Size = New System.Drawing.Size(255, 20)
         Me.TxtInfoKet.TabIndex = 8
@@ -170,7 +170,7 @@ Partial Class UpdateJenisLocker
         Me.Panel3.Controls.Add(Me.Label1)
         Me.Panel3.Controls.Add(Me.TxtBiaya)
         Me.Panel3.Location = New System.Drawing.Point(26, 137)
-        Me.Panel3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(276, 29)
         Me.Panel3.TabIndex = 9
@@ -192,7 +192,7 @@ Partial Class UpdateJenisLocker
         Me.TxtBiaya.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtBiaya.Font = New System.Drawing.Font("Calibri Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtBiaya.Location = New System.Drawing.Point(30, 3)
-        Me.TxtBiaya.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TxtBiaya.Margin = New System.Windows.Forms.Padding(2)
         Me.TxtBiaya.Name = "TxtBiaya"
         Me.TxtBiaya.Size = New System.Drawing.Size(238, 20)
         Me.TxtBiaya.TabIndex = 8
@@ -202,7 +202,7 @@ Partial Class UpdateJenisLocker
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel2.Controls.Add(Me.TxtUkuran)
         Me.Panel2.Location = New System.Drawing.Point(26, 79)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(276, 29)
         Me.Panel2.TabIndex = 7
@@ -215,8 +215,9 @@ Partial Class UpdateJenisLocker
         Me.ClientSize = New System.Drawing.Size(374, 359)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "UpdateJenisLocker"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Update Jenis Loker"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
