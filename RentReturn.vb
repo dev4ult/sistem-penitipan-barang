@@ -23,6 +23,24 @@
         locker_model = New Locker_model()
     End Sub
 
+    Public Property GSTotalBiayaDanDenda() As Integer
+        Get
+            Return totalBiayadanDenda
+        End Get
+        Set(value As Integer)
+            totalBiayadanDenda = value
+        End Set
+    End Property
+
+    Public Property GSBiayaPerUkuran() As Integer
+        Get
+            Return biayaPerUkuran
+        End Get
+        Set(value As Integer)
+            biayaPerUkuran = value
+        End Set
+    End Property
+
     Private Sub RentReturn_Activated(sender As Object, e As EventArgs) Handles Me.Activated
         tanggalSewa = MainMenu.GetTanggalSewa()
         tanggalKembali = MainMenu.GetTanggalPengembalian()
@@ -56,24 +74,6 @@
     End Sub
 
     'Getter Dan Setter
-
-    Public Property GSTotalBiayaDanDenda() As Integer
-        Get
-            Return totalBiayadanDenda
-        End Get
-        Set(value As Integer)
-            totalBiayadanDenda = value
-        End Set
-    End Property
-
-    Public Property GSBiayaPerUkuran() As Integer
-        Get
-            Return biayaPerUkuran
-        End Get
-        Set(value As Integer)
-            biayaPerUkuran = value
-        End Set
-    End Property
 
     Private Sub BtnCancelKembali_Click(sender As Object, e As EventArgs) Handles BtnCancelKembali.Click
         MainMenu.Show()

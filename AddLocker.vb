@@ -1,6 +1,6 @@
 ﻿Imports System.Threading
 
-Public Class TambahLocker
+Public Class AddLocker
     Private locker_model As Locker_model
 
     Private ukuran As String

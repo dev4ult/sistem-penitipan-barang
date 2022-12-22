@@ -1,10 +1,9 @@
 ﻿Imports Google.Protobuf.WellKnownTypes
 
-Public Class FormListDataPenyewaan
+Public Class RentListForm
 
     Private selectedLocker As String
-    Private selectedTanggalSewa As Date
-    Private sewa_model As Rent_model
+    Private rent_model As Rent_model
     Private selectedIdPenyewaan As Integer
 
     Public Sub New()
@@ -13,16 +12,10 @@ Public Class FormListDataPenyewaan
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-        sewa_model = New Rent_model()
+        rent_model = New Rent_model()
 
         ReloadRentData()
     End Sub
-
-    'Public WriteOnly Property SetSelectedLocker()
-    '    Set(value)
-    '        selectedLocker = value
-    '    End Set
-    'End Property
 
     Public Property GSSelectedIdPenyewaan() As Integer
         Get
@@ -34,7 +27,7 @@ Public Class FormListDataPenyewaan
     End Property
 
     Public Sub ReloadRentData()
-        DGV_DataSewa.DataSource = sewa_model.FetchAllRentData()
+        DGV_DataSewa.DataSource = rent_model.FetchAllRentData()
     End Sub
 
     Private Sub BTNHapusSewa_Click(sender As Object, e As EventArgs) Handles BTNHapusSewa.Click

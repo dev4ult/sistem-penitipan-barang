@@ -32,7 +32,5 @@
                 Me.Close()
             End If
         End If
-
     End Sub
-
 End Class

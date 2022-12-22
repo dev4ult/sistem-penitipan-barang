@@ -1,4 +1,4 @@
-﻿Public Class HapusLocker
+﻿Public Class DeleteLocker
     Private locker_model As Locker_model
     Private namaLoker As String
     Public Sub New()

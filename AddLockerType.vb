@@ -1,7 +1,6 @@
-﻿Public Class UpdateJenisLocker
+﻿Public Class AddLockerType
 
     Private locker_model As Locker_model
-    Private ukuranLama As String
 
     Public Sub New()
 
@@ -10,21 +9,16 @@
 
         ' Add any initialization after the InitializeComponent() call.
         locker_model = New Locker_model
-
-        ukuranLama = FormJenisLocker.GSUkuran()
-        TxtUkuran.Text = ukuranLama
-
-        TxtBiaya.Text = FormJenisLocker.GSBiaya()
-        TxtInfoKet.Text = FormJenisLocker.GSInfoKet()
-
     End Sub
 
-    Private Sub BtnSubmit_Click(sender As Object, e As EventArgs) Handles BtnSubmit.Click
+    Private Sub BtnAdd_Click(sender As Object, e As EventArgs) Handles BtnAdd.Click
         Dim ukuran As String = TxtUkuran.Text
         Dim biaya As Integer = Integer.Parse(TxtBiaya.Text)
-        Dim infoKet As String = TxtInfoKet.Text
+        Dim info_ket As String = TxtInfoKet.Text
 
-        If locker_model.ValidateFormUpdateLockerType(ukuran, biaya, infoKet, ukuranLama) Then
+        MessageBox.Show(ukuran)
+
+        If locker_model.ValidateFormAddLockerType(ukuran, biaya, info_ket) Then
             FormJenisLocker.ReloadDataTableDatabase()
             FormJenisLocker.Show()
             Me.Close()

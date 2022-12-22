@@ -1,4 +1,4 @@
-﻿Public Class UpdateStatusLocker
+﻿Public Class UpdateLockerStatus
     Private locker_model As Locker_model
     Private namaLoker As String
     Private status As String
