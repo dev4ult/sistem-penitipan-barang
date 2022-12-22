@@ -1,7 +1,7 @@
 ﻿
 
 Public Class MainMenu
-    Private sewa_model As Rent_model
+    Private rent_model As Rent_model
     Private user_model As User_model
 
     Private selectedLocker As String
@@ -16,7 +16,7 @@ Public Class MainMenu
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-        sewa_model = New Rent_model()
+        rent_model = New Rent_model()
         user_model = New User_model()
 
         userId = Login.GetUserId()
@@ -46,7 +46,7 @@ Public Class MainMenu
     End Property
 
     Public Sub ReloadRentData()
-        DGV_DataSewa.DataSource = sewa_model.FetchAllRentDataByUserId(userId)
+        DGV_DataSewa.DataSource = rent_model.FetchAllRentDataByUserId(userId)
     End Sub
 
     Private Sub DGV_DataSewa_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGV_DataSewa.CellClick
@@ -63,7 +63,7 @@ Public Class MainMenu
 
     Private Sub BtnFormReturn_Click(sender As Object, e As EventArgs) Handles BtnFormReturn.Click
         If Not selectedLocker = "" Then
-            Dim dataLocker As DataTable = sewa_model.GetRentDataByLockerName(selectedLocker, selectedTanggalSewa)
+            Dim dataLocker As DataTable = rent_model.GetRentDataByLockerName(selectedLocker, selectedTanggalSewa)
 
             RentReturn.LblLockerName.Text = dataLocker.Rows(0)(0)
             RentReturn.LblJmlHariPinjam.Text = dataLocker.Rows(0)(1)

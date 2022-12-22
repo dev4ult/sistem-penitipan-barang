@@ -1,6 +1,6 @@
 ﻿
-Public Class SewaLocker
-    Private sewa_model As Rent_model
+Public Class RentLocker
+    Private rent_model As Rent_model
     Private locker_model As Locker_model
 
     Private namaLoker As String
@@ -10,7 +10,6 @@ Public Class SewaLocker
     Private totalBiaya As Integer
     Private keteranganIsiLocker As String
 
-    Dim str As String = ""
     Private panjangKarakter As Integer
 
     Public Sub New()
@@ -19,7 +18,7 @@ Public Class SewaLocker
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-        sewa_model = New Rent_model()
+        rent_model = New Rent_model()
         locker_model = New Locker_model()
 
         ReloadSizeList()
@@ -74,16 +73,16 @@ Public Class SewaLocker
     Private Sub BtnYesSewa_Click(sender As Object, e As EventArgs) Handles BtnYesSewa.Click
         keteranganIsiLocker = RTBKetUser.Text
 
-        If Not validationOfFormFill() = "" Then
-            MsgBox(validationOfFormFill(), MsgBoxStyle.Critical, "Kesalahan")
+        If Not ValidationOfFormFill() = "" Then
+            MsgBox(ValidationOfFormFill(), MsgBoxStyle.Critical, "Kesalahan")
         Else
-            If sewa_model.ValidateNewRentData(lokasiLoker, lamaSewa,
+            If rent_model.ValidateNewRentData(lokasiLoker, lamaSewa,
                                           totalBiaya, keteranganIsiLocker) Then
                 locker_model.UpdateLockerStatus(lokasiLoker, "Terisi")
                 MainMenu.ReloadRentData()
             End If
             'Reset Isian Form
-            resetFormFill()
+            ResetFormFill()
         End If
     End Sub
 
@@ -94,7 +93,7 @@ Public Class SewaLocker
         LblTotalBiaya.Text = totalBiaya
     End Sub
 
-    Private Sub resetFormFill()
+    Private Sub ResetFormFill()
         CBUkuranLocker.Text = "-- Pilih Ukuran --"
         LsbLockerTersedia.Items.Clear()
         RTBKetUser.Clear()
@@ -107,7 +106,7 @@ Public Class SewaLocker
         LblTotalBiaya.Text = 0
     End Sub
 
-    Public Function validationOfFormFill()
+    Private Function ValidationOfFormFill()
         Dim infoKesalahan As String = ""
 
         If ukuran = "" Then

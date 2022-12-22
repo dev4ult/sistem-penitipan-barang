@@ -1,4 +1,4 @@
-﻿Public Class FormJenisLocker
+﻿Public Class LockerTypeForm
 
     Private locker_model As Locker_Model
     Private ukuran As String
