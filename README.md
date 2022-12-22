@@ -1,7 +1,8 @@
 <h2 style="font-weight: 700; font-size: 2rem">SISTEM PENITIPAN BARANG</h2>
 
 <br>
-Project UAS Visual Basic Semester 3 <Kelompok 2>
+Project UAS Visual Basic Semester 3
+
 - Agus Setiawan (2107411013)
 - Alfares Ariandha Nurdin (2107411020)
 - Nibras Alyassar (2107411026)
