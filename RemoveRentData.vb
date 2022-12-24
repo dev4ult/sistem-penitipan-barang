@@ -14,11 +14,11 @@
     End Sub
 
     Private Sub BtnRemoveLockerName_Click(sender As Object, e As EventArgs) Handles BtnRemoveLockerName.Click
-        If sewa_model.RemoveRentData(FormListDataPenyewaan.GSSelectedIdPenyewaan) And locker_model.UpdateLockerStatus(LblRemoveLockerName.Text, "Kosong") Then
+        If sewa_model.RemoveRentData(RentListForm.GSSelectedIdPenyewaan) And locker_model.UpdateLockerStatus(LblRemoveLockerName.Text, "Kosong") Then
             MsgBox("Berhasil dihapus", MsgBoxStyle.Information, "Sukses")
-            'FormListDataPenyewaan.SetSelectedLocker = ""
-            FormListDataPenyewaan.ReloadRentData()
-            FormListDataPenyewaan.GSSelectedIdPenyewaan = -1
+            'RentListForm.SetSelectedLocker = ""
+            RentListForm.ReloadRentData()
+            RentListForm.GSSelectedIdPenyewaan = -1
             Me.Close()
         Else
             MsgBox("Ada kesalahan", MsgBoxStyle.Critical, "Kesalahan")
@@ -26,7 +26,7 @@
     End Sub
 
     Private Sub BtnCancelRemove_Click(sender As Object, e As EventArgs) Handles BtnCancelRemove.Click
-        FormListDataPenyewaan.Show()
+        RentListForm.Show()
         Me.Close()
     End Sub
 

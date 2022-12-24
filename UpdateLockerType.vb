@@ -11,11 +11,11 @@
         ' Add any initialization after the InitializeComponent() call.
         locker_model = New Locker_model
 
-        ukuranLama = FormJenisLocker.GSUkuran()
+        ukuranLama = LockerTypeForm.GSUkuran()
         TxtUkuran.Text = ukuranLama
 
-        TxtBiaya.Text = FormJenisLocker.GSBiaya()
-        TxtInfoKet.Text = FormJenisLocker.GSInfoKet()
+        TxtBiaya.Text = LockerTypeForm.GSBiaya()
+        TxtInfoKet.Text = LockerTypeForm.GSInfoKet()
 
     End Sub
 
@@ -25,14 +25,14 @@
         Dim infoKet As String = TxtInfoKet.Text
 
         If locker_model.ValidateFormUpdateLockerType(ukuran, biaya, infoKet, ukuranLama) Then
-            FormJenisLocker.ReloadDataTableDatabase()
-            FormJenisLocker.Show()
+            LockerTypeForm.ReloadDataTableDatabase()
+            LockerTypeForm.Show()
             Me.Close()
         End If
     End Sub
 
     Private Sub BtnClose_Click(sender As Object, e As EventArgs) Handles BtnClose.Click
-        FormJenisLocker.Show()
+        LockerTypeForm.Show()
         Me.Close()
     End Sub
 
