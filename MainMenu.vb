@@ -58,7 +58,7 @@ Public Class MainMenu
     End Sub
 
     Private Sub BtnTambahDataSewa_Click(sender As Object, e As EventArgs) Handles BtnTambahDataSewa.Click
-        SewaLocker.Show()
+        RentLocker.Show()
     End Sub
 
     Private Sub BtnFormReturn_Click(sender As Object, e As EventArgs) Handles BtnFormReturn.Click

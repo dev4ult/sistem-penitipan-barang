@@ -19,14 +19,14 @@
         MessageBox.Show(ukuran)
 
         If locker_model.ValidateFormAddLockerType(ukuran, biaya, info_ket) Then
-            FormJenisLocker.ReloadDataTableDatabase()
-            FormJenisLocker.Show()
+            LockerTypeForm.ReloadDataTableDatabase()
+            LockerTypeForm.Show()
             Me.Close()
         End If
     End Sub
 
     Private Sub BtnClose_Click(sender As Object, e As EventArgs) Handles BtnClose.Click
-        FormJenisLocker.Show()
+        LockerTypeForm.Show()
         Me.Close()
     End Sub
 

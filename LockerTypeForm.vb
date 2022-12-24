@@ -56,14 +56,14 @@
     End Sub
 
     Private Sub BtnCreate_Click(sender As Object, e As EventArgs) Handles BtnCreate.Click
-        TambahJenisLocker.Show()
+        AddLockerType.Show()
     End Sub
 
     Private Sub BtnUpdate_Click(sender As Object, e As EventArgs) Handles BtnUpdate.Click
         If ukuran = "" Or biaya = 0 Or infoKet = "" Then
             MessageBox.Show("Silahkan pilih jenis loker terlebih dahulu")
         Else
-            UpdateJenisLocker.Show()
+            UpdateLockerType.Show()
         End If
     End Sub
 
