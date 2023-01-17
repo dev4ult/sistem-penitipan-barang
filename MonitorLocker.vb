@@ -25,14 +25,14 @@
     End Property
 
     Private Sub BTNTambahLoker_Click(sender As Object, e As EventArgs) Handles BTNTambahLoker.Click
-        TambahLocker.Show()
+        AddLocker.Show()
     End Sub
 
     Private Sub BTNUbahStatus_Click(sender As Object, e As EventArgs) Handles BTNUbahStatus.Click
         If selectedLocker = "" Then
             MessageBox.Show("Pilih locker terlebih dahulu")
         Else
-            UpdateStatusLocker.Show()
+            UpdateLockerStatus.Show()
         End If
     End Sub
 
@@ -40,7 +40,7 @@
         If selectedLocker = "" Then
             MessageBox.Show("Pilih locker terlebih dahulu")
         Else
-            HapusLocker.Show()
+            DeleteLocker.Show()
         End If
     End Sub
 

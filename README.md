@@ -3,6 +3,11 @@
 <br>
 Project UAS Visual Basic Semester 3
 
+- Agus Setiawan (2107411013)
+- Alfares Ariandha Nurdin (2107411020)
+- Nibras Alyassar (2107411026)
+- Gerry Satria Halim (2107411028)
+
 <hr>
 <h2 style="font-weight: 700">Requirement</h2>
 <hr>
@@ -58,21 +63,25 @@ Project UAS Visual Basic Semester 3
 ### Class Diagram :
 
 <i>Asosiasi Class Database</i>
+<br>
 <img src="./img/Database_CD_Asosiasi.jpg" alt="Use Case Diagram">
 
 <br>
 
 <i>Asosiasi Class User_model</i>
+<br>
 <img src="./img/User_model_CD_Asosiasi.jpg" alt="Use Case Diagram">
 
 <br>
 
 <i>Asosiasi Class Locker_model</i>
+<br>
 <img src="./img/Locker_model_CD_Asosiasi.png" alt="Use Case Diagram">
 
 <br>
 
 <i>Asosiasi Class Rent_model</i>
+<br>
 <img src="./img/Rent_model_CD_Asosiasi.jpg" alt="Use Case Diagram">
 
 <br>
@@ -82,24 +91,29 @@ Project UAS Visual Basic Semester 3
 <hr>
 
 <i>Sign Up dan Login</i>
+<br>
 <img src="./img/Signup_dan_Login_AD.jpg" alt="Activity Diagram">
 
 <br>
 
 <i>Kelola Data Loker</i>
+<br>
 <img src="./img/Kelola_Data_Loker_AD.jpg" alt="Activity Diagram">
 
 <br>
 
 <i>Sewa Loker</i>
+<br>
 <img src="./img/Sewa_Loker_AD.jpg" alt="Activity Diagram">
 
 <br>
 
 <i>Pengembalian Loker</i>
+<br>
 <img src="./img/Pengembalian_Loker_AD.jpg" alt="Activity Diagram">
 
 <br>
 
 <i>Hapus Data Loker</i>
+<br>
 <img src="./img/Hapus_Data_Sewa_AD.jpg" alt="Activity Diagram">
